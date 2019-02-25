@@ -8,7 +8,7 @@ class CreateSuccessProfiles < ActiveRecord::Migration[5.2]
       t.string :photo
       t.string :website
       t.string :video
-      t.references :personalityriasec, foreign_key: true
+      t.references :personality_riasec, foreign_key: true
 
       t.timestamps
     end
