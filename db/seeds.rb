@@ -16,10 +16,10 @@ url_eleonore = "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_20
 eleonore = User.new(
     first_name: "Eleonore",
     last_name: "Selly",
-    gender: "F"
-    sport: "Plongée"
-    bio: "Sportive d'haut niveau à la retraite"
-    address: "16 villa Gaudelet, 75011, Paris"
+    gender: "F",
+    sport: "Plongée",
+    bio: "Sportive d'haut niveau à la retraite",
+    address: "16 villa Gaudelet, 75011, Paris",
     email: "eleonore@gmail.com",
     password: "reecover"
   )
@@ -30,10 +30,10 @@ url_natalia = "https://avatars3.githubusercontent.com/u/43504407?v=4"
 natalia = User.new(
     first_name: "Natalia",
     last_name: "Vega",
-    gender: "F"
-    sport: "Basketball"
-    bio: "Sportive d'haut niveau à la retraite"
-    address: "16 villa Gaudelet, 75011, Paris"
+    gender: "F",
+    sport: "Basketball",
+    bio: "Sportive d'haut niveau à la retraite",
+    address: "16 villa Gaudelet, 75011, Paris",
     email: "natalia@gmail.com",
     password: "reecover"
   )
@@ -44,10 +44,10 @@ url_francois = "https://avatars0.githubusercontent.com/u/45876591?v=4"
 francois = User.new(
     first_name: "François",
     last_name: "Nguyen",
-    gender: "F"
-    sport: "Football"
-    bio: "Sportive d'haut niveau à la retraite"
-    address: "16 villa Gaudelet, 75011, Paris"
+    gender: "M",
+    sport: "Football",
+    bio: "Sportif d'haut niveau à la retraite",
+    address: "16 villa Gaudelet, 75011, Paris",
     email: "francois@gmail.com",
     password: "reecover"
   )
