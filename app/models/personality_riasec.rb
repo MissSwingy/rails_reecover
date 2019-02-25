@@ -1,0 +1,2 @@
+class PersonalityRiasec < ApplicationRecord
+end
