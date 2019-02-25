@@ -10,10 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_135513) do
+ActiveRecord::Schema.define(version: 2019_02_25_162600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "column"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "attempts", force: :cascade do |t|
+    t.string "result"
+    t.bigint "survey_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["survey_id"], name: "index_attempts_on_survey_id"
+    t.index ["user_id"], name: "index_attempts_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.bigint "survey_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_questions_on_survey_id"
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_answers", force: :cascade do |t|
+    t.bigint "answer_id"
+    t.bigint "user_id"
+    t.bigint "attempt_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answer_id"], name: "index_user_answers_on_answer_id"
+    t.index ["attempt_id"], name: "index_user_answers_on_attempt_id"
+    t.index ["user_id"], name: "index_user_answers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,8 +70,16 @@ ActiveRecord::Schema.define(version: 2019_02_25_135513) do
     t.string "sport"
     t.string "bio"
     t.string "address"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "attempts", "surveys"
+  add_foreign_key "attempts", "users"
+  add_foreign_key "questions", "surveys"
+  add_foreign_key "user_answers", "answers"
+  add_foreign_key "user_answers", "attempts"
+  add_foreign_key "user_answers", "users"
 end
