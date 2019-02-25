@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_143045) do
+ActiveRecord::Schema.define(version: 2019_02_25_143835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,17 @@ ActiveRecord::Schema.define(version: 2019_02_25_143045) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_answers", force: :cascade do |t|
+    t.bigint "answer_id"
+    t.bigint "user_id"
+    t.bigint "attempt_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answer_id"], name: "index_user_answers_on_answer_id"
+    t.index ["attempt_id"], name: "index_user_answers_on_attempt_id"
+    t.index ["user_id"], name: "index_user_answers_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -67,4 +78,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_143045) do
   add_foreign_key "attempts", "surveys"
   add_foreign_key "attempts", "users"
   add_foreign_key "questions", "surveys"
+  add_foreign_key "user_answers", "answers"
+  add_foreign_key "user_answers", "attempts"
+  add_foreign_key "user_answers", "users"
 end
