@@ -62,6 +62,7 @@ a:focus {
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
+    padding-left :20px;
 }
 
 #sidebar.active {
@@ -152,6 +153,102 @@ a.article:hover {
     transition: all 0.3s;
 }
 
+.grid {
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 10% 1fr 1fr 1fr;
+  height:100vh;
+}
+
+.search-bar {
+  grid-row:1 / span 1;
+  grid-column:1 / span 2;
+}
+
+.title {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+}
+
+.card-1 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  padding:10px 20px;
+  width:70%;
+}
+
+.card-2 {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+  padding:10px 20px;
+  width:70%;
+}
+
+.card-3 {
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 1;
+  padding:10px 20px;
+  width:70%;
+}
+
+.map {
+  grid-row: 3 / span 3;
+  grid-column: 2 / span 1;
+}
+
+.card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 24px;
+}
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+
+
+
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -167,3 +264,7 @@ a.article:hover {
         display: none;
     }
 }
+
+
+
+
