@@ -19,6 +19,8 @@ gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
+gem "letter_opener", group: :development
+gem 'postmark-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
