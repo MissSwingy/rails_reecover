@@ -1,1 +1,176 @@
 // Specific CSS for your home-page
+
+@media (max-width: 1023px) {
+  .o-section-home {
+  padding-bottom: 0;
+  background-size: 150% auto;
+  }
+
+  .o-section-home__select-gender {
+    margin-top: -30px;
+  }
+
+  .a-button-gender {
+    width: 370px;
+    height: 370px;
+  }
+}
+
+@media (max-width: 479px) {
+  .a-button-gender {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+.m-select-gender {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.container {
+    max-width: 1545px;
+    width: 100%!important;
+    padding: 0 30px;
+}
+
+.section-first {
+    padding-top: 260px;
+    padding-bottom: 70px;
+  }
+
+.o-section-home {
+  position: relative;
+  margin-top: -30px;
+
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  }
+
+.o-section-home__select-gender {
+    margin-top: -30px;
+  }
+
+.a-button-gender {
+    width: 370px;
+    height: 370px;
+  }
+
+.o-section-home__select-gender {
+    margin-top: -100px;
+}
+.m-select-gender {
+    position: relative;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.a-button-gender {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    // width: 430px;
+    // height: 430px;
+    cursor: pointer;
+}
+
+.a-button-gender__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+.a-button-gender__icon {
+    position: relative;
+    fill: #fff;
+    width: 77px;
+    height: 95px;
+    margin-bottom: 5px;
+}
+
+.a-button-gender__circle {
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border: 1px solid #ef5eb9;
+    background-image: linear-gradient(135deg, #F36265 0%,#961276 100%);
+    -webkit-box-shadow: 0 20px 30px 0 rgba(13,38,102,.6);
+    box-shadow: 0 20px 30px 0 rgba(13,38,102,.6);
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.a-button-gender:hover {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;animation: none;
+}
+
+.a-button-gender--man .a-button-gender__circle {
+    background-image:-webkit-gradient(linear,left top,right top,from(#33f5e0),to(#5172e8));
+    background-image:linear-gradient(90deg,#33f5e0,#5172e8);
+    -webkit-box-shadow: 0 20px 30px 0 rgba(13,38,102,.6);
+    box-shadow: 0 20px 30px 0 rgba(13,38,102,.6);
+    border-color: #5bd8f0;
+}
+
+.a-button-gender__circle--1 {
+    width: 78%;
+    height: 78%;
+    z-index: 2;
+}
+
+.a-button-gender__circle--2 {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.a-button-gender__circle--3 {
+    width: 55%;
+    height: 55%;
+    transition: all .35s ease;
+}
+
+.a-button-gender__text {
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+    z-index: 2;
+}
