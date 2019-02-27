@@ -7,9 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "destroy all users"
+puts "destroy all attempts"
 
 User.destroy_all
-
+Attempt.destroyAll
 puts 'Creating users...'
 
 url_eleonore = "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/psrttn14zuhmsk04g50k.jpg"
@@ -51,8 +52,23 @@ francois = User.new(
     email: "francois@gmail.com",
     password: "reecover"
   )
+
 francois.remote_photo_url = url_francois
 francois.save!
-
-
 puts "ok"
+puts 'Creating survey...'
+francois_survey = Survey.new
+francois_survey.save
+puts "ok"
+
+puts 'Creating questions...'
+questions1 = Questions.new
+
+puts 'Creating attempts...'
+francois_attempt = Attempt.new(
+  user_id: francois.id,
+
+
+)
+
+
