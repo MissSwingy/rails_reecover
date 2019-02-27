@@ -13,5 +13,6 @@ class SurveysController < ApplicationController
     # @answers = @questions.answer
     # @answer = Answer.find(@question.id)
     @answer = @answers[3].answer
+     # raise
   end
 end
