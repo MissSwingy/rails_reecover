@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'bienvenuebeaugosse@reecover.fr'
+  default from: 'contact@reecover.fr'
   layout 'mailer'
 end
