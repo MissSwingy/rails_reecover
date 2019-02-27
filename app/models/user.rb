@@ -8,11 +8,11 @@ class User < ApplicationRecord
   has_many :attempts
   has_many :users_personalities
 
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
 
-  private
+    #private
 
-  def send_welcome_email
-    UserMailer.welcome(self).deliver_now
-  end
+    #def send_welcome_email
+    # UserMailer.welcome(self).deliver_now
+    #end
 end

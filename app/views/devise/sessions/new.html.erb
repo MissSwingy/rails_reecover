@@ -15,8 +15,9 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <%= image_tag "logo-icon.png", height: 50 %>
-                    <%= link_to 'Reecover', root_path %>
+                      <%= link_to root_path do %>
+                      <%= image_tag "logo-icon.png", height: 50 %>
+                      <% end %>
                     <h1 class="h4 text-gray-900 mb-4">Log in</h1>
                   </div>
                     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
