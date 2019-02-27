@@ -231,7 +231,7 @@ answer42 = Answer.new(
 question: question4,
 column: "R",
 answer: "Laure Boulleau",
-photo: "quiz/3qfemmes/mariecurie.jpg")
+photo: "quiz/3qfemmes/laureboulleau.jpg")
 answer42.save!
 
 answer43 = Answer.new(
@@ -271,7 +271,7 @@ question5.save!
 answer51 = Answer.new(
 question: question5,
 column: "E",
-answer: "Protéines d'origin animal",
+answer: "Viande",
 photo: "quiz/7qfood/viande.jpg")
 answer51.save!
 
@@ -285,7 +285,7 @@ answer52.save!
 answer53 = Answer.new(
 question: question5,
 column: "I",
-answer: "Protéines synthé",
+answer: "Whey",
 photo: "quiz/7qfood/whey.jpg")
 answer53.save!
 
@@ -326,7 +326,7 @@ answer62 = Answer.new(
 question: question6,
 column: "C",
 answer: "Bricolage",
-photo: "quiz/8qhobbies/randonne.jpg")
+photo: "quiz/8qhobbies/bricolage.jpg")
 answer62.save!
 
 answer63 = Answer.new(
@@ -386,8 +386,8 @@ answer73.save!
 
 answer74 = Answer.new(
 question: question7,
-column: "GuitarHero",
-answer: "A",
+column: "A",
+answer: "GuitarHero",
 photo: "quiz/6qgaming/guitarhero.jpg")
 answer74.save!
 
@@ -414,7 +414,7 @@ question8.save!
 answer81 = Answer.new(
 question: question8,
 column: "R",
-answer: "Gatorade",
+answer: "Boisson energétique",
 photo: "quiz/5qdrinks/gatorade.jpg")
 answer81.save!
 
