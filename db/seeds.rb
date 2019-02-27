@@ -62,7 +62,59 @@ francois_survey.save
 puts "ok"
 
 puts 'Creating questions...'
-questions1 = Questions.new
+questions1 = Question.new(
+  question: "vous êtes ... ?"
+  survey_id: francois_survey.id
+  )
+questions1.save
+
+questions2 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions2.save
+
+questions3 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions3.save
+
+questions4 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions4.save
+
+questions5 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions5.save
+
+questions6 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions6.save
+
+questions7 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions7.save
+
+questions8 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions8.save
+
+questions9 = Question.new(
+  question: "Avant une compétition, je ...?"
+  survey_id: francois_survey.id
+  )
+questions9.save
 
 puts 'Creating attempts...'
 francois_attempt = Attempt.new(
