@@ -1,4 +1,23 @@
 // Specific CSS for your home-page
+.masthead-img {
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://s3.nikecdn.com/pass/NikeBasketball/LeBron_Poster.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  padding-top: 50px;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
 
 @media (max-width: 1023px) {
   .o-section-home {
@@ -30,12 +49,6 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
-}
-
-.container {
-    max-width: 1545px;
-    width: 100%!important;
-    padding: 0 30px;
 }
 
 .section-first {
