@@ -502,4 +502,62 @@ photo: "quiz/9qpersonality/introverti.jpg")
 answer96.save!
 
 puts "ok"
+
+puts 'creating attempts ...'
+
+francois_attempt = Attempt.new(
+  user_id: francois,
+  survey_id: survey
+  )
+
+puts "ok"
+puts 'creating user answers ...'
+francois_answers1 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer12,
+  attempt_id: francois_attempt
+  )
+
+francois_answers2 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer24,
+  attempt_id: francois_attempt
+  )
+
+francois_answers3 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer32,
+  attempt_id: francois_attempt
+  )
+
+francois_answers4 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer53,
+  attempt_id: francois_attempt
+  )
+
+francois_answers5 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer61,
+  attempt_id: francois_attempt
+  )
+
+francois_answers6 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer76,
+  attempt_id: francois_attempt
+  )
+
+francois_answers7 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer85,
+  attempt_id: francois_attempt
+  )
+
+francois_answers8 = UserAnswer.new(
+  user_id: francois,
+  answer_id: answer96,
+  attempt_id: francois_attempt
+  )
+
 puts "end"
