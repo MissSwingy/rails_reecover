@@ -1,53 +1,18 @@
-<!-- <p>Quizz</p> -->
-<div class= "quizz container">
-  <div class='col-md-4 col-xs-4'>
-  </div>
-</div>
 <!-- @answers[1].photo -->
 <div class="container">
   <% @questions.each do |question| %>
-  <h2> <%= question.question %> </h2>
-    <% question.answers.each do |answer| %>
-    <p><%= answer.answer %></p>
-    <p><%= image_url(answer.photo) %></p>
-    <% end %>
-  <div class="cards-quiz">
-    <div class="row align-items-start">
-      <div class="col">
-         <div class="card-category-quiz">
-          <%= image_tag "quiz/2qfilms/milliondollar.jpg", height: 250, width: 400, crop: :fill, class: "card-category-quiz", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))" %> Breakfast
-         </div>
-      </div>
-
-      <div class="col">
-        <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=  %>)">
-          Lunch
+    <h3 class="text-center"> <%= question.question %> </h3>
+      <div class="cards-quiz">
+        <div class="row align-items-start">
+        <% question.answers.each do |answer| %>
+          <div class="col-xs-4">
+            <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>')">
+            <%= answer.answer %>
+            </div>
+          </div>
+        <% end %>
         </div>
       </div>
-      <div class="col">
-        <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        Dinner
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cards-quiz">
-    <div class="row align-items-start">
-      <div class="col">
-        <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"> Breakfast
-        </div>
-      </div>
-      <div class="col">
-        <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-          Lunch
-        </div>
-      </div>
-      <div class="col">
-        <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        Dinner
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
+
