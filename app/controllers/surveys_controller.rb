@@ -5,7 +5,11 @@ class SurveysController < ApplicationController
 
   def show
     @survey = Survey.find(params[:id])
-    @question = Question.find(@survey.id)
-    @answer = Answer.find(@question.id)
+    @questions = @survey.questions
+    @question = @questions[:question]
+    @answers = @question.answer
+    # @answers = @questions.answer
+    # @answer = Answer.find(@question.id)
+    raise
   end
 end
