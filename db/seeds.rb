@@ -55,5 +55,4 @@ francois.remote_photo_url = url_francois
 francois.save!
 
 
-
 puts "ok"
