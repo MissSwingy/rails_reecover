@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class DashboardsController < ApplicationController
   def show
     @user = current_user
     # To uncomment when other tables will be created.

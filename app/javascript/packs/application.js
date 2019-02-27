@@ -1,3 +1,5 @@
 import "bootstrap";
 import { collapseSlideBar } from '../components/slidebar_collapse';
-collapseSlideBar();
+if (document.getElementById('sidebarCollapse')) {
+  collapseSlideBar();
+}
