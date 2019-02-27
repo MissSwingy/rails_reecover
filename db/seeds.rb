@@ -138,14 +138,14 @@ answer22 = Answer.new(
 question: question2,
 column: "S",
 answer: "Million Dollar Baby",
-photo: "/quiz/2qfilms/milliondollar.jpg")
+photo: "../quiz/2qfilms/milliondollar.jpg")
 answer22.save!
 
 answer23 = Answer.new(
 question: question2,
 column: "A",
 answer: "Moi, Tonya",
-photo: "/quiz/2qfilms/tonya.jpg")
+photo: "../quiz/2qfilms/tonya.jpg")
 answer23.save!
 
 answer24 = Answer.new(
