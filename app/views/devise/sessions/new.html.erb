@@ -18,22 +18,22 @@
                       <%= link_to root_path do %>
                       <%= image_tag "logo-icon.png", height: 50 %>
                       <% end %>
-                    <h1 class="h4 text-gray-900 mb-4">Log in</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Se connecter</h1>
                   </div>
                     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                       <div class="user form-inputs">
                         <%= f.input :email,
                                     required: false,
                                     autofocus: true,
-                                    input_html: { autocomplete: "email" }, :placeholder => "Enter email adress", class: 'form-user form-control-user' %>
+                                    input_html: { autocomplete: "email" }, :placeholder => "Entrez votre email", class: 'form-user form-control-user' %>
                         <%= f.input :password,
                                     required: false,
-                                    input_html: { autocomplete: "current-password" }, :placeholder => "Password" %>
+                                    input_html: { autocomplete: "current-password" }, :placeholder => "Mot de passe" %>
                         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                       </div>
 
                       <div class="form-actions">
-                        <%= f.button :submit, "Log in", class: 'btn btn-primary btn-block' %>
+                        <%= f.button :submit, "Se connecter", class: 'btn btn-primary btn-block' %>
                       </div>
                     <% end %>
                     <hr>
