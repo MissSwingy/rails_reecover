@@ -66,7 +66,10 @@ Question.destroy_all
 puts "destroy all surveys"
 Survey.destroy_all
 
-
+puts "destroy all attempts"
+Attempt.destroy_all
+puts "destroy all users answers"
+UserAnswer.destroy_all
 puts 'Creating surveys...'
 
 survey = Survey.new()
