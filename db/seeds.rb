@@ -7,10 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "destroy all users"
-puts "destroy all attempts"
 
 User.destroy_all
-Attempt.destroyAll
+
 puts 'Creating users...'
 
 url_eleonore = "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/psrttn14zuhmsk04g50k.jpg"
@@ -52,76 +51,9 @@ francois = User.new(
     email: "francois@gmail.com",
     password: "reecover"
   )
-
 francois.remote_photo_url = url_francois
 francois.save!
-puts "ok"
-puts 'Creating survey...'
-francois_survey = Survey.new
-francois_survey.save
-puts "ok"
 
-puts 'Creating questions...'
-questions1 = Question.new(
-  question: "vous êtes ... ?"
-  survey_id: francois_survey.id
-  )
-questions1.save
-
-questions2 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions2.save
-
-questions3 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions3.save
-
-questions4 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions4.save
-
-questions5 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions5.save
-
-questions6 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions6.save
-
-questions7 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions7.save
-
-questions8 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions8.save
-
-questions9 = Question.new(
-  question: "Avant une compétition, je ...?"
-  survey_id: francois_survey.id
-  )
-questions9.save
-
-puts 'Creating attempts...'
-francois_attempt = Attempt.new(
-  user_id: francois.id,
-
-
-)
 
 puts "ok"
 
@@ -571,4 +503,3 @@ answer96.save!
 
 puts "ok"
 puts "end"
-
