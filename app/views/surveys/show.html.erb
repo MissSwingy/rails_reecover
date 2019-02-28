@@ -5,6 +5,7 @@
       <h2 class="mb-5">
         <em>A Free Bootstrap Theme by Start Bootstrap</em>
       </h2> -->
+      <h3 id="question-0" style="color: white">Tu es ... ?</h3>
       <div class="o-section-home__select-gender m-select-gender js-select-gender">
         <div data-href="/2" class="m-select-gender__button-gender js-select-gender-button a-button-gender--man a-button-gender js-button-gender bodyClass dietAnswer" data-key="1755" data-value="327" data-body-class-value="men-theme" data-pixel-event="User Profile" data-pixel-key="male" data-pixel-value="1">
           <div class="a-button-gender__background">
@@ -15,9 +16,9 @@
           </div>
            <div class="a-button-gender__content">
                 <div class="a-button-gender__circle a-button-gender__circle--3 js-button-circle-main" style="opacity: 0.9;"></div>
-                <svg class="a-icon a-button-gender__icon">
+             <!--    <svg class="a-icon a-button-gender__icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/keto/sprite.svg#icon-man"></use>
-                </svg>
+                </svg> -->
                 <div class="a-button-gender__text">Sportif</div>
             </div>
           </div>
@@ -30,9 +31,9 @@
             <div class="a-button-gender__content">
                 <div class="a-button-gender__circle a-button-gender__circle--3 js-button-circle-main" style="opacity: 0.9;">
                 </div>
-                <svg class="a-icon a-button-gender__icon">
+                <!-- <svg class="a-icon a-button-gender__icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/keto/sprite.svg#icon-woman"></use>
-                </svg>
+                </svg> -->
                 <div class="a-button-gender__text">Sportive</div>
             </div>
           </div>
@@ -42,14 +43,16 @@
   </section>
   <div class="container-quiz">
     <% @questions.each do |question| %>
-      <h3 class="text-center"> <%= question.question %> </h3>
+      <h3 id="question-<%= question.id %>" class="text-center"> <%= question.question %> </h3>
         <div class="cards-quiz">
           <div class="row align-items-start">
           <% question.answers.each do |answer| %>
             <div class="col-xs-4">
-              <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>')">
-              <%= answer.answer %>
-              </div>
+              <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
+                <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>')">
+                  <%= answer.answer %>
+                </div>
+              <% end %>
             </div>
           <% end %>
           </div>
