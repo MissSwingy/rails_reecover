@@ -172,6 +172,7 @@ answer26.save!
 
 question3 = Question.new(
 question: "Avec quel personnage tu t'identifies ?",
+gender: "M",
 survey: Survey.last)
 question3.save!
 
@@ -219,6 +220,7 @@ answer36.save!
 
 question4 = Question.new(
 question: "Avec quel personnage tu t'identifies ?",
+gender: "F",
 survey: Survey.last)
 
 question4.save!

@@ -5,6 +5,6 @@ class SurveysController < ApplicationController
 
   def show
     @survey = Survey.find(params[:id])
-    @questions = @survey.questions
+    @questions = @survey.questions.where(gender: [nil, current_user.gender])
   end
 end
