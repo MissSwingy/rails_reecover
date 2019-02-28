@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   resources :answers, only: [] do
     resources :users_answers, only: [:create]
   end
+  resources :surveys do
+    resources :attempts, only: [:new, :create]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
