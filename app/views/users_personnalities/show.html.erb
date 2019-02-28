@@ -1,7 +1,11 @@
 <div class="container-results">
-  <h1>Tu es un</h1>
+  <div class="avatar-personnality">
+    <h2>Tu es un</h2>
 
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-results-large", alt: "avatar-results-large" %>
+      <%= image_url(personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
+
+    <h2>Personalité <%= @user.users_personalities.personality_riasec %></h2>
+  </div>
 
   <div class="cards-results-quiz">
 
