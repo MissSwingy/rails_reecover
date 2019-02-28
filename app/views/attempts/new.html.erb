@@ -63,7 +63,9 @@
         </div>
       </div>
     <% end %>
+    <div id="question-<%= @questions.last.id + 1 %>" data-question="9" data-container="9">
+      <div class="button-results" >
+      <%= link_to "Voir les résultats", survey_attempt_path(Survey.last.id, Attempt.last.id), method: :patch, class: "btn btn-warning btn-lg"  %>
+    </div>
   </div>
-  <div class="button-results">
-    <%= link_to "Voir les résultats", survey_path(Survey.last.id), class: "btn btn-warning btn-lg"  %>
-  </div>
+</div>
