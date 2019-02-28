@@ -26,7 +26,7 @@ class AttemptsController < ApplicationController
     end
     calcul = @attempt.result.split('')
     result = calcul.max
-    @attempt.result = result
+    @attempt.update(result: result)
     redirect_to results_path(current_user)
   end
 end
