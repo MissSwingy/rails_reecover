@@ -1,5 +1,12 @@
 class AttemptsController < ApplicationController
+  def new
+    @attempt = Attempt.new
+    @survey = Survey.find(params[:survey_id])
+    @questions = @survey.questions.where(gender: [nil, current_user.gender])
+  end
+
   def create
+    raise
     @survey = Survey.find(params[:id])
     @attempt = Attempt.create(user: current_user, survey: @survey, result: "")
     redirect_to edit_attempt_path(@attempt)
