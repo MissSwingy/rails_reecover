@@ -22,5 +22,5 @@ class AttemptsController < ApplicationController
     calcul = @attempt.result.split('')
     result = calcul.max
     @attempt.result = result
-
+  end
 end
