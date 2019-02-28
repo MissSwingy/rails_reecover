@@ -175,18 +175,23 @@
     width: 78%;
     height: 78%;
     z-index: 2;
+    opacity: 0.11137;
+    transform: translate3d(0px, 0px, 0px) scale(0.962274, 0.962274);
 }
 
 .a-button-gender__circle--2 {
     width: 100%;
     height: 100%;
     z-index: 1;
+    opacity: 0.0849287;
+    transform: translate3d(0px, 0px, 0px) scale(0.984929, 0.984929);
 }
 
 .a-button-gender__circle--3 {
     width: 55%;
     height: 55%;
     transition: all .35s ease;
+    opacity: 0.9;
 }
 
 .a-button-gender__text {
