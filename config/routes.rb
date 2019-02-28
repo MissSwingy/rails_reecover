@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :answers, only: [] do
     resources :users_answers, only: [:create]
   end
+  resources :careers, only: [:index, :show]
   resources :surveys, only: [:index, :show] do
     resources :attempts, only: [:new, :create, :edit, :update]
   end

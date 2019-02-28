@@ -547,29 +547,28 @@ francois_answers4 = UserAnswer.new(
 francois_answers4.save!
 
 francois_answers5 = UserAnswer.new(
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer61.id,
   attempt_id: francois_attempt.id
   )
 francois_answers5.save!
 
 francois_answers6 = UserAnswer.new(
-
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer76.id,
   attempt_id: francois_attempt.id
   )
 francois_answers6.save!
 
 francois_answers7 = UserAnswer.new(
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer85.id,
   attempt_id: francois_attempt.id
   )
 francois_answers7.save!
 
 francois_answers8 = UserAnswer.new(
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer96.id,
   attempt_id: francois_attempt.id
   )
@@ -613,11 +612,23 @@ PersonalityRiasec.create!(
 PersonalityRiasec.find_by name: "Investigateur/trice"
 
 PersonalityRiasec.create!(
-  name: "Social",
+  name: "Social/e",
   description: "Les personnes de ce type aiment être en contact avec les autres dans le but de les aider, de les informer, de les éduquer, de les divertir, de les soigner ou encore de favoriser leur croissance. Elles s’intéressent aux comportements humains et sont soucieuses de la qualité de leurs relations avec les autres. Elles utilisent leur savoir ainsi que leurs impressions et leurs émotions pour agir et pour interagir avec les autres. Elles aiment communiquer et s’expriment facilement. Ces personnes sont attentives aux autres, coopératives, collaboratrices, compréhensives, dévouées, sensibles, sympathiques, perspicaces, bienveillantes, communicatives, encourageantes.",
   avatar_f: "social.jpg",
   avatar_m: "social.jpg")
-PersonalityRiasec.find_by name: "Social"
+PersonalityRiasec.find_by name: "Social/e"
+
+
+puts 'Creating careers...'
+
+csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
+filepath = 'metier-artistique.csv'
+CSV.foreach(filepath, csv_options) do |row|
+  personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'])
+  c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec)
+  puts "#{c.title}"
+end
 
 puts "end"
+
 
