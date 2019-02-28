@@ -515,7 +515,7 @@ francois_attempt = Attempt.new(
 francois_attempt.save!
 
 
-binding.pry
+
 puts "ok"
 puts 'creating user answers ...'
 francois_answers1 = UserAnswer.new(
@@ -534,43 +534,44 @@ francois_answers2.save!
 
 francois_answers3 = UserAnswer.new(
   user_id: francois.id,
-  answer_id: answer32,
-  attempt_id: francois_attempt
+  answer_id: answer32.id,
+  attempt_id: francois_attempt.id
   )
 francois_answers3.save!
 
 francois_answers4 = UserAnswer.new(
-  user_id: francois,
-  answer_id: answer53,
-  attempt_id: francois_attempt
+  user_id: francois.id,
+  answer_id: answer53.id,
+  attempt_id: francois_attempt.id
   )
 francois_answers4.save!
 
 francois_answers5 = UserAnswer.new(
-  user_id: francois,
-  answer_id: answer61,
-  attempt_id: francois_attempt
+    user_id: francois.id,
+  answer_id: answer61.id,
+  attempt_id: francois_attempt.id
   )
 francois_answers5.save!
 
 francois_answers6 = UserAnswer.new(
-  user_id: francois,
-  answer_id: answer76,
-  attempt_id: francois_attempt
+
+    user_id: francois.id,
+  answer_id: answer76.id,
+  attempt_id: francois_attempt.id
   )
 francois_answers6.save!
 
 francois_answers7 = UserAnswer.new(
-  user_id: francois,
-  answer_id: answer85,
-  attempt_id: francois_attempt
+    user_id: francois.id,
+  answer_id: answer85.id,
+  attempt_id: francois_attempt.id
   )
 francois_answers7.save!
 
 francois_answers8 = UserAnswer.new(
-  user_id: francois,
-  answer_id: answer96,
-  attempt_id: francois_attempt
+    user_id: francois.id,
+  answer_id: answer96.id,
+  attempt_id: francois_attempt.id
   )
 francois_answers8.save!
 
