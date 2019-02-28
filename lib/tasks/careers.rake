@@ -11,9 +11,8 @@ namespace :career do
       # p row
 
       p "#{row['metier']} | #{row['personnalite']}"
-       careers1 = Career.new
-       careers1.title = "#{row['metier']}"
-       p careers1.title
+      careers1 = Career.create(title: "#{row['metier']}", category: "#{row['personnalite']}", personality_riasec_id: @personality_riasec)
+      p careers1
     end
 
     # => TODO

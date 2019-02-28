@@ -1,13 +1,6 @@
 class PersonalitiesRiasecController < ApplicationController
-  def name
-  end
-
-  def avatar_f
-  end
-
-  def avavatar_m
-  end
-
-  def description
+  def show
+    @personality_riasec = Personality_riasec.find(params[:id])
+    @users_personalities = @personality_riasec.users_personalities
   end
 end
