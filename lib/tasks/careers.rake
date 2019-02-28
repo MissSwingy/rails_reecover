@@ -6,7 +6,7 @@ namespace :career do
     puts "Hello from my rake task"
 
     csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
-    filepath = 'metiers-social.csv'
+    filepath = 'metier-social.csv'
     CSV.foreach(filepath, csv_options) do |row|
       # p row
 
