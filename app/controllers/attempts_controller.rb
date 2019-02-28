@@ -1,14 +1,13 @@
 class AttemptsController < ApplicationController
   def new
-    @attempt = Attempt.new
     @survey = Survey.find(params[:survey_id])
+    @attempt = Attempt.create(user: current_user, survey: @survey, result: "")
     @questions = @survey.questions.where(gender: [nil, current_user.gender])
   end
 
   def create
     raise
     @survey = Survey.find(params[:id])
-    @attempt = Attempt.create(user: current_user, survey: @survey, result: "")
     redirect_to edit_attempt_path(@attempt)
   end
 
@@ -28,5 +27,7 @@ class AttemptsController < ApplicationController
     calcul = @attempt.result.split('')
     result = calcul.max
     @attempt.result = result
+    # redirect_to results_path
+    raise
   end
 end
