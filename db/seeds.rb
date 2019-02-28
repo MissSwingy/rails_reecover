@@ -508,75 +508,50 @@ answer96.save!
 
 puts "ok"
 
-puts 'creating attempts ...'
+puts 'Creating personalities_riasec...'
 
-francois_attempt = Attempt.new(
-  user_id: francois.id,
-  survey_id: survey.id
-  )
-francois_attempt.save!
+PersonalityRiasec.create!(
+  name: "Réaliste",
+  description: "Les personnes de ce type exercent surtout des tâches concrètes. Habiles de leurs mains, elles savent coordonner leurs gestes. Elles se servent d’outils, font fonctionner des appareils, des machines, des véhicules. Les réalistes ont le sens de la mécanique, le souci de la précision. Plusieurs exercent leur profession à l’extérieur plutôt qu’à l’intérieur. Leur travail demande souvent une bonne endurance physique et même des capacités athlétiques. Ces personnes sont patientes, minutieuses, constantes, sensées, naturelles, franches, pratiques, concrètes, simples.",
+  avatar_f: "realiste.jpg",
+  avatar_m: "realiste.jpg")
+PersonalityRiasec.find_by name: "Réaliste"
 
+PersonalityRiasec.create!(
+  name: "Artistique",
+  description: "Les personnes de ce type aiment les activités qui leur permettent de s’exprimer librement à partir de leurs perceptions, de leur sensibilité et de leur intuition. Elles s’intéressent au travail de création, qu’il s’agisse d’art visuel, de littérature, de musique, de publicité ou de spectacle. D’esprit indépendant et non conformiste, elles sont à l’aise dans des situations qui sortent de l’ordinaire. Elles sont dotées d’une grande sensibilité et de beaucoup d’imagination. Bien qu’elles soient rebutées par les tâches méthodiques et routinières, elles sont néanmoins capables de travailler avec discipline. Ces personnes sont spontanées, expressives, imaginatives, émotives, indépendantes, originales, intuitives, passionnées, fières, flexibles, disciplinées.",
+  avatar_f: "artistique.jpg",
+  avatar_m: "artistique.jpg")
+PersonalityRiasec.find_by name: "Artistique"
 
+PersonalityRiasec.create!(
+  name: "Conventionnel/le",
+  description: "Les personnes de ce type ont une préférence pour les activités précises, méthodiques, axées sur un résultat prévisible. Elles se préoccupent de l’ordre et de la bonne organisation matérielle de leur environnement. Elles préfèrent se conformer à des conventions bien établies et à des consignes claires plutôt que d’agir dans l’improvisation. Elles aiment calculer, classer, tenir à jour des registres ou des dossiers. Elles sont efficaces dans tout travail qui exige de l’exactitude et à l’aise dans les tâches routinières. Ces personnes sont loyales, organisées, efficaces, respectueuses de l’autorité, perfectionnistes, raisonnables, consciencieuses, ponctuelles, discrètes, strictes.",
+  avatar_f: "conventionnel.jpg",
+  avatar_m: "conventionnel.jpg")
+PersonalityRiasec.find_by name: "Conventionnel/le"
 
-puts "ok"
-puts 'creating user answers ...'
-francois_answers1 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer12.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers1.save!
+PersonalityRiasec.create!(
+  name: "Entrepreneur/se",
+  description: "Les personnes de ce type aiment influencer leur entourage. Leur capacité de décision, le sens de l’organisation et une habileté particulière à communiquer leur enthousiasme les appuient dans leurs objectifs. Elles savent vendre des idées autant que des biens matériels. Elles ont le sens de l’organisation, de la planification et de l’initiative et savent mener à bien leurs projets. Elles savent faire preuve d’audace et d’efficacité. Ces personnes sont persuasives, énergiques, optimistes, audacieuses, sûres d’elles-mêmes, ambitieuses, déterminées, diplomates, débrouillardes, sociables.",
+  avatar_f: "entreprenant.jpg",
+  avatar_m: "entreprenant.jpg")
+PersonalityRiasec.find_by name: "Entrepreneur/se"
 
-francois_answers2 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer24.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers2.save!
+PersonalityRiasec.create!(
+  name: "Investigateur/trice",
+  description: "La plupart des personnes de ce type ont des connaissances théoriques auxquelles elles ont recours pour agir. Elles disposent de renseignements spécialisés dont elles se servent pour résoudre des problèmes. Ce sont des personnes qui observent. Leur principale compétence tient à la compréhension qu’elles ont des phénomènes. Elles aiment bien se laisser absorber dans leurs réflexions. Elles aiment jouer avec les idées. Elles valorisent le savoir. Ces personnes sont critiques, curieuses, soucieuses de se renseigner, calmes, réservées, persévérantes, tolérantes, prudentes dans leurs jugements, logiques, objectives, rigoureuses, intellectuelles.",
+  avatar_f: "investigateur.jpg",
+  avatar_m: "investigateur.jpg")
+PersonalityRiasec.find_by name: "Investigateur/trice"
 
-francois_answers3 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer32.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers3.save!
+PersonalityRiasec.create!(
+  name: "Social/e",
+  description: "Les personnes de ce type aiment être en contact avec les autres dans le but de les aider, de les informer, de les éduquer, de les divertir, de les soigner ou encore de favoriser leur croissance. Elles s’intéressent aux comportements humains et sont soucieuses de la qualité de leurs relations avec les autres. Elles utilisent leur savoir ainsi que leurs impressions et leurs émotions pour agir et pour interagir avec les autres. Elles aiment communiquer et s’expriment facilement. Ces personnes sont attentives aux autres, coopératives, collaboratrices, compréhensives, dévouées, sensibles, sympathiques, perspicaces, bienveillantes, communicatives, encourageantes.",
+  avatar_f: "social.jpg",
+  avatar_m: "social.jpg")
+PersonalityRiasec.find_by name: "Social/e"
 
-francois_answers4 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer53.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers4.save!
-
-francois_answers5 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer61.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers5.save!
-
-francois_answers6 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer76.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers6.save!
-
-francois_answers7 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer85.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers7.save!
-
-francois_answers8 = UserAnswer.new(
-  user_id: francois.id,
-  answer_id: answer96.id,
-  attempt_id: francois_attempt.id
-  )
-francois_answers8.save!
-
-puts "end"
 
 puts 'Creating careers...'
 
@@ -589,4 +564,5 @@ CSV.foreach(filepath, csv_options) do |row|
 end
 
 puts "end"
+
 
