@@ -578,50 +578,15 @@ francois_answers8.save!
 
 puts "end"
 
-puts 'Creating personalities_riasec...'
+puts 'Creating careers...'
 
-
-personality_riasec = Personality_riasec.new(
-  name: "realiste",
-  description: "Les personnes de ce type exercent surtout des tâches concrètes. Habiles de leurs mains, elles savent coordonner leurs gestes. Elles se servent d’outils, font fonctionner des appareils, des machines, des véhicules. Les réalistes ont le sens de la mécanique, le souci de la précision. Plusieurs exercent leur profession à l’extérieur plutôt qu’à l’intérieur. Leur travail demande souvent une bonne endurance physique et même des capacités athlétiques. Ces personnes sont patientes, minutieuses, constantes, sensées, naturelles, franches, pratiques, concrètes, simples.",
-  avatar_f: "quiz/9qpersonality/concret.jpg",
-  avatar_m: "quiz/9qpersonality/concret.jpg")
-personality_riasec.save!
-
-personality_riasec = Personality_riasec.new(
-  name: "artistique",
-  description: "Les personnes de ce type aiment les activités qui leur permettent de s’exprimer librement à partir de leurs perceptions, de leur sensibilité et de leur intuition. Elles s’intéressent au travail de création, qu’il s’agisse d’art visuel, de littérature, de musique, de publicité ou de spectacle. D’esprit indépendant et non conformiste, elles sont à l’aise dans des situations qui sortent de l’ordinaire. Elles sont dotées d’une grande sensibilité et de beaucoup d’imagination. Bien qu’elles soient rebutées par les tâches méthodiques et routinières, elles sont néanmoins capables de travailler avec discipline. Ces personnes sont spontanées, expressives, imaginatives, émotives, indépendantes, originales, intuitives, passionnées, fières, flexibles, disciplinées.",
-  avatar_f: "quiz/9qpersonality/creatif.jpg",
-  avatar_m: "quiz/9qpersonality/creatif.jpg")
-personality_riasec.save!
-
-personality_riasec = Personality_riasec.new(
-  name: "conventionnel",
-  description: "Les personnes de ce type ont une préférence pour les activités précises, méthodiques, axées sur un résultat prévisible. Elles se préoccupent de l’ordre et de la bonne organisation matérielle de leur environnement. Elles préfèrent se conformer à des conventions bien établies et à des consignes claires plutôt que d’agir dans l’improvisation. Elles aiment calculer, classer, tenir à jour des registres ou des dossiers. Elles sont efficaces dans tout travail qui exige de l’exactitude et à l’aise dans les tâches routinières. Ces personnes sont loyales, organisées, efficaces, respectueuses de l’autorité, perfectionnistes, raisonnables, consciencieuses, ponctuelles, discrètes, strictes.",
-  avatar_f: "quiz/9qpersonality/perfectioniste.jpg.jpg",
-  avatar_m: "quiz/9qpersonality/perfectioniste.jpg.jpg")
-personality_riasec.save!
-
-personality_riasec = Personality_riasec.new(
-  name: "entreprenant",
-  description: "Les personnes de ce type aiment influencer leur entourage. Leur capacité de décision, le sens de l’organisation et une habileté particulière à communiquer leur enthousiasme les appuient dans leurs objectifs. Elles savent vendre des idées autant que des biens matériels. Elles ont le sens de l’organisation, de la planification et de l’initiative et savent mener à bien leurs projets. Elles savent faire preuve d’audace et d’efficacité. Ces personnes sont persuasives, énergiques, optimistes, audacieuses, sûres d’elles-mêmes, ambitieuses, déterminées, diplomates, débrouillardes, sociables.",
-  avatar_f: "quiz/9qpersonality/leader.jpg",
-  avatar_m: "quiz/9qpersonality/leader.jpg")
-personality_riasec.save!
-
-personality_riasec = Personality_riasec.new(
-  name: "investigateur",
-  description: "La plupart des personnes de ce type ont des connaissances théoriques auxquelles elles ont recours pour agir. Elles disposent de renseignements spécialisés dont elles se servent pour résoudre des problèmes. Ce sont des personnes qui observent. Leur principale compétence tient à la compréhension qu’elles ont des phénomènes. Elles aiment bien se laisser absorber dans leurs réflexions. Elles aiment jouer avec les idées. Elles valorisent le savoir. Ces personnes sont critiques, curieuses, soucieuses de se renseigner, calmes, réservées, persévérantes, tolérantes, prudentes dans leurs jugements, logiques, objectives, rigoureuses, intellectuelles.",
-  avatar_f: "quiz/9qpersonality/introverti.jpg",
-  avatar_m: "quiz/9qpersonality/introverti.jpg")
-personality_riasec.save!
-
-personality_riasec = Personality_riasec.new(
-  name: "social",
-  description: "Les personnes de ce type aiment être en contact avec les autres dans le but de les aider, de les informer, de les éduquer, de les divertir, de les soigner ou encore de favoriser leur croissance. Elles s’intéressent aux comportements humains et sont soucieuses de la qualité de leurs relations avec les autres. Elles utilisent leur savoir ainsi que leurs impressions et leurs émotions pour agir et pour interagir avec les autres. Elles aiment communiquer et s’expriment facilement. Ces personnes sont attentives aux autres, coopératives, collaboratrices, compréhensives, dévouées, sensibles, sympathiques, perspicaces, bienveillantes, communicatives, encourageantes.",
-  avatar_f: "quiz/9qpersonality/socialble.jpg",
-  avatar_m: "quiz/9qpersonality/socialble.jpg")
-personality_riasec.save!
+csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
+filepath = 'metier-artistique.csv'
+CSV.foreach(filepath, csv_options) do |row|
+  personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'])
+  c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec)
+  puts "#{c.title}"
+end
 
 puts "end"
 
