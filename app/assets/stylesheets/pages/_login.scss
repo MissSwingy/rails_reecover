@@ -19,9 +19,13 @@
   background-size: cover;
 }
 
+.form-check-label {
+  margin-left: 24px;
+}
+
 form.user {
 
-  .custom-checkbox.small {
+  .custom-checkbox {
     label {
       line-height: 1.5rem;
     }
