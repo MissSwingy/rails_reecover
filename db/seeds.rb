@@ -549,32 +549,44 @@ francois_answers4 = UserAnswer.new(
 francois_answers4.save!
 
 francois_answers5 = UserAnswer.new(
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer61.id,
   attempt_id: francois_attempt.id
   )
 francois_answers5.save!
 
 francois_answers6 = UserAnswer.new(
-
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer76.id,
   attempt_id: francois_attempt.id
   )
 francois_answers6.save!
 
 francois_answers7 = UserAnswer.new(
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer85.id,
   attempt_id: francois_attempt.id
   )
 francois_answers7.save!
 
 francois_answers8 = UserAnswer.new(
-    user_id: francois.id,
+  user_id: francois.id,
   answer_id: answer96.id,
   attempt_id: francois_attempt.id
   )
 francois_answers8.save!
 
 puts "end"
+
+puts 'Creating careers...'
+
+csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
+filepath = 'metier-artistique.csv'
+CSV.foreach(filepath, csv_options) do |row|
+  personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'])
+  c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec)
+  puts "#{c.title}"
+end
+
+puts "end"
+

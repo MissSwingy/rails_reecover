@@ -10,17 +10,10 @@ namespace :career do
     CSV.foreach(filepath, csv_options) do |row|
       # p row
 
-      p "#{row['metier']} | #{row['personnalite']}"
-       careers1 = Career.new
-       careers1.title = "#{row['metier']}"
-       p careers1.title
+      # p "#{row['metier']} | #{row['personnalite']}"
+      p Career.create(title: "#{row['metier']}", category: "#{row['personnalite']}")
     end
 
     # => TODO
   end
 end
-
-#  CSV.foreach(filepath) do |row|
- # #   # Here, row is an array of columns
- #    puts "#{row[0]} | #{row[1]}"
- #  end
