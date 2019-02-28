@@ -18,10 +18,17 @@
   background-position: top;
   background-size: cover;
 }
-  // background: url('http://www4.pictures.zimbio.com/gi/Eric+Cantona+Mad+Kings+Red+Carpet+10th+Rome+K9VY4JxJy0tl.jpg');
+
+// background: url('http://www4.pictures.zimbio.com/gi/Eric+Cantona+Mad+Kings+Red+Carpet+10th+Rome+K9VY4JxJy0tl.jpg');
+
+
+.form-check-label {
+  margin-left: 24px;
+}
+
 form.user {
 
-  .custom-checkbox.small {
+  .custom-checkbox {
     label {
       line-height: 1.5rem;
     }

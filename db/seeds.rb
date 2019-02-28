@@ -66,7 +66,10 @@ Question.destroy_all
 puts "destroy all surveys"
 Survey.destroy_all
 
-
+puts "destroy all attempts"
+Attempt.destroy_all
+puts "destroy all users answers"
+UserAnswer.destroy_all
 puts 'Creating surveys...'
 
 survey = Survey.new()
@@ -278,7 +281,7 @@ answer51.save!
 answer52 = Answer.new(
 question: question5,
 column: "R",
-answer: "Graises",
+answer: "Graisses",
 photo: "quiz/7qfood/fishchips.jpg")
 answer52.save!
 
@@ -502,4 +505,74 @@ photo: "quiz/9qpersonality/introverti.jpg")
 answer96.save!
 
 puts "ok"
+
+puts 'creating attempts ...'
+
+francois_attempt = Attempt.new(
+  user_id: francois.id,
+  survey_id: survey.id
+  )
+francois_attempt.save!
+
+
+
+puts "ok"
+puts 'creating user answers ...'
+francois_answers1 = UserAnswer.new(
+  user_id: francois.id,
+  answer_id: answer12.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers1.save!
+
+francois_answers2 = UserAnswer.new(
+  user_id: francois.id,
+  answer_id: answer24.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers2.save!
+
+francois_answers3 = UserAnswer.new(
+  user_id: francois.id,
+  answer_id: answer32.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers3.save!
+
+francois_answers4 = UserAnswer.new(
+  user_id: francois.id,
+  answer_id: answer53.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers4.save!
+
+francois_answers5 = UserAnswer.new(
+    user_id: francois.id,
+  answer_id: answer61.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers5.save!
+
+francois_answers6 = UserAnswer.new(
+
+    user_id: francois.id,
+  answer_id: answer76.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers6.save!
+
+francois_answers7 = UserAnswer.new(
+    user_id: francois.id,
+  answer_id: answer85.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers7.save!
+
+francois_answers8 = UserAnswer.new(
+    user_id: francois.id,
+  answer_id: answer96.id,
+  attempt_id: francois_attempt.id
+  )
+francois_answers8.save!
+
 puts "end"
