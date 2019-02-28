@@ -8,7 +8,7 @@
         <h4>Vous souhaitez donner un nouvel élan à votre carrière ?
         </h4>
         <br><br>
-        <%= link_to "Faites le test !", survey_path(Survey.last.id), class: "btn btn-warning btn-lg"  %>
+        <%= link_to "Faites le test !", new_survey_attempt_path(Survey.last), class: "btn btn-warning btn-lg"  %>
         </div>
     </div>
   </div>
