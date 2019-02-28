@@ -1,24 +1,25 @@
 <div class="container-results">
   <div class="avatar-personnality">
-    <h2>Tu es un</h2>
+    <h2>Ta personalité</h2>
 
-      <%= image_url(personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
+      <%= image_tag (@personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
 
-    <h2>Personalité <%= @user.users_personalities.personality_riasec %></h2>
+    <h2><%= @personality_riasec.name %></h2>
+    <h4><%= @personality_riasec.description %></h4>
   </div>
 
   <div class="cards-results-quiz">
 
-    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Breakfast
+    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(h)">
+      Métier 1
     </div>
 
-    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Lunch
+    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+      Métier 2
     </div>
 
-    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-      Dinner
+    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+      Métier 3
     </div>
 
   </div>
