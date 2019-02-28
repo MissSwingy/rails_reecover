@@ -1,5 +1,4 @@
 class AttemptsController < ApplicationController
-
   def create
     @survey = Survey.find(params[:id])
     @attempt = Attempt.create(user: current_user, survey: @survey, result: "")
