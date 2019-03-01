@@ -5,3 +5,6 @@ if (document.getElementById('sidebarCollapse')) {
 }
 import { hideFirstQuestion } from '../components/hide_first_question';
 hideFirstQuestion();
+
+import { toggleSidebar } from '../components/sidebar_toggle';
+toggleSidebar();
