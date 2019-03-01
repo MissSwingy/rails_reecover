@@ -54,7 +54,7 @@
             <div class="col-6 col-md-6 col-lg-4">
               <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
                 <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>')">
-                  <%= answer.answer %>
+                  <strong> <%= answer.answer %> </strong>
                 </div>
               <% end %>
             </div>
@@ -65,9 +65,19 @@
     <% end %>
 
     <!-- Show results -->
-    <div id="question-<%= @questions.last.id + 1 %>" data-question="9" data-container="9">
-      <div class="button-results" >
-      <%= link_to "Voir les résultats", survey_attempt_path(Survey.last.id, Attempt.last.id), method: :patch, class: "btn btn-warning btn-lg"  %>
+<header class="masthead-results">
+  <div class="container h-100 bg-overlay">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+          <div id="question-<%= @questions.last.id + 1 %>" data-question="9" data-container="9">
+            <div class="button-results" >
+            <%= link_to "Voir les résultats", survey_attempt_path(Survey.last.id, Attempt.last.id), method: :patch, class: "btn btn-warning btn-lg"  %>
+          </div>
+        </div>
+       </div>
     </div>
   </div>
+</header>
 </div>
+
+

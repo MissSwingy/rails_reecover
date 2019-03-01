@@ -23,3 +23,29 @@
     }
   }
 }
+
+.masthead-results {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.21), rgba(0, 0, 0, 0.7)), url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/vintage-leather-punching-bag-allan-swart.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 992px) {
+    height: 100vh;
+    h1 {
+      font-size: 5.5rem;
+    }
+  }
+}
