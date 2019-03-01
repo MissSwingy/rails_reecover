@@ -3,22 +3,45 @@
     <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top">Home</a>
+  <% if user_signed_in? %>
+
+      <!-- Links when logged in -->
+     <!--  <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %> -->
+      <% if params[:controller] === "dashboards" %>
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Dashboard</span>
+        </button>
+        <% else %>
+      <% end %>
+    <ul class="sidebar-nav sidebar-brand">
+       <%= cl_image_tag current_user.photo, class: "avatar-dashbord", id: "navbar-wagon-menu" %>
+       <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top"><i class="fas fa-home"></i>   Accueil</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
+        <%= link_to dashboard_path(current_user) do %>
+                <i class="fas fa-user"></i> <%= t(".profile", default: "Mon compte") %>
+              <% end %>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#services">Services</a>
+        <a class="js-scroll-trigger" href="#portfolio">S'incrire</a>
       </li>
+       <li class="sidebar-nav-item">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
+         <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <% else %>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
-      </li>
-    </ul>
+        <!-- Login link (when logged out) -->
+         <%= link_to t(".sign_in", default: "Se connecter"), new_user_session_path, class: "btn-warning" %>
+          </li>
+    <% end %>
   </nav>
+
 
