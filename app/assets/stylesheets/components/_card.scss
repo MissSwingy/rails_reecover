@@ -14,6 +14,7 @@
   grid-gap: 16px;
   padding: 16px;
   height: 180px;
+  font-size: 32px;
 }
 
 .card-category-career-results {
@@ -77,6 +78,12 @@ a {
   padding: 16px;
   background-color: white;
   box-shadow: 0 5 30px rgba(0, 0, 0, 0.2);
+}
+
+.peach-gradient-rgba {
+    background: -webkit-linear-gradient(50deg,rgba(255,216,111,.9),rgba(252,98,98,.9))!important;
+    background: -o-linear-gradient(50deg,rgba(255,216,111,.9),rgba(252,98,98,.9))!important;
+    background: linear-gradient(40deg,rgba(255,216,111,.9),rgba(252,98,98,.9))!important;
 }
 
 // Smallest device

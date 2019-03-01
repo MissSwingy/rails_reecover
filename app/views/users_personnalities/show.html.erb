@@ -1,22 +1,24 @@
-<div class="container-results">
-  <div class="avatar-personnality">
-    <h1>Vous avez un profil de type :</h1>
+<header class="masthead-img">
+  <div class="container-results">
+    <div class="avatar-personnality">
+      <h1>Vous avez un profil de type :</h1>
 
-      <%= image_tag (@personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
+        <%= image_tag (@personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
 
-    <h2><%= @personality_riasec.name %></h2>
-    <p><%= @personality_riasec.description %></p>
-  </div>
+      <h2><%= @personality_riasec.name %></h2>
+      <p><%= @personality_riasec.description %></p>
+    </div>
 
-  <div class="cards-results-quiz">
-    <% @personality_riasec.careers.sample(3).each do |career| %>
-      <%= link_to users_personnalities_path(personality: @personality_riasec, career: career), method: :post do %>
-        <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(h)">
-          <%= career.title %>
-        </div>
+    <div class="cards-results-quiz text-center">
+      <% @personality_riasec.careers.sample(3).each do |career| %>
+        <%= link_to users_personnalities_path(personality: @personality_riasec, career: career), method: :post do %>
+          <div class="card-category-career-results peach-gradient-rgba " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(h)">
+            <%= career.title %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
+</header>
 
-</div>
 
