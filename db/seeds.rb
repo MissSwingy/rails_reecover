@@ -555,10 +555,13 @@ PersonalityRiasec.find_by name: "Social/e"
 
 puts 'Creating careers...'
 
+Career.destroy_all
+
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 filepath = 'metier-artistique.csv'
 CSV.foreach(filepath, csv_options) do |row|
-  personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'])
+  p row['personnalite'].capitalize
+  personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
   c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec)
   puts "#{c.title}"
 end
