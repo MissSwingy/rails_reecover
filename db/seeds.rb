@@ -17,8 +17,8 @@ eleonore = User.new(
     first_name: "Eleonore",
     last_name: "Selly",
     gender: "F",
-    sport: "Plongée",
-    bio: "Sportive d'haut niveau à la retraite",
+    sport: "Boxe",
+    bio: "Sportive de Haut Niveau en reconversion",
     address: "16 villa Gaudelet, 75011, Paris",
     email: "eleonore@gmail.com",
     password: "reecover"
@@ -32,7 +32,7 @@ natalia = User.new(
     last_name: "Vega",
     gender: "F",
     sport: "Basketball",
-    bio: "Sportive d'haut niveau à la retraite",
+    bio: "Sportive de Haut Niveau en reconversion",
     address: "16 villa Gaudelet, 75011, Paris",
     email: "natalia@gmail.com",
     password: "reecover"
@@ -46,7 +46,7 @@ francois = User.new(
     last_name: "Nguyen",
     gender: "M",
     sport: "Football",
-    bio: "Sportif d'haut niveau à la retraite",
+    bio: "Sportif de Haut Niveau en reconversion",
     address: "16 villa Gaudelet, 75011, Paris",
     email: "francois@gmail.com",
     password: "reecover"
@@ -83,28 +83,28 @@ question1.save!
 answer11 = Answer.new(
 question: question1,
 column: "R",
-answer: "me concentre dans mes derniers résultats.",
+answer: "me concentre sur l'amélioration de mes derniers résultats.",
 photo: "quiz/1question/time.jpg")
 answer11.save!
 
 answer12 = Answer.new(
 question: question1,
 column: "A",
-answer: "me lance sáns réfléchir, c'est une histoire d'inspiration.",
+answer: "me lance sans réfléchir, c'est une histoire d'inspiration.",
 photo: "quiz/1question/swim.jpg")
 answer12.save!
 
 answer13 = Answer.new(
 question: question1,
 column: "I",
-answer: "visualise la compétition et j'imagine chaque détail.",
+answer: "visualise la compétition et j'anticipe chaque détail.",
 photo: "quiz/1question/details.jpg")
 answer13.save!
 
 answer14 = Answer.new(
 question: question1,
 column: "S",
-answer: "me concentre avec mon équipe pour sortir le meilleur de chacun.",
+answer: "me concentre sur mon équipe pour sortir le meilleur de chacun.",
 photo: "quiz/1question/team.jpg")
 answer14.save!
 
@@ -118,12 +118,12 @@ answer15.save!
 answer16 = Answer.new(
 question: question1,
 column: "E",
-answer: "donne les dernières consignes, je suis responsable de mon team.",
+answer: "donne les dernières consignes, je suis responsable de ma team.",
 photo: "quiz/1question/leader.jpg")
 answer16.save!
 
 question2 = Question.new(
-question: "Ton film préferé",
+question: "Ton film préferé un dimanche soir :",
 survey: Survey.last)
 
 question2.save!
@@ -131,7 +131,7 @@ question2.save!
 answer21 = Answer.new(
 question: question2,
 column: "R",
-answer: "La fureur de vaincre",
+answer: "La Fureur de Vaincre",
 photo: "quiz/2qfilms/lafureur.jpg")
 answer21.save!
 
@@ -159,7 +159,7 @@ answer24.save!
 answer25 = Answer.new(
 question: question2,
 column: "C",
-answer: "Karate Kid",
+answer: "Karaté Kid",
 photo: "quiz/2qfilms/karatekid.jpg")
 answer25.save!
 
@@ -171,7 +171,7 @@ photo: "quiz/2qfilms/maguire.jpg")
 answer26.save!
 
 question3 = Question.new(
-question: "Avec quel personnage tu t'identifies ?",
+question: "A quelle personnalité tu t'identifies le + ?",
 gender: "M",
 survey: Survey.last)
 question3.save!
@@ -219,7 +219,7 @@ photo: "quiz/4qhommes/douillet.jpg")
 answer36.save!
 
 question4 = Question.new(
-question: "Avec quel personnage tu t'identifies ?",
+question: "A quelle personnalité tu t'identifies le + ?",
 gender: "F",
 survey: Survey.last)
 
@@ -268,7 +268,7 @@ photo: "quiz/3qfemmes/merkel.jpg")
 answer46.save!
 
 question5 = Question.new(
-question: "Ton repas préferé contient",
+question: "Ton repas préféré contient :",
 survey: Survey.last)
 
 question5.save!
@@ -283,7 +283,7 @@ answer51.save!
 answer52 = Answer.new(
 question: question5,
 column: "R",
-answer: "Graisses",
+answer: "Lipides",
 photo: "quiz/7qfood/fishchips.jpg")
 answer52.save!
 
@@ -316,7 +316,7 @@ photo: "quiz/7qfood/fruits.jpg")
 answer56.save!
 
 question6 = Question.new(
-question: "Ton loisir préféré",
+question: "Ton loisir préféré pour décompresser :",
 survey: Survey.last)
 question6.save!
 
@@ -337,7 +337,7 @@ answer62.save!
 answer63 = Answer.new(
 question: question6,
 column: "S",
-answer: "Coach pour team d'enfants",
+answer: "Coaching",
 photo: "quiz/8qhobbies/coach.jpg")
 answer63.save!
 
@@ -351,7 +351,7 @@ answer64.save!
 answer65 = Answer.new(
 question: question6,
 column: "R",
-answer: "Pâtisserie",
+answer: "Gourmandises",
 photo: "quiz/8qhobbies/baking.jpg")
 answer65.save!
 
@@ -419,14 +419,14 @@ question8.save!
 answer81 = Answer.new(
 question: question8,
 column: "R",
-answer: "Boisson energétique",
+answer: "Boisson énergétique",
 photo: "quiz/5qdrinks/gatorade.jpg")
 answer81.save!
 
 answer82 = Answer.new(
 question: question8,
 column: "E",
-answer: "Whisky",
+answer: "Boisson alcoolisée",
 photo: "quiz/5qdrinks/whisky.jpg")
 answer82.save!
 
@@ -459,7 +459,7 @@ photo: "quiz/5qdrinks/coffee.jpg")
 answer86.save!
 
 question9 = Question.new(
-question: "Tu es plutôt",
+question: "Tu es plutôt :",
 survey: Survey.last)
 
 question9.save!
@@ -467,14 +467,14 @@ question9.save!
 answer91 = Answer.new(
 question: question9,
 column: "R",
-answer: "Concret/e",
+answer: "Concret(e)",
 photo: "quiz/9qpersonality/concret.jpg")
 answer91.save!
 
 answer92 = Answer.new(
 question: question9,
 column: "C",
-answer: "Perfectioniste",
+answer: "Perfectionniste",
 photo: "quiz/9qpersonality/perfectioniste.jpg")
 answer92.save!
 
@@ -495,14 +495,14 @@ answer94.save!
 answer95 = Answer.new(
 question: question9,
 column: "A",
-answer: "Créatif/ve",
+answer: "Créatif(ve)",
 photo: "quiz/9qpersonality/creatif.jpg")
 answer95.save!
 
 answer96 = Answer.new(
 question: question9,
 column: "I",
-answer: "Introverti/e",
+answer: "Introverti(e)",
 photo: "quiz/9qpersonality/introverti.jpg")
 answer96.save!
 
@@ -525,32 +525,32 @@ PersonalityRiasec.create!(
 PersonalityRiasec.find_by name: "Artistique"
 
 PersonalityRiasec.create!(
-  name: "Conventionnel/le",
+  name: "Conventionnel",
   description: "Les personnes de ce type ont une préférence pour les activités précises, méthodiques, axées sur un résultat prévisible. Elles se préoccupent de l’ordre et de la bonne organisation matérielle de leur environnement. Elles préfèrent se conformer à des conventions bien établies et à des consignes claires plutôt que d’agir dans l’improvisation. Elles aiment calculer, classer, tenir à jour des registres ou des dossiers. Elles sont efficaces dans tout travail qui exige de l’exactitude et à l’aise dans les tâches routinières. Ces personnes sont loyales, organisées, efficaces, respectueuses de l’autorité, perfectionnistes, raisonnables, consciencieuses, ponctuelles, discrètes, strictes.",
   avatar_f: "conventionnel.jpg",
   avatar_m: "conventionnel.jpg")
-PersonalityRiasec.find_by name: "Conventionnel/le"
+PersonalityRiasec.find_by name: "Conventionnel"
 
 PersonalityRiasec.create!(
-  name: "Entrepreneur/se",
+  name: "Entrepreneur",
   description: "Les personnes de ce type aiment influencer leur entourage. Leur capacité de décision, le sens de l’organisation et une habileté particulière à communiquer leur enthousiasme les appuient dans leurs objectifs. Elles savent vendre des idées autant que des biens matériels. Elles ont le sens de l’organisation, de la planification et de l’initiative et savent mener à bien leurs projets. Elles savent faire preuve d’audace et d’efficacité. Ces personnes sont persuasives, énergiques, optimistes, audacieuses, sûres d’elles-mêmes, ambitieuses, déterminées, diplomates, débrouillardes, sociables.",
   avatar_f: "entreprenant.jpg",
   avatar_m: "entreprenant.jpg")
-PersonalityRiasec.find_by name: "Entrepreneur/se"
+PersonalityRiasec.find_by name: "Entrepreneur"
 
 PersonalityRiasec.create!(
-  name: "Investigateur/trice",
+  name: "Investigateur",
   description: "La plupart des personnes de ce type ont des connaissances théoriques auxquelles elles ont recours pour agir. Elles disposent de renseignements spécialisés dont elles se servent pour résoudre des problèmes. Ce sont des personnes qui observent. Leur principale compétence tient à la compréhension qu’elles ont des phénomènes. Elles aiment bien se laisser absorber dans leurs réflexions. Elles aiment jouer avec les idées. Elles valorisent le savoir. Ces personnes sont critiques, curieuses, soucieuses de se renseigner, calmes, réservées, persévérantes, tolérantes, prudentes dans leurs jugements, logiques, objectives, rigoureuses, intellectuelles.",
   avatar_f: "investigateur.jpg",
   avatar_m: "investigateur.jpg")
-PersonalityRiasec.find_by name: "Investigateur/trice"
+PersonalityRiasec.find_by name: "Investigateur"
 
 PersonalityRiasec.create!(
-  name: "Social/e",
+  name: "Social",
   description: "Les personnes de ce type aiment être en contact avec les autres dans le but de les aider, de les informer, de les éduquer, de les divertir, de les soigner ou encore de favoriser leur croissance. Elles s’intéressent aux comportements humains et sont soucieuses de la qualité de leurs relations avec les autres. Elles utilisent leur savoir ainsi que leurs impressions et leurs émotions pour agir et pour interagir avec les autres. Elles aiment communiquer et s’expriment facilement. Ces personnes sont attentives aux autres, coopératives, collaboratrices, compréhensives, dévouées, sensibles, sympathiques, perspicaces, bienveillantes, communicatives, encourageantes.",
   avatar_f: "social.jpg",
   avatar_m: "social.jpg")
-PersonalityRiasec.find_by name: "Social/e"
+PersonalityRiasec.find_by name: "Social"
 
 
 puts 'Creating careers...'
@@ -558,7 +558,7 @@ puts 'Creating careers...'
 Career.destroy_all
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
-filepath = 'metier-artistique.csv'
+filepath = 'metiers.csv'
 CSV.foreach(filepath, csv_options) do |row|
   p row['personnalite'].capitalize
   personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)

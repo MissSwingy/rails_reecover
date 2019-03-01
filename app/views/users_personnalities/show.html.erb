@@ -1,11 +1,11 @@
 <div class="container-results">
   <div class="avatar-personnality">
-    <h2>Ta personnalité</h2>
+    <h1>Vous avez un profil de type :</h1>
 
       <%= image_tag (@personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
 
     <h2><%= @personality_riasec.name %></h2>
-    <h4><%= @personality_riasec.description %></h4>
+    <p><%= @personality_riasec.description %></p>
   </div>
 
   <div class="cards-results-quiz">
