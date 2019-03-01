@@ -9,6 +9,8 @@
       <p><%= @personality_riasec.description %></p>
     </div>
 
+    <div id="randomize-career" class="btn btn-primary btn-lg"><i class="fas fa-dice"></i></div>
+
     <div class="cards-results-quiz text-center">
       <% @personality_riasec.careers.sample(3).each do |career| %>
         <%= link_to users_personnalities_path(personality: @personality_riasec, career: career), method: :post do %>
