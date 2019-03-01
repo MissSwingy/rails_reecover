@@ -9,18 +9,14 @@
   </div>
 
   <div class="cards-results-quiz">
-
-    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(h)">
-      Métier 1
-    </div>
-
-    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-      Métier 2
-    </div>
-
-    <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-      Métier 3
-    </div>
-
+    <% @personality_riasec.careers.sample(3).each do |career| %>
+      <%= link_to users_personnalities_path(personality: @personality_riasec, career: career), method: :post do %>
+        <div class="card-category-career-results" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(h)">
+          <%= career.title %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
+
 </div>
+
