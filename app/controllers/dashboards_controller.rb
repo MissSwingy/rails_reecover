@@ -1,6 +1,7 @@
 class DashboardsController < ApplicationController
   def show
     @user = current_user
+    @user_personality = UsersPersonality.find_by(user_id: current_user)
     # To uncomment when other tables will be created.
     # @training_centers = current_user.users_personalities.training_centers.where.not(latitude: nil, longitude: nil)
 

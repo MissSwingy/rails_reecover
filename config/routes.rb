@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # resources :dashboards, only: [:show, :update]
   get "dashboards/:user_id", to: "dashboards#show", as: "dashboard"
   get 'users_personnalities/:user_id', to: "users_personnalities#show", as: "results"
+  resources :users_personnalities, only: :create
   root to: 'pages#home'
   # resources :surveys, only: [:index, :show]
   resources :answers, only: [] do
