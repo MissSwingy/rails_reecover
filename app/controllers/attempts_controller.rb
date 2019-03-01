@@ -5,22 +5,21 @@ class AttemptsController < ApplicationController
     @questions = @survey.questions.where(gender: [nil, current_user.gender])
   end
 
-  def create
-    raise
-    @survey = Survey.find(params[:id])
-    redirect_to edit_attempt_path(@attempt)
-  end
+  # def create
+  #   @survey = Survey.find(params[:id])
+  #   redirect_to edit_attempt_path(@attempt)
+  # end
 
-  def edit
-    @attempt = Attempt.find(params[:id])
-    @user = current_user
-  end
+  # def edit
+  #   @attempt = Attempt.find(params[:id])
+  #   @user = current_user
+  # end
 
   def update
     @attempt = Attempt.find(params[:id])
     @user = current_user
-    @user_answers = UserAnswer.all.where(user_id: @user) #ne marchera pas
-    # @attempt = Attempt.where(user_id: @user).last
+    @user_answer = UserAnswer.all.where(user_id: @user)
+    @user_answers = @user_answer.where(attempt_id: @attempt)
     @user_answers.each do |answer|
       @attempt.result << answer.answer.column
     end
