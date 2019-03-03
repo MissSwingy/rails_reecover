@@ -1,0 +1,60 @@
+fr:
+ simple_form:
+
+    "yes": 'Oui'
+
+    "no": 'Non'
+
+    required:
+
+      text: 'requis'
+
+      # mark: '*'
+
+      html: '<abbr title="requis">**</abbr>'
+
+    error_notification:
+
+      default_message: "Merci de corriger les erreurs signalées:"
+
+    labels:
+
+      defaults:
+
+        password: 'Mot de passe'
+
+        remember_me: 'Se souvenir de moi'
+
+        first_name: 'Prénom'
+
+        last_name: 'Nom'
+
+        first name: 'Prénom'
+
+        last name: 'Nom'
+
+        gender: 'Genre'
+
+        Password_confirmation: 'Confirmation de mot de passe'
+
+        # Signed_in_successfully: 'Connecté avec succès'
+
+        # Signed_out_successfully: 'Déconnecté avec succès'
+
+    #   address:
+
+    #     street_number: "N°"
+
+    #     building: "Code de votre bâtiment"
+
+    hints:
+
+      defaults:
+
+        leave it blank if you don't want to change it: 'Laissez le champ vide si vous ne voulez pas le changer'
+
+        we need your current password to confirm your changes: 'Nous avons besoin de votre mot de passe actuel pour confirmer vos modifications'
+
+    #     building: 'Exemple: Bâtiment 2A'
+
+    #     street_number: 'Uniquement le numéro de rue'

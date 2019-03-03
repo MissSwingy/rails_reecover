@@ -1,3 +1,7 @@
+
+<% I18n.translate %>
+
+
 <body class="bg-gradient-danger">
 
   <div class="container">
@@ -51,9 +55,9 @@
                             input_html: { autocomplete: "bio" }, :placeholder => "Bio", class: 'form-user form-control-user'%>
                             <%= f.input :photo %>
                             <%= f.input :photo_cache, as: :hidden %>
-                             <%= f.input :password,
+                            <%= f.input :password,
                             required: true,
-                            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                            hint: ("#{@minimum_password_length} caractères min." if @minimum_password_length),
                             input_html: { autocomplete: "new-password" }, :placeholder => "Mot de passe" %>
                              <%= f.input :password_confirmation,
                             required: true,
