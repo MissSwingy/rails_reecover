@@ -18,7 +18,9 @@
     <ul class="sidebar-nav sidebar-brand">
        <%= cl_image_tag current_user.photo, class: "avatar-dashbord", id: "navbar-wagon-menu" %>
        <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top"><i class="fas fa-home"></i>   Accueil</a>
+        <%= link_to root_path 'Accueil' do %>
+        <i class="fas fa-home"></i>   Accueil
+        <% end %>
       </li>
       <li class="sidebar-nav-item">
         <%= link_to dashboard_path(current_user) do %>

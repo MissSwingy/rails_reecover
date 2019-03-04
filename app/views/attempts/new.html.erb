@@ -3,7 +3,7 @@
   <div data-container="0">
     <header class="masthead-img d-flex" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "skateboard-survey-light.jpg", alt: "skateboard background survey" %>);">
       <div class="container h-100 bg-overlay">
-        <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
         <%= link_to root_path do %>
           <%= image_tag "logo-reecover-transparent-white.png", height: 120 %>
         <% end %>
@@ -17,30 +17,18 @@
 
             <!-- button gender male-->
             <div data-button class="a-button-gender">
-              <div class="a-button-gender__background">
-                <div class="a-button-gender__circle a-button-gender__circle--1" style="opacity: 0.29699; transform: translate3d(0px, 0px, 0px) scale(0.999398, 0.999398);">
-                </div>
-                <div class="a-button-gender__circle a-button-gender__circle--2"  style="opacity: 0.0937528; transform: translate3d(0px, 0px, 0px) scale(0.993753, 0.993753);">
-                </div>
-              </div>
                 <div class="a-button-gender__content">
-                  <div class="a-button-gender__circle a-button-gender__circle--3" style="opacity: 0.9;"></div>
-                  <div class="a-button-gender__text"><i class="fas fa-mars fa-2x"></i><br>Sportif</div>
+                  <div class="a-button-gender__text"> <%= image_tag "male-athlete.jpg", class: "img-gender pulse-button" %><br><strong>Sportif</strong></div>
                 </div>
             </div>
 
           <!-- button gender female-->
           <div data-button class="a-button-gender">
-            <div class="a-button-gender__background">
-            <div class="a-button-gender__circle a-button-gender__circle--1" style="opacity: 0.29699; transform: translate3d(0px, 0px, 0px) scale(0.999398, 0.999398);"></div>
-            <div class="a-button-gender__circle a-button-gender__circle--2" style="opacity: 0.0937528; transform: translate3d(0px, 0px, 0px) scale(0.993753, 0.993753);"></div>
-            </div>
               <div class="a-button-gender__content">
-                  <div class="a-button-gender__circle a-button-gender__circle--3" style="opacity: 0.9;">
-                  </div>
-                  <div class="a-button-gender__text"><i class="fas fa-venus fa-2x"></i><br>Sportive</div>
+                  <div class="a-button-gender__text"> <%= image_tag "female-athlete.jpg", class: "img-gender-f pulse-button" %><br><strong>Sportive</strong></div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
