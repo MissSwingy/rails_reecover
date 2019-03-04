@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   # resources :dashboards, only: [:show, :update]
+
   get "dashboards/:user_id", to: "dashboards#show", as: "dashboard"
   get 'users_personnalities/:user_id', to: "users_personnalities#show", as: "results"
   resources :users_personnalities, only: :create
@@ -13,5 +14,6 @@ Rails.application.routes.draw do
   resources :surveys, only: [:index, :show] do
     resources :attempts, only: [:new, :create, :edit, :update]
   end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
