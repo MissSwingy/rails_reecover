@@ -1,6 +1,6 @@
   <!-- Navigation -->
   <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars fa-2x"></i>
   </a>
   <nav id="sidebar-wrapper">
   <% if user_signed_in? %>
@@ -33,12 +33,19 @@
         </div>
       </div>
     <% else %>
+    </ul>
+    <ul class="sidebar-nav sidebar-brand">
       <li class="sidebar-nav-item">
         <!-- Login link (when logged out) -->
-         <%= link_to t(".sign_in", default: "Se connecter"), new_user_session_path, class: "btn btn-warning" %>
+         <%= link_to new_user_session_path do %>
+         <i class="fas fa-sign-in-alt"></i> <%= t(".sign_in", default: "Se connecter") %>
+         <% end %>
           </li>
-    <% end %>
-          </ul>
+        <% end %>
+        <li class="sidebar-nav-item">
+         <%= link_to new_user_registration_path do %>
+         <i class="fas fa-user"></i> <%= t(".sign_up", default: "Créer mon compte") %>
+         <% end %>
+          </li>
+    </ul>
   </nav>
-
-

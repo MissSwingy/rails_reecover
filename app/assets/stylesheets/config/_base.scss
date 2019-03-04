@@ -2753,7 +2753,7 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #f6c23e;
+  background-color: #fd7e146e !important;
   border-color: #f6c23e;
 }
 
@@ -3193,7 +3193,7 @@ fieldset:disabled a.btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem;
+  border-radius: 3.5rem !important;
 }
 
 .btn-sm, .btn-group-sm > .btn {
