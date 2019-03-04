@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_112139) do
+ActiveRecord::Schema.define(version: 2019_03_04_143932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_112139) do
     t.bigint "personality_riasec_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "salary"
     t.index ["personality_riasec_id"], name: "index_careers_on_personality_riasec_id"
   end
 
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_112139) do
     t.bigint "career_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "postal_code"
     t.index ["career_id"], name: "index_training_centers_on_career_id"
   end
 
