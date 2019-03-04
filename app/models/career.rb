@@ -6,13 +6,13 @@ class Career < ApplicationRecord
   include PgSearch
   multisearchable against: [:title, :category]
 
-  def intiialize
-    PgSearch.multisearch_options = {
-      using: :tsearch {prefix: true },
-      using: :trigram],
-      ignoring: :accents
-    }
-  end
+  # def initialize
+  #   PgSearch.multisearch_options = {
+  #     using: :tsearch {prefix: true },
+  #     using: :trigram],
+  #     ignoring: :accents
+  #   }
+  # end
   #   ignoring: :accents,
   #   using: {
   #     tsearch: { prefix: true }
