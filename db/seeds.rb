@@ -5,6 +5,47 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "destroy all centers"
+
+TrainingCenter.destroy_all
+
+puts 'Creating centers...'
+
+dev = Career.find_by title: "Ingénieur en informatique"
+
+centre1 = TrainingCenter.new(
+name: "Le Wagon",
+address: "16, Villa Gaudelet",
+city: "Paris",
+category: "TI",
+email: "lewagon@lewagon.org",
+telephone: "0101010101",
+website: "http://www.lewagon.org",
+latitude: "48.86",
+longitude: "2.37",
+career: dev
+)
+centre1.save!
+
+com = Career.find_by title: "Gérant de commerce de détail"
+
+centre2 = TrainingCenter.new(
+name: "ESCP",
+address: "179 Avenue de la République",
+city: "Paris",
+category: "Commerce",
+email: "escp@escpeurope.eu",
+telephone: "0101010101",
+website: "https://www.escpeurope.eu/",
+latitude: "48.87",
+longitude: "2.35",
+career: com
+)
+
+centre2.save!
+puts 'end...'
+
+
 
 puts "destroy all users"
 

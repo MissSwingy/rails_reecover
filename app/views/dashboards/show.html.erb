@@ -63,8 +63,15 @@
     <!-- Page Content  -->
     <div id="content">
       <div class="grid">
-        <div class="search-bar">
-          <p></p>
+        <div class="search-bar form-inline">
+          <%= form_tag careers_path, method: :get do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Trouver une formation"
+            %>
+            <%= button_tag "Rechercher", class: "btn btn-warning btn-lg" %>
+          <% end %>
         </div>
         <h2 class="title">Bienvenue sur votre compte <%= @user.first_name %> </h2>
         <div class="card-1">
