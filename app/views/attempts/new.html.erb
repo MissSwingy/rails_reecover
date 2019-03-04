@@ -1,12 +1,17 @@
+<%= render 'shared/sidebar_menu' %>
 <!-- @answers[1].photo -->
   <div data-container="0">
-    <section class="masthead d-flex">
-      <div class="container text-center my-auto">
+    <header class="masthead-img d-flex" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "skateboard-survey-light.jpg", alt: "skateboard background survey" %>);">
+      <div class="container h-100 bg-overlay">
         <div class="row h-100 align-items-center">
-          <div class="col-12 text-center">
-            <h1 style="color: #eee"><strong>Pour quels métiers êtes-vous fait ?</strong></h1>
-          </div>
-        </div>
+        <%= link_to root_path do %>
+          <%= image_tag "logo-reecover-transparent-white.png", height: 120 %>
+        <% end %>
+        <br>
+        <h1><strong>Votre carrière a de la valeur</strong></h1>
+        <hr class="col-6">
+        <h4>Vous souhaitez donner un nouvel élan à votre carrière ?
+        </h4>
 
         <div class="o-section-home__select-gender m-select-gender">
 
@@ -37,8 +42,9 @@
               </div>
             </div>
           </div>
+        </div>
       </div>
-    </section>
+    </header>
   </div>
 
 

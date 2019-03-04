@@ -12,7 +12,7 @@
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: linear-gradient(to right, #dc124e78, #e7852da1 50%);
+  background-color: #1d1d1da1;
   border-left: 1px solid fade-out($white, 0.9);
 }
 
@@ -86,9 +86,9 @@
   text-align: center;
 
   color: $white;
-  background: $gradient;
 
   line-height: 50px;
+  padding-top: 8px;
 
   z-index: 999;
   &:focus,
@@ -96,7 +96,7 @@
     color: $white;
   }
   &:hover {
-    background: linear-gradient(to top left,#ff8a00,#da1b60);
+    background:  #1d1d1da1;
   }
   &.active {
     // background-color: $white;
