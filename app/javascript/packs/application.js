@@ -8,3 +8,8 @@ hideFirstQuestion();
 
 import { toggleSidebar } from '../components/sidebar_toggle';
 toggleSidebar();
+
+import { reloadPage } from '../components/randomize_career';
+if (document.getElementById('randomize-career')) {
+  reloadPage();
+}

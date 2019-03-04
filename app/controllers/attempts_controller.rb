@@ -5,16 +5,6 @@ class AttemptsController < ApplicationController
     @questions = @survey.questions.where(gender: [nil, current_user.gender])
   end
 
-  # def create
-  #   @survey = Survey.find(params[:id])
-  #   redirect_to edit_attempt_path(@attempt)
-  # end
-
-  # def edit
-  #   @attempt = Attempt.find(params[:id])
-  #   @user = current_user
-  # end
-
   def update
     @attempt = Attempt.find(params[:id])
     @user = current_user

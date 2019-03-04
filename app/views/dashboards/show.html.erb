@@ -5,6 +5,7 @@
         <div class="sidebar-header">
           <%= image_tag @user_personality.career.personality_riasec.avatar_f, class: "avatar-large", alt: "avatar-large" %>
           <p><%= @user_personality.career.personality_riasec.name %></p>
+          <p>Votre choix de métier :<br><%= @user_personality.career.title %></p>
           <h3><%= @user.first_name %><br><%= @user.last_name %></h3>
         </div>
 
@@ -25,7 +26,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Votre personnalité</a>
+              <%= link_to "Votre personnalité", results_path(current_user) %>
             </li>
             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Vos métiers</a>
@@ -63,7 +64,7 @@
     <div id="content">
       <div class="grid">
         <div class="search-bar">
-
+          <p></p>
         </div>
         <h2 class="title">Bienvenue sur votre compte <%= @user.first_name %> </h2>
         <div class="card-1">
