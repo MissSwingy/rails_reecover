@@ -607,7 +607,7 @@ puts 'Creating careers...'
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 filepath = 'metier2.csv'
-filepath2 = 'training_centers.csv'
+filepath2 = 'training_centers3.csv'
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 training_centers = []
 CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
@@ -634,7 +634,7 @@ count = 0
   training_centers.each_with_index do |training, index|
     if count < 6
       t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
-      if c.category == t.category && Geocoder.coordinates(t.full_address) != nil
+      if c.category == t.category
         t.save
         training_centers.delete_at(index)
         count += 1
