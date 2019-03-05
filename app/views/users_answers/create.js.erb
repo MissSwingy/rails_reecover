@@ -1,4 +1,3 @@
-
 function nextQuestion() {
   const lastAnswerQuestion = document.getElementById("question-<%= @user_answer.answer.question.id %>");
   const nextQuestionDataQuestion = parseInt(lastAnswerQuestion.dataset.question) + 1;
@@ -6,9 +5,11 @@ function nextQuestion() {
   nextQuestion.scrollIntoView();
   for (var i = 0; i < nextQuestionDataQuestion; i++) {
     document.querySelector("[data-container='" + i + "']").style.display="none";
-}
+  }
   // const nextQuestionId = "question-<%= @user_answer.answer.question.id + 1 %>";
   // location.hash = nextQuestionId;
+  document.querySelector("[data-container='" + nextQuestionDataQuestion + "']").classList.add('fade-in');
+  console.log('yay')
 }
 
 nextQuestion();

@@ -18,11 +18,18 @@
     <ul class="sidebar-nav sidebar-brand">
        <%= cl_image_tag current_user.photo, class: "avatar-dashbord", id: "navbar-wagon-menu" %>
        <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top"><i class="fas fa-home"></i>   Accueil</a>
+        <%= link_to root_path 'Accueil' do %>
+        <i class="fas fa-home"></i>   Accueil
+        <% end %>
       </li>
       <li class="sidebar-nav-item">
         <%= link_to dashboard_path(current_user) do %>
                 <i class="fas fa-user"></i> <%= t(".profile", default: "Mon compte") %>
+              <% end %>
+      </li>
+        <li class="sidebar-nav-item">
+        <%= link_to new_survey_attempt_path(Survey.last) do %>
+                <i class="fas fa-poll-h"></i> <%= t(".profile", default: "Test RIASEC") %>
               <% end %>
       </li>
        <li class="sidebar-nav-item">
@@ -30,8 +37,6 @@
               <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
          <% end %>
             </li>
-        </div>
-      </div>
     <% else %>
     </ul>
     <ul class="sidebar-nav sidebar-brand">
@@ -41,11 +46,11 @@
          <i class="fas fa-sign-in-alt"></i> <%= t(".sign_in", default: "Se connecter") %>
          <% end %>
           </li>
-        <% end %>
         <li class="sidebar-nav-item">
          <%= link_to new_user_registration_path do %>
          <i class="fas fa-user"></i> <%= t(".sign_up", default: "Créer mon compte") %>
          <% end %>
           </li>
+        <% end %>
     </ul>
   </nav>

@@ -1,5 +1,5 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
+
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo-reecover-transparent-white.png", height: 100 %>
   <% end %>
@@ -10,8 +10,6 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-     <!--  <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %> -->
       <% if params[:controller] === "dashboards" %>
         <button type="button" id="sidebarCollapse" class="btn btn-info">
           <i class="fas fa-align-left"></i>
@@ -21,6 +19,16 @@
       <% end %>
 
       <!-- Avatar with dropdown menu -->
+      <div class="search-bar form-inline">
+        <%= form_tag careers_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouver une formation "
+          %>
+          <%= button_tag "Rechercher", class: "btn btn-warning btn-lg" %>
+        <% end %>
+      </div>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -32,12 +40,12 @@
             </li>
             <li>
               <%= link_to dashboard_path(current_user) do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Dashboard") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
               <% end %>
             </li>
           </ul>
