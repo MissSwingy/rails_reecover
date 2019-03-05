@@ -15,5 +15,12 @@ class DashboardsController < ApplicationController
       lat: @user.latitude,
       image_url: helpers.asset_url(@user.photo)
     }
+
+    @results = PgSearch.multisearch(params[:query])
+
+    # respond_to do |format|
+    #   format.html { render 'dashboards/show' }
+    #   format.js
+    # end
   end
 end
