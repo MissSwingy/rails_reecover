@@ -171,9 +171,9 @@ question2.save!
 
 answer21 = Answer.new(
 question: question2,
-column: "R",
-answer: "La Fureur de Vaincre",
-photo: "quiz/2qfilms/lafureur.jpg")
+column: "C",
+answer: "Karaté Kid",
+photo: "quiz/2qfilms/karatekid.jpg")
 answer21.save!
 
 answer22 = Answer.new(
@@ -199,16 +199,16 @@ answer24.save!
 
 answer25 = Answer.new(
 question: question2,
-column: "C",
-answer: "Karaté Kid",
-photo: "quiz/2qfilms/karatekid.jpg")
+column: "E",
+answer: "Jerry Maguire",
+photo: "quiz/2qfilms/maguire.jpg")
 answer25.save!
 
 answer26 = Answer.new(
 question: question2,
-column: "E",
-answer: "Jerry Maguire",
-photo: "quiz/2qfilms/maguire.jpg")
+column: "R",
+answer: "La Fureur de Vaincre",
+photo: "quiz/2qfilms/lafureur.jpg")
 answer26.save!
 
 question3 = Question.new(
@@ -219,16 +219,16 @@ question3.save!
 
 answer31 = Answer.new(
 question: question3,
-column: "R",
-answer: "Bernard Tapie",
-photo: "quiz/4qhommes/tapie.jpg")
+column: "I",
+answer: "Stephen Hawking",
+photo: "quiz/4qhommes/hawking.jpg")
 answer31.save!
 
 answer32 = Answer.new(
 question: question3,
-column: "I",
-answer: "Stephen Hawking",
-photo: "quiz/4qhommes/hawking.jpg")
+column: "R",
+answer: "Bernard Tapie",
+photo: "quiz/4qhommes/tapie.jpg")
 answer32.save!
 
 answer33 = Answer.new(
@@ -247,16 +247,16 @@ answer34.save!
 
 answer35 = Answer.new(
 question: question3,
-column: "S",
-answer: "Teddy Riner",
-photo: "quiz/4qhommes/rider.jpg")
+column: "C",
+answer: "David Douillet",
+photo: "quiz/4qhommes/douillet.jpg")
 answer35.save!
 
 answer36 = Answer.new(
 question: question3,
-column: "C",
-answer: "David Douillet",
-photo: "quiz/4qhommes/douillet.jpg")
+column: "S",
+answer: "Teddy Riner",
+photo: "quiz/4qhommes/rider.jpg")
 answer36.save!
 
 question4 = Question.new(
@@ -268,44 +268,44 @@ question4.save!
 
 answer41 = Answer.new(
 question: question4,
-column: "I",
-answer: "Marie Curie",
-photo: "quiz/3qfemmes/mariecurie.jpg")
+column: "C",
+answer: "Anne-Laure Bonnet",
+photo: "quiz/3qfemmes/bonnet.jpg")
 answer41.save!
 
 answer42 = Answer.new(
 question: question4,
-column: "R",
-answer: "Laure Boulleau",
-photo: "quiz/3qfemmes/laureboulleau.jpg")
+column: "S",
+answer: "Mère Teresa",
+photo: "quiz/3qfemmes/mereteresa.jpg")
 answer42.save!
 
 answer43 = Answer.new(
 question: question4,
-column: "A",
-answer: "J. K. Rowling",
-photo: "quiz/3qfemmes/rowling.jpg")
+column: "E",
+answer: "Angela Merkel",
+photo: "quiz/3qfemmes/merkel.jpg")
 answer43.save!
 
 answer44 = Answer.new(
 question: question4,
-column: "C",
-answer: "Anne-Laure Bonnet",
-photo: "quiz/3qfemmes/bonnet.jpg")
+column: "I",
+answer: "Marie Curie",
+photo: "quiz/3qfemmes/mariecurie.jpg")
 answer44.save!
 
 answer45 = Answer.new(
 question: question4,
-column: "S",
-answer: "Mère Teresa",
-photo: "quiz/3qfemmes/mereteresa.jpg")
+column: "R",
+answer: "Laure Boulleau",
+photo: "quiz/3qfemmes/laureboulleau.jpg")
 answer45.save!
 
 answer46 = Answer.new(
 question: question4,
-column: "E",
-answer: "Angela Merkel",
-photo: "quiz/3qfemmes/merkel.jpg")
+column: "A",
+answer: "J. K. Rowling",
+photo: "quiz/3qfemmes/rowling.jpg")
 answer46.save!
 
 question5 = Question.new(
@@ -361,19 +361,19 @@ question: "Ton loisir préféré pour décompresser :",
 survey: Survey.last)
 question6.save!
 
-answer61 = Answer.new(
-question: question6,
-column: "E",
-answer: "Randonnée en nature",
-photo: "quiz/8qhobbies/randonne.jpg")
-answer61.save!
-
 answer62 = Answer.new(
 question: question6,
 column: "C",
 answer: "Bricolage",
 photo: "quiz/8qhobbies/bricolage.jpg")
 answer62.save!
+
+answer61 = Answer.new(
+question: question6,
+column: "E",
+answer: "Randonnée en nature",
+photo: "quiz/8qhobbies/randonne.jpg")
+answer61.save!
 
 answer63 = Answer.new(
 question: question6,
@@ -418,30 +418,30 @@ answer71.save!
 
 answer72 = Answer.new(
 question: question7,
-column: "R",
-answer: "FIFA",
-photo: "quiz/6qgaming/fifa.jpg")
+column: "S",
+answer: "The Sims",
+photo: "quiz/6qgaming/sims.jpg")
 answer72.save!
 
 answer73 = Answer.new(
 question: question7,
-column: "S",
-answer: "The Sims",
-photo: "quiz/6qgaming/sims.jpg")
+column: "R",
+answer: "FIFA",
+photo: "quiz/6qgaming/fifa.jpg")
 answer73.save!
 
 answer74 = Answer.new(
 question: question7,
-column: "A",
-answer: "GuitarHero",
-photo: "quiz/6qgaming/guitarhero.jpg")
+column: "C",
+answer: "Super Mario Bros",
+photo: "quiz/6qgaming/supermario.jpg")
 answer74.save!
 
 answer75 = Answer.new(
 question: question7,
-column: "C",
-answer: "Super Mario Bros",
-photo: "quiz/6qgaming/supermario.jpg")
+column: "A",
+answer: "GuitarHero",
+photo: "quiz/6qgaming/guitarhero.jpg")
 answer75.save!
 
 answer76 = Answer.new(
@@ -507,9 +507,9 @@ question9.save!
 
 answer91 = Answer.new(
 question: question9,
-column: "R",
-answer: "Concret(e)",
-photo: "quiz/9qpersonality/concret.jpg")
+column: "A",
+answer: "Créatif(ve)",
+photo: "quiz/9qpersonality/creatif.jpg")
 answer91.save!
 
 answer92 = Answer.new(
@@ -528,16 +528,16 @@ answer93.save!
 
 answer94 = Answer.new(
 question: question9,
-column: "S",
-answer: "Sociable",
-photo: "quiz/9qpersonality/sociable.jpg")
+column: "R",
+answer: "Concret(e)",
+photo: "quiz/9qpersonality/concret.jpg")
 answer94.save!
 
 answer95 = Answer.new(
 question: question9,
-column: "A",
-answer: "Créatif(ve)",
-photo: "quiz/9qpersonality/creatif.jpg")
+column: "S",
+answer: "Sociable",
+photo: "quiz/9qpersonality/sociable.jpg")
 answer95.save!
 
 answer96 = Answer.new(

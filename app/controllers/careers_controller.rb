@@ -2,6 +2,10 @@ class CareersController < ApplicationController
   def index
     @careers = Career.all
     @results = PgSearch.multisearch(params[:query])
+    # respond_to do |format|
+    #   format.html { render 'dashboard' }
+    #   format.js
+    # end
   end
 
   def show
