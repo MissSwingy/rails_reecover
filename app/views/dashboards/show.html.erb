@@ -64,7 +64,7 @@
     <div id="content">
       <div class="grid">
         <div class="search-bar form-inline">
-          <%= form_tag dashboard_path, remote: true, method: :get do %>
+          <%= form_tag dashboard_path, method: :get do %>
             <%= text_field_tag :query,
             params[:query],
             class: "form-control",
@@ -74,16 +74,39 @@
           <% end %>
         </div>
         <div>
-          <% @results.map do |result| %>
-            <% Object.const_get(result.searchable_type).find(result.searchable_id) %>
-          <% end  %>
-          <div>
-            <ul id="show-results">
-            </ul>
-          </div>
-        </div>
         <h2 class="title">Bienvenue sur votre compte <%= @user.first_name %> </h2>
-        <div class="card-1">
+        </div>
+          <% @results.each do |result| %>
+            <% if result.searchable_type == "TrainingCenter" %>
+          <div class="card-1">
+            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
+              <div class="card-category">CENTRE DE FORMATION
+              </div>
+              <div class="card-description">
+                <h2><%= result.searchable.name %></h2>
+                <p><%= result.searchable.address %>, <%= result.searchable.city %></p>
+                <p><%= result.searchable.telephone %></p>
+                <p><%= result.searchable.email %></p>
+                <%= link_to result.searchable.website %>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-2">
+              <% else %>
+            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+              <div class="card-category">MÉTIER
+              </div>
+              <div class="card-description">
+                <h2><%= result.searchable.title %></h2>
+                <p><%= result.searchable.category %></p>
+                <% end  %>
+              <% end  %>
+              </div>
+            </div>
+
+        </div>
+<!--         <div class="card-3">
           <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
             <div class="card-category">Popular</div>
             <div class="card-description">
@@ -92,27 +115,7 @@
             </div>
           <a class="card-link" href="#" ></a>
           </div>
-        </div>
-        <div class="card-2">
-          <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-category">Popular</div>
-            <div class="card-description">
-              <h2>Le Wagon Shanghai</h2>
-              <p>Very cool city, the best</p>
-            </div>
-          <a class="card-link" href="#" ></a>
-          </div>
-        </div>
-        <div class="card-3">
-          <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-category">Popular</div>
-            <div class="card-description">
-              <h2>Le Wagon Shanghai</h2>
-              <p>Very cool city, the best</p>
-            </div>
-          <a class="card-link" href="#" ></a>
-          </div>
-        </div>
+        </div> -->
 <!--         to uncomment when all controllers are created -->
 <!--         <div
         id="map"
@@ -122,7 +125,7 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div> -->
       </div>
+    </div>
 </div>
-
 
 
