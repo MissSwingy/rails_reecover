@@ -13,3 +13,8 @@ import { reloadPage } from '../components/randomize_career';
 if (document.getElementById('randomize-career')) {
   reloadPage();
 }
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
+if (document.getElementById('map')) {
+  initMapbox();
+}
