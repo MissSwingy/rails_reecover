@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_112139) do
+ActiveRecord::Schema.define(version: 2019_03_04_234418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_112139) do
     t.bigint "personality_riasec_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "salary"
     t.index ["personality_riasec_id"], name: "index_careers_on_personality_riasec_id"
   end
 
@@ -51,6 +52,15 @@ ActiveRecord::Schema.define(version: 2019_02_28_112139) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -94,6 +104,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_112139) do
     t.bigint "career_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "postal_code"
     t.index ["career_id"], name: "index_training_centers_on_career_id"
   end
 
@@ -123,6 +134,8 @@ ActiveRecord::Schema.define(version: 2019_02_28_112139) do
     t.string "bio"
     t.string "address"
     t.string "photo"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
