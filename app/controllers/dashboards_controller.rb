@@ -10,12 +10,18 @@ class DashboardsController < ApplicationController
 
     # To uncomment when other tables will be created.
     # @training_centers = current_user.users_personalities.training_centers.where.not(latitude: nil, longitude: nil)
+    @training_centers = TrainingCenter.where(career_id: @user_personality[:career_id]).where.not(latitude: nil, longitude: nil).near(@user, 1000)
 
-    # @markers = @training_centers.map do |training_center|
-    #   {
-    #     lng: training_center.longitude,
-    #     lat: training_center.latitude
-    #   }
-    # end
+    @markers = @training_centers.first(3).map do |training_center|
+      {
+        lng: training_center.longitude,
+        lat: training_center.latitude
+      }
+    end
+    @markers << {
+      lng: @user.longitude,
+      lat: @user.latitude,
+      image_url: helpers.asset_url(@user.photo)
+    }
   end
 end

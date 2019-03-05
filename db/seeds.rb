@@ -595,16 +595,49 @@ PersonalityRiasec.find_by name: "Social"
 
 
 puts 'Creating careers...'
+puts 'Creating training centers...'
 
 Career.destroy_all
 
+
+
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
-filepath = 'metiers.csv'
-CSV.foreach(filepath, csv_options) do |row|
-  p row['personnalite'].capitalize
-  personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
-  c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec)
-  puts "#{c.title}"
+filepath = 'metier2.csv'
+filepath2 = 'training_centers.csv'
+csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
+training_centers = []
+CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
+  training_centers << {name: row['name'], address: row['address'], category: row['category'], postal_code: row['postal_code'], city: row['city']}
+end
+
+# count = 0
+# puts training_centers.count
+# training_centers.each_with_index do |training, index|
+#   if count < 6
+#     puts index
+#     puts training[:name]
+#     training_centers.delete_at(index)
+#     count += 1
+#     puts training_centers.count
+#   end
+# end
+
+CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
+puts row['personnalite'].capitalize
+personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
+c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
+count = 0
+  training_centers.each_with_index do |training, index|
+    if count < 6
+      t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
+      if c.category == t.category
+        t.save
+        training_centers.delete_at(index)
+        count += 1
+      else
+      end
+    end
+  end
 end
 
 puts "end"
