@@ -13,6 +13,8 @@ gem "rails-i18n"
 gem "i18n"
 gem 'devise-i18n', '~> 1.2'
 
+gem 'pg_search'
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.5.0'

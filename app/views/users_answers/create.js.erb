@@ -5,8 +5,6 @@ function nextQuestion() {
   nextQuestion.scrollIntoView();
   for (var i = 0; i < nextQuestionDataQuestion; i++) {
     document.querySelector("[data-container='" + i + "']").style.display="none";
-
-
   }
   document.querySelector("[data-container='" + i + "'] .cards-quiz").classList.add('fade-in');
   // const nextQuestionId = "question-<%= @user_answer.answer.question.id + 1 %>";

@@ -17,4 +17,4 @@ const hideFirstQuestion = ()  => {
 
 }
 
-export {hideFirstQuestion};
+export { hideFirstQuestion };
