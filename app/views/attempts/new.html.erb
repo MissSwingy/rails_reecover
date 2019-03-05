@@ -41,7 +41,7 @@
     <% @questions.each do |question| %>
 <!--             if question == @questions.last
           redirect_to sss_path -->
-    <div data-container="<%= @questions.index(question) + 1 %>" class="fade-in">
+    <div data-container="<%= @questions.index(question) + 1 %>">
       <div class="overlay"><h2 id="question-<%= question.id %>" class="text-center mb-5" data-question="<%= @questions.index(question) + 1 %>"> <%= question.question %> </h2></div>
         <div class="cards-quiz">
           <div class="row align-items-start text-center">
