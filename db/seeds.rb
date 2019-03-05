@@ -566,32 +566,38 @@ filepath2 = 'training_centers.csv'
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 training_centers = []
 CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
-  training_centers << [name: row['name'], address: row['address'], category: row['category'], postal_code: row['postal_code'], city: row['city']]
+  training_centers << {name: row['name'], address: row['address'], category: row['category'], postal_code: row['postal_code'], city: row['city']}
 end
 
-p training_centers.count
+# count = 0
+# puts training_centers.count
+# training_centers.each_with_index do |training, index|
+#   if count < 6
+#     puts index
+#     puts training[:name]
+#     training_centers.delete_at(index)
+#     count += 1
+#     puts training_centers.count
+#   end
+# end
 
 CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
 puts row['personnalite'].capitalize
 personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
 c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
 count = 0
-  training_centers.each do |training|
-  until count > 6
-  t = TrainingCenter.new(name: training[0][:name], address: training[0][:address], category: training[0][:category], postal_code: training[0][:postal_code], city: training[0][:city], career: c)
-    if c.category = t.category
-      t.save
-      training_centers.reject
-      count += 1
-    else
+  training_centers.each_with_index do |training, index|
+    if count < 6
+      t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
+      if c.category == t.category
+        t.save
+        training_centers.delete_at(index)
+        count += 1
+      else
+      end
     end
   end
 end
-end
-
-
-
-
 
 puts "end"
 
