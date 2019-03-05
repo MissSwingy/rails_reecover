@@ -589,7 +589,7 @@ count = 0
   training_centers.each_with_index do |training, index|
     if count < 6
       t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
-      if c.category == t.category
+      if c.category == t.category #&& Geocoder.coordinates(t.full_address) != nil
         t.save
         training_centers.delete_at(index)
         count += 1
