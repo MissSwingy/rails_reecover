@@ -1,14 +1,1 @@
-
-function nextQuestion() {
-  const lastAnswerQuestion = document.getElementById("question-<%= @user_answer.answer.question.id %>");
-  const nextQuestionDataQuestion = parseInt(lastAnswerQuestion.dataset.question) + 1;
-  const nextQuestion = document.querySelector("[data-question='" + nextQuestionDataQuestion + "']");
-  nextQuestion.scrollIntoView();
-  for (var i = 0; i < nextQuestionDataQuestion; i++) {
-    document.querySelector("[data-container='" + i + "']").style.display="none";
-}
-  // const nextQuestionId = "question-<%= @user_answer.answer.question.id + 1 %>";
-  // location.hash = nextQuestionId;
-}
-
-nextQuestion();
+console.log('ok')
