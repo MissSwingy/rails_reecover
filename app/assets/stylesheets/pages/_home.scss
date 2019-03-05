@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   color: #fff;
-  padding-top: 50px;
+  // padding-top: 50px;
 }
 
 #loading {
@@ -57,11 +57,23 @@
 
 @media (max-width: 767px) {
 .m-select-gender {
-    -webkit-box-orient: vertical;
+    // -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+}
+
+@media (max-width: 1023px) {
+.o-section-home__select-gender {
+    margin-top: -30px;
+  }
+}
+
+.m-select-gender__text {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .section-first {
@@ -83,8 +95,8 @@
   }
 
 .a-button-gender {
-    width: 370px;
-    height: 370px;
+    width: 250px;
+    height: 250px;
   }
 
 // .o-section-home__select-gender {
@@ -92,7 +104,7 @@
 // }
 .m-select-gender {
     position: relative;
-    max-width: 950px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     display: -webkit-box;
@@ -207,7 +219,7 @@
 
 
 .overlay {
-  background-image:linear-gradient(to top left,#ff8a00,#da1b60);
+  background-color: #444;
   padding-top: 15px;
   padding-bottom: 15px;
 }

@@ -9,7 +9,11 @@ hideFirstQuestion();
 import { toggleSidebar } from '../components/sidebar_toggle';
 toggleSidebar();
 
+import { carousel } from '../components/carousel';
+carousel();
+
 import { reloadPage } from '../components/randomize_career';
 if (document.getElementById('randomize-career')) {
   reloadPage();
 }
+

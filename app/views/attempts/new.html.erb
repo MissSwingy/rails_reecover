@@ -1,18 +1,18 @@
 <%= render 'shared/sidebar_menu' %>
 <!-- @answers[1].photo -->
-  <div data-container="0">
-    <header class="masthead-img d-flex" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "skateboard-survey-light.jpg", alt: "skateboard background survey" %>);">
-      <div class="container h-100 bg-overlay">
-        <div class="col-12 text-center">
+<div data-container="0">
+<header class="masthead-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "skateboard-survey-light.jpg", alt: "skateboard background survey" %>);">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+          <!-- Logo -->
         <%= link_to root_path do %>
           <%= image_tag "logo-reecover-transparent-white.png", height: 120 %>
         <% end %>
-        <br>
         <h1><strong>Votre carrière a de la valeur</strong></h1>
-        <hr class="col-6">
+        <hr class="col-4">
         <h4>Vous souhaitez donner un nouvel élan à votre carrière ?
         </h4>
-
+        <br><br>
         <div class="o-section-home__select-gender m-select-gender">
 
             <!-- button gender male-->
@@ -22,6 +22,8 @@
                 </div>
             </div>
 
+          <div class="m-select-gender__text">ou</div>
+
           <!-- button gender female-->
           <div data-button class="a-button-gender">
               <div class="a-button-gender__content">
@@ -30,12 +32,11 @@
             </div>
 
           </div>
-        </div>
       </div>
-    </header>
+    </div>
   </div>
-
-
+</header>
+  <!-- Header -->
   <div class="container-quiz">
     <% @questions.each do |question| %>
 <!--             if question == @questions.last
