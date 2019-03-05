@@ -1,58 +1,47 @@
 <%= render 'shared/sidebar_menu' %>
 <!-- @answers[1].photo -->
-  <div data-container="0">
-    <header class="masthead-img d-flex" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "skateboard-survey-light.jpg", alt: "skateboard background survey" %>);">
-      <div class="container h-100 bg-overlay">
-        <div class="row h-100 align-items-center">
+<div data-container="0" class="animated--fade-in">
+<header class="masthead-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "skateboard-survey-light.jpg", alt: "skateboard background survey" %>);">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+          <!-- Logo -->
         <%= link_to root_path do %>
           <%= image_tag "logo-reecover-transparent-white.png", height: 120 %>
         <% end %>
-        <br>
         <h1><strong>Votre carrière a de la valeur</strong></h1>
-        <hr class="col-6">
+        <hr class="col-4">
         <h4>Vous souhaitez donner un nouvel élan à votre carrière ?
         </h4>
-
+        <br><br>
         <div class="o-section-home__select-gender m-select-gender">
 
             <!-- button gender male-->
             <div data-button class="a-button-gender">
-              <div class="a-button-gender__background">
-                <div class="a-button-gender__circle a-button-gender__circle--1" style="opacity: 0.29699; transform: translate3d(0px, 0px, 0px) scale(0.999398, 0.999398);">
-                </div>
-                <div class="a-button-gender__circle a-button-gender__circle--2"  style="opacity: 0.0937528; transform: translate3d(0px, 0px, 0px) scale(0.993753, 0.993753);">
-                </div>
-              </div>
                 <div class="a-button-gender__content">
-                  <div class="a-button-gender__circle a-button-gender__circle--3" style="opacity: 0.9;"></div>
-                  <div class="a-button-gender__text"><i class="fas fa-mars fa-2x"></i><br>Sportif</div>
+                  <div class="a-button-gender__text"> <%= image_tag "male-athlete.jpg", class: "img-gender pulse-button" %><br><strong>Sportif</strong></div>
                 </div>
             </div>
+
+          <div class="m-select-gender__text">ou</div>
 
           <!-- button gender female-->
           <div data-button class="a-button-gender">
-            <div class="a-button-gender__background">
-            <div class="a-button-gender__circle a-button-gender__circle--1" style="opacity: 0.29699; transform: translate3d(0px, 0px, 0px) scale(0.999398, 0.999398);"></div>
-            <div class="a-button-gender__circle a-button-gender__circle--2" style="opacity: 0.0937528; transform: translate3d(0px, 0px, 0px) scale(0.993753, 0.993753);"></div>
-            </div>
               <div class="a-button-gender__content">
-                  <div class="a-button-gender__circle a-button-gender__circle--3" style="opacity: 0.9;">
-                  </div>
-                  <div class="a-button-gender__text"><i class="fas fa-venus fa-2x"></i><br>Sportive</div>
+                  <div class="a-button-gender__text"> <%= image_tag "female-athlete.jpg", class: "img-gender-f pulse-button" %><br><strong>Sportive</strong></div>
               </div>
             </div>
+
           </div>
-        </div>
       </div>
-    </header>
+    </div>
   </div>
-
-
+</header>
+  <!-- Header -->
   <div class="container-quiz">
     <% @questions.each do |question| %>
 <!--             if question == @questions.last
           redirect_to sss_path -->
-    <div data-container="<%= @questions.index(question) + 1 %>">
+    <div data-container="<%= @questions.index(question) + 1 %>" class="fade-in">
       <div class="overlay"><h2 id="question-<%= question.id %>" class="text-center mb-5" data-question="<%= @questions.index(question) + 1 %>"> <%= question.question %> </h2></div>
         <div class="cards-quiz">
           <div class="row align-items-start text-center">
@@ -60,7 +49,7 @@
             <div class="col-6 col-md-6 col-lg-4">
               <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
                 <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>')">
-                  <strong> <%= answer.answer %> </strong>
+                 <div class="quiz-answer"><p> <%= answer.answer %> </p></div>
                 </div>
               <% end %>
             </div>
