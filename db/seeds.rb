@@ -508,6 +508,10 @@ answer96.save!
 
 puts "ok"
 
+puts 'Destroying personalities_riasec...'
+
+PersonalityRiasec.destroy_all
+
 puts 'Creating personalities_riasec...'
 
 PersonalityRiasec.create!(
@@ -597,6 +601,12 @@ count = 0
       end
     end
   end
+end
+
+vartest = Career.all
+
+vartest.each do |career|
+  puts career.training_centers.count
 end
 
 puts "end"
