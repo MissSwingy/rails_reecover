@@ -11,7 +11,7 @@ TrainingCenter.destroy_all
 
 puts 'Creating centers...'
 
-dev = Career.find_by title: "Ingénieur en informatique"
+dev = Career.find_by title: "Commis de bourse"
 
 centre1 = TrainingCenter.new(
 name: "Le Wagon",
@@ -27,7 +27,7 @@ career: dev
 )
 centre1.save!
 
-com = Career.find_by title: "Gérant de commerce de détail"
+com = Career.find_by title: "Comptable"
 
 centre2 = TrainingCenter.new(
 name: "ESCP",
@@ -109,8 +109,10 @@ Survey.destroy_all
 
 puts "destroy all attempts"
 Attempt.destroy_all
+
 puts "destroy all users answers"
 UserAnswer.destroy_all
+
 puts 'Creating surveys...'
 
 survey = Survey.new()
@@ -549,6 +551,10 @@ answer96.save!
 
 puts "ok"
 
+puts 'Destroying personalities_riasec...'
+
+PersonalityRiasec.destroy_all
+
 puts 'Creating personalities_riasec...'
 
 PersonalityRiasec.create!(
@@ -594,11 +600,9 @@ PersonalityRiasec.create!(
 PersonalityRiasec.find_by name: "Social"
 
 
-puts 'Creating careers...'
 puts 'Creating training centers...'
 
-Career.destroy_all
-
+puts 'Creating careers...'
 
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
@@ -642,4 +646,5 @@ end
 
 puts "end"
 
-
+PgSearch::Multisearch.rebuild(Career)
+PgSearch::Multisearch.rebuild(TrainingCenter)

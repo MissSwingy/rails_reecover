@@ -59,22 +59,12 @@
             </li>
         </ul>
     </nav>
-
-  <!-- Page Content  -->
+<!--
+   Page Content -->
       <div id="content">
         <div class="grid">
-          <div class="search-bar form-inline">
-            <%= form_tag dashboard_path, method: :get do %>
-              <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Trouver une formation "
-              %>
-              <%= button_tag "Rechercher", class: "btn btn-warning btn-lg" %>
-            <% end %>
-          </div>
-            <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
-          <div class="card-1">
+          <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
+         <div class="card-1">
             <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
               <div class="card-category">Popular</div>
               <div class="card-description">
@@ -104,7 +94,7 @@
             <a class="card-link" href="#" ></a>
             </div>
           </div>
-  <!--         to uncomment when all controllers are created -->
+<!--       to uncomment when all controllers are created -->
           <div
           id="map"
           style="width: 100%;
@@ -117,33 +107,4 @@
 
     <!-- Page Content  -->
 
-    <div id="content">
-      <div class="grid">
-        <div class="card-1">
-          <% @results.each do |result| %>
-            <% if result.searchable_type == "TrainingCenter" %>
-              <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
-                <div class="card-category">CENTRE DE FORMATION
-                </div>
-                <div class="card-description">
-                  <h2><%= result.searchable.name %></h2>
-                  <p><%= result.searchable.address %>, <%= result.searchable.city %></p>
-                  <p><%= result.searchable.telephone %></p>
-                  <p><%= result.searchable.email %></p>
-                  <%= link_to result.searchable.website %>
-                </div>
-              </div>
-              <% else %>
-          </div>
-        <div class="card-2">
-          <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
-            <div class="card-category">MÉTIER
-            </div>
-            <div class="card-description">
-              <h2><%= result.searchable.title %></h2>
-              <p><%= result.searchable.category %></p>
-              <% end  %>
-            </div>
-          </div>
-            <% end  %>
-        </div>
+

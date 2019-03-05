@@ -19,6 +19,16 @@
       <% end %>
 
       <!-- Avatar with dropdown menu -->
+      <div class="search-bar form-inline">
+        <%= form_tag careers_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouver une formation "
+          %>
+          <%= button_tag "Rechercher", class: "btn btn-warning btn-lg" %>
+        <% end %>
+      </div>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
