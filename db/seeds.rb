@@ -5,45 +5,43 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "destroy all centers"
 
-TrainingCenter.destroy_all
 
-puts 'Creating centers...'
+# puts 'Creating centers...'
 
-dev = Career.find_by title: "Commis de bourse"
+# dev = Career.find_by title: "Commis de bourse"
 
-centre1 = TrainingCenter.new(
-name: "Le Wagon",
-address: "16, Villa Gaudelet",
-city: "Paris",
-category: "TI",
-email: "lewagon@lewagon.org",
-telephone: "0101010101",
-website: "http://www.lewagon.org",
-latitude: "48.86",
-longitude: "2.37",
-career: dev
-)
-centre1.save!
+# centre1 = TrainingCenter.new(
+# name: "Le Wagon",
+# address: "16, Villa Gaudelet",
+# city: "Paris",
+# category: "TI",
+# email: "lewagon@lewagon.org",
+# telephone: "0101010101",
+# website: "http://www.lewagon.org",
+# latitude: "48.86",
+# longitude: "2.37",
+# career: dev
+# )
+# centre1.save!
 
-com = Career.find_by title: "Comptable"
+# com = Career.find_by title: "Comptable"
 
-centre2 = TrainingCenter.new(
-name: "ESCP",
-address: "179 Avenue de la République",
-city: "Paris",
-category: "Commerce",
-email: "escp@escpeurope.eu",
-telephone: "0101010101",
-website: "https://www.escpeurope.eu/",
-latitude: "48.87",
-longitude: "2.35",
-career: com
-)
+# centre2 = TrainingCenter.new(
+# name: "ESCP",
+# address: "179 Avenue de la République",
+# city: "Paris",
+# category: "Commerce",
+# email: "escp@escpeurope.eu",
+# telephone: "0101010101",
+# website: "https://www.escpeurope.eu/",
+# latitude: "48.87",
+# longitude: "2.35",
+# career: com
+# )
 
-centre2.save!
-puts 'end...'
+# centre2.save!
+# puts 'end...'
 
 
 
@@ -98,20 +96,12 @@ francois.save!
 
 puts "ok"
 
-puts "destroy all answers"
-Answer.destroy_all
-
-puts "destroy all questions"
-Question.destroy_all
-
 puts "destroy all surveys"
 Survey.destroy_all
 
 puts "destroy all attempts"
 Attempt.destroy_all
 
-puts "destroy all users answers"
-UserAnswer.destroy_all
 
 puts 'Creating surveys...'
 
@@ -600,14 +590,56 @@ PersonalityRiasec.create!(
 PersonalityRiasec.find_by name: "Social"
 
 
-puts 'Creating training centers...'
 
 puts 'Creating careers...'
 
+Career.create!(
+  title: "Chef-cuisinier",
+  category: "Agro-alimentaire, alimentation, cuisine",
+  salary: 1521,
+  personality_riasec: PersonalityRiasec.find_by(name: "Réaliste")
+  )
+puts 'Creating training centers...'
+
+TrainingCenter.create!(
+  name: "Chef Martial",
+  address:"80 rue des Tournelles",
+  postal_code: "75003",
+  city: "Paris",
+  category:"Agro-alimentaire, alimentation, cuisine",
+  email: "contact@chefmartial.com",
+  telephone: "01 86 95 22 29",
+  website: "https://www.chefmartial.com/",
+  career: Career.find_by(title: "Chef-cuisinier")
+  )
+
+TrainingCenter.create!(
+  name: "Cuisine Mode d'Emploi(s)",
+  address:"7 Rue Albert Marquet",
+  postal_code: "75020",
+  city: "Paris",
+  category: "Agro-alimentaire, alimentation, cuisine",
+  email: "restaurant-paris@cme-formations.com",
+  telephone: "07 63 33 57 21",
+  website: "https://www.cuisinemodemplois.com/",
+  career: Career.find_by(title: "Chef-cuisinier")
+  )
+
+TrainingCenter.create!(
+  name: "Les coulisses du chef",
+  address:"7 rue Paul Lelong",
+  postal_code: "75002",
+  city: "Paris",
+  category: "Agro-alimentaire, alimentation, cuisine",
+  email:"olivier.berte@coursdecuisineparis.com",
+  telephone:"01 40 26 14 00",
+  website:"http://www.coulissesduchef.com",
+  career: Career.find_by(title: "Chef-cuisinier")
+  )
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 filepath = 'metier2.csv'
-filepath2 = 'training_centers.csv'
+filepath2 = 'training_centers3.csv'
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 training_centers = []
 CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
@@ -627,22 +659,31 @@ end
 # end
 
 CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
-puts row['personnalite'].capitalize
+# puts row['personnalite'].capitalize
 personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
 c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
 count = 0
   training_centers.each_with_index do |training, index|
     if count < 6
-      t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
-      if c.category == t.category
+      if c.category == training[:category]
+        t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
+        # if Geocoder.coordinates(t.full_address) != nil
         t.save
         training_centers.delete_at(index)
         count += 1
+        # else
+        # end
       else
       end
     end
   end
 end
+
+# vartest = Career.all
+
+# vartest.each do |career|
+#   puts career.training_centers.where(latitude: nil).count
+# end
 
 puts "end"
 
