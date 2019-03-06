@@ -7,13 +7,15 @@ class DashboardsController < ApplicationController
     @markers = @training_centers.first(3).map do |training_center|
       {
         lng: training_center.longitude,
-        lat: training_center.latitude
+        lat: training_center.latitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { training_center: training_center })
       }
     end
     @markers << {
       lng: @user.longitude,
       lat: @user.latitude,
-      image_url: helpers.asset_url(@user.photo)
+      image_url: helpers.asset_url(@user.photo),
+      # infoWindow: render_to_string(partial: "infowindow", locals: { user: @user })
     }
 
     @results = PgSearch.multisearch(params[:query])
