@@ -5,9 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "destroy all centers"
 
-TrainingCenter.destroy_all
 
 # puts 'Creating centers...'
 
@@ -98,20 +96,12 @@ francois.save!
 
 puts "ok"
 
-puts "destroy all answers"
-Answer.destroy_all
-
-puts "destroy all questions"
-Question.destroy_all
-
 puts "destroy all surveys"
 Survey.destroy_all
 
 puts "destroy all attempts"
 Attempt.destroy_all
 
-puts "destroy all users answers"
-UserAnswer.destroy_all
 
 puts 'Creating surveys...'
 
@@ -612,7 +602,6 @@ PersonalityRiasec.create!(
 PersonalityRiasec.find_by name: "Social"
 
 
-puts 'Creating training centers...'
 
 puts 'Creating careers...'
 
@@ -622,6 +611,7 @@ Career.create!(
   salary: 1521,
   personality_riasec: PersonalityRiasec.find_by(name: "Réaliste")
   )
+puts 'Creating training centers...'
 
 TrainingCenter.create!(
   name: "Chef Martial",
@@ -681,7 +671,7 @@ end
 # end
 
 CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
-puts row['personnalite'].capitalize
+# puts row['personnalite'].capitalize
 personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
 c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
 count = 0
@@ -701,11 +691,11 @@ count = 0
   end
 end
 
-vartest = Career.all
+# vartest = Career.all
 
-vartest.each do |career|
-  puts career.training_centers.where(latitude: nil).count
-end
+# vartest.each do |career|
+#   puts career.training_centers.where(latitude: nil).count
+# end
 
 puts "end"
 

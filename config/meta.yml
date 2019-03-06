@@ -1,5 +1,5 @@
 meta_product_name: "Reecover"
 meta_title: "Reecover - Votre carrière a de la valeur"
 meta_description: "Ancien sportif, vous souhaitez donner un nouvel élan à votre carrière ?"
-meta_image: "logo-reecover.png" # should exist in `app/assets/images/`
+meta_image: "homepage-reecover-og-image-1200x630.png" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards

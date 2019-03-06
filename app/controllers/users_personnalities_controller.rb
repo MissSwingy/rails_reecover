@@ -26,6 +26,5 @@ class UsersPersonnalitiesController < ApplicationController
     when "C"
       @personality_riasec  = PersonalityRiasec.find_by(name: "Conventionnel")
     end
-    # @careers = @personality_riasec.careers.sample(3)
   end
 end

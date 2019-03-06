@@ -19,10 +19,5 @@ class DashboardsController < ApplicationController
     }
 
     @results = PgSearch.multisearch(params[:query])
-
-    # respond_to do |format|
-    #   format.html { render 'dashboards/show' }
-    #   format.js
-    # end
   end
 end
