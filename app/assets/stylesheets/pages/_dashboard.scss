@@ -112,7 +112,12 @@ a.article:hover {
 .grid {
   display:grid;
   grid-template-columns: 50% 50%;
-  // grid-template-rows: 10% 10% 1fr 1fr 1fr;
+  height:100vh;
+}
+
+.grid-search {
+  display:grid;
+  grid-template-columns: 50% 50%;
   height:100vh;
 }
 
@@ -126,39 +131,22 @@ a.article:hover {
   grid-column: 1 / span 2;
 }
 
-.card-1 {
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 1;
-  padding:10px 20px;
-  width:70%;
-}
-
-.card-2 {
-  grid-row: 4 / span 1;
-  grid-column: 1 / span 1;
-  padding:10px 20px;
-  width:70%;
-}
-
-.card-3 {
-  grid-row: 5 / span 1;
-  grid-column: 1 / span 1;
-  padding:10px 20px;
-  width:70%;
-}
-
 #map {
-  grid-row: 3 / span 3;
+  grid-row: 1 / span 1;
   grid-column: 2 / span 1;
 }
 
 .card-dashboard {
   height: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background: white;
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: #47748b;
   position: relative;
+  border: 1px solid #47748b;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .card-user {
@@ -177,10 +165,24 @@ a.article:hover {
   text-transform: uppercase;
 }
 
+.card-1 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  padding:10px 20px;
+  width:70%;
+}
+
+.card-1:hover {
+  .card-description {
+    bottom: 10px;
+  }
+}
+
 .card-description {
   position: absolute;
-  bottom: 10px;
+  bottom: -96px;
   left: 10px;
+  transition: bottom 0.5s ease-out;
 }
 
 .card-description h2 {
@@ -189,29 +191,12 @@ a.article:hover {
 
 .card-description p {
   font-size: 14px;
-  opacity: 0.7;
   font-weight: lighter;
-}
-
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-}
-
-.card-link:hover {
-  opacity: 0.1;
 }
 
 /* ---------------------------------------------------
     MAPBOX
 ----------------------------------------------------- */
-
 
 .marker {
 display: block;
