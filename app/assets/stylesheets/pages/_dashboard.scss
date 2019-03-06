@@ -155,10 +155,13 @@ a.article:hover {
 .card-dashboard {
   height: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background: white;
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: #47748b;
   position: relative;
+  border: 1px solid #47748b;
+  border-radius: 5px;
 }
 
 .card-user {
@@ -200,15 +203,13 @@ a.article:hover {
   right: 0;
   width: 100%;
   z-index: 2;
-  background: black;
+  background: #47748b;
   opacity: 0;
 }
 
 .card-link:hover {
   opacity: 0.1;
 }
-
-
 
 .marker {
 display: block;

@@ -15,7 +15,7 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Votre profil</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="#">Vos infos</a>
+                      <%=  link_to "Vos infos", edit_user_registration_path  %>
                     </li>
                     <li>
                         <a href="#">Home 2</a>
@@ -59,51 +59,120 @@
             </li>
         </ul>
     </nav>
-<!--
-   Page Content -->
-      <div id="content">
-        <div class="grid">
-          <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
-         <div class="card-1">
-            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-              <div class="card-category">Popular</div>
-              <div class="card-description">
-                <h2><%= @training_centers.first.name %></h2>
-                <p><%= @training_centers.first.full_address %></p>
+<!-- Page Content -->
+    <div id="content">
+      <div class="grid">
+        <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
+          <div class="card-1">
+            <div class="card-dashboard">
+              <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
+                <div class="card-description">
+                  <h2><%= @training_centers.first.name %></h2>
+                  <p><%= @training_centers.first.full_address %>, <%= @training_centers.first.city %> </p>
+                </div>
+                <a class="card-link" data-toggle= "modal" data-target= "#modal1" class="btn btn-primary" href="#" ></a>
               </div>
-            <a class="card-link" href="#" ></a>
             </div>
-          </div>
-          <div class="card-2">
-            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-              <div class="card-category">Popular</div>
-              <div class="card-description">
-                <h2><%= @training_centers.second.name %></h2>
-                <p><%= @training_centers.second.full_address %></p>
+            <div class="card-2">
+              <div class="card-dashboard">
+                <div class="card-category btn btn-info"">CENTRE DE FORMATION</div>
+                <div class="card-description">
+                  <h2><%= @training_centers.second.name %></h2>
+                  <p><%= @training_centers.second.full_address %>, <%= @training_centers.first.city %> </p>
+                </div>
+              <a class="card-1-link" data-toggle= "modal" data-target= "#modal2" class="btn btn-primary" href="#" ></a>
               </div>
-            <a class="card-link" href="#" ></a>
             </div>
-          </div>
-          <div class="card-3">
-            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-              <div class="card-category">Popular</div>
-              <div class="card-description">
-                <h2><%= @training_centers.third.name %></h2>
-                <p><%= @training_centers.third.full_address %></p>
+            <div class="card-3">
+              <div class="card-dashboard">
+                <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
+                <div class="card-description">
+                  <h2><%= @training_centers.third.name %></h2>
+                  <p><%= @training_centers.third.full_address %>, <%= @training_centers.first.city %> </p>
+                </div>
+              <a class="card-link" data-toggle= "modal" data-target= "#modal3" class="btn btn-primary" href="#" ></a>
               </div>
-            <a class="card-link" href="#" ></a>
             </div>
-          </div>
 <!--       to uncomment when all controllers are created -->
-          <div
-          id="map"
-          style="width: 100%;
-          height: 600px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-          ></div>
-        </div>
+            <div
+              id="map"
+              style="width: 100%;
+              height: 600px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+              >
+            </div>
+      </div>
+    </div>
+
+
+
+<div class="modal" id ="modal1" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="card-category btn btn-info"">CENTRE DE FORMATION</div>
+        <h2 class="modal-title"><%= @training_centers.first.name %></h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> e-mail: <%= @training_centers.first.email %></p>
+        <p> téléphone: <%= @training_centers.first.telephone %> </p>
+        <p> website: <%= @training_centers.first.website %></p>
+      </div>
+      <div class="modal-footer">
+<!--         <button type="submit" class="btn btn-primary">Back</button> -->
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Retourner</button>
+      </div>
+    </div>
   </div>
+</div>
+<div class="modal" id ="modal2" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="card-category btn btn-info"">CENTRE DE FORMATION</div>
+        <h2 class="modal-title"><%= @training_centers.second.name %></h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> e-mail: <%= @training_centers.second.email %></p>
+        <p> téléphone: <%= @training_centers.second.telephone %> </p>
+        <p> website: <%= @training_centers.second.website %></p>
+      </div>
+      <div class="modal-footer">
+<!--         <button type="submit" class="btn btn-primary">Back</button> -->
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Retourner</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id ="modal3" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="card-category btn btn-info"">CENTRE DE FORMATION</div>
+        <h2 class="modal-title"><%= @training_centers.third.name %></h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> e-mail: <%= @training_centers.third.email %></p>
+        <p> téléphone: <%= @training_centers.third.telephone %> </p>
+        <p> website: <%= @training_centers.third.website %></p>
+      </div>
+      <div class="modal-footer">
+<!--         <button type="submit" class="btn btn-primary">Back</button> -->
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Retourner</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Page Content  -->
 
