@@ -1,6 +1,7 @@
 <h6><%= training_center.name %></h6>
-<p><strong>Adresse :</strong> <br><%= training_center.full_address %></p>
-<p><strong>E-mail :</strong> <br><a href="<%= training_center.email %>" target="_blank"><%= training_center.email %></a></p>
-<p><strong>Site-web :</strong> <br><a href="<%= training_center.website %>"><%= training_center.website %></a></p>
-<p><strong>Site-web :</strong> <br><%= training_center.telephone %></p>
-
+<p><strong><i class="fas fa-map-marker-alt"></i> Adresse :</strong> <br><%= training_center.full_address %></p>
+<p><strong><i class="fas fa-envelope"></i> E-mail :</strong> <br><a href="mailto:<%= training_center.email %>" target="_blank"><%= training_center.email %></a></p>
+<p><strong><i class="fas fa-at"></i> Site-web :</strong> <br><a href="<%= training_center.website %>" target="_blank"><%= training_center.website %></a></p>
+<p><strong><i class="fas fa-phone"></i> Telephone :</strong> <br><%= training_center.telephone %></p>
+<strong><i class="fas fa-shoe-prints"></i> Distance : <%= Geocoder::Calculations.distance_between([training_center.latitude, training_center.longitude],[@user.latitude, @user.longitude]).to_f.round(2) %> km<strong>
+<!-- Geocoder::Calculations.distance_between([47.858205,2.294359], [40.748433,-73.985655]) -->
