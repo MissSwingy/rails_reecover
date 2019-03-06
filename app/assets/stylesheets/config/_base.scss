@@ -2753,14 +2753,20 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #fd7e146e !important;
-  border-color: #f6c23e;
+  background-color: #eb5 !important;
+  border-color: #eb5 !important;
 }
 
 .btn-warning:hover {
   color: #fff;
-  background-color: #f4b619;
-  border-color: #f4b30d;
+  background-color: #ffd071 !important;
+  border-color: #ffd071 !important;
+}
+
+.btn-test {
+  color: #fff;
+  background-color: #eb5 !important;
+  border-color: #eb5 !important;
 }
 
 .btn-warning:focus, .btn-warning.focus {
