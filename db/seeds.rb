@@ -635,7 +635,7 @@ TrainingCenter.create!(
   telephone: "07 63 33 57 21",
   website: "https://www.cuisinemodemplois.com/",
   career: Career.find_by(title: "Chef-cuisinier"),
-  photo: "cuisine-mode-emploi-noir.png")
+  photo: "cuisine-mode-emploi-noir.jpg")
 
 TrainingCenter.create!(
   name: "Les coulisses du chef",
@@ -647,7 +647,7 @@ TrainingCenter.create!(
   telephone:"01 40 26 14 00",
   website:"http://www.coulissesduchef.com",
   career: Career.find_by(title: "Chef-cuisinier"),
-  photo: "les-coulisses-du-chef.png")
+  photo: "les-coulisses-du-chef.jpg")
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 filepath = 'metier2.csv'
