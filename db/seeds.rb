@@ -676,7 +676,7 @@ personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capital
 c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
 count = 0
   training_centers.each_with_index do |training, index|
-    if count < 6
+    if count < 2
       if c.category == training[:category]
         t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
         # if Geocoder.coordinates(t.full_address) != nil
@@ -701,3 +701,5 @@ puts "end"
 
 PgSearch::Multisearch.rebuild(Career)
 PgSearch::Multisearch.rebuild(TrainingCenter)
+
+puts "end"
