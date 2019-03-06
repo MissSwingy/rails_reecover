@@ -13,7 +13,9 @@ import { carousel } from '../components/carousel';
 carousel();
 
 import { scrollMoove } from '../components/scroll_move';
-scrollMoove();
+if (document.getElementById('test-riasec')) {
+  scrollMoove();
+}
 
 import { reloadPage } from '../components/randomize_career';
 if (document.getElementById('randomize-career')) {
