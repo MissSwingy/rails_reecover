@@ -1,6 +1,8 @@
 class CareersController < ApplicationController
   def index
     @careers = Career.all
+    @user = current_user
+    @user_personality = UsersPersonality.find_by(user_id: current_user)
     @results = PgSearch.multisearch(params[:query])
   end
 
