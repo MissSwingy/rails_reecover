@@ -48,44 +48,42 @@
             <li>
                 <a href="#">Contact</a>
             </li>
-        </ul>
-
-        <ul class="list-unstyled CTAs">
-            <li>
-              <%= link_to "Retour à la page d'accueil", root_path, class: "article"%>
-            </li>
-        </ul>
-    </nav>
+    <ul class="list-unstyled CTAs">
+      <li>
+       <%= link_to "Retour à la page d'accueil", root_path, class: "article"%>
+      </li>
+    </ul>
+  </nav>
 
 <!-- Page Content -->
-    <div id="content">
-      <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
-      <div class="grid">
-        <div class="cards">
-          <% @training_centers.each do |center| %>
-            <div class="card-1">
-              <div class="card-dashboard">
-                <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
-                <div class="card-description">
-                  <h2><%= center.name %></h2>
-                  <p><strong><i class="fas fa-map-marker-alt"></i></strong> <%= center.full_address %></p>
-                  <p><strong><i class="fas fa-envelope"></i></strong> E-mail: <%= center.email %></p>
-                  <p><strong><i class="fas fa-phone"></i></strong> Téléphone: <%= center.telephone %></p>
-                  <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", center.website, :target => "_blank" %> </p>
-                </div>
-              </div>
-            </div>
-          <% end %>
+  <div id="content">
+   <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
+   <div class="grid">
+    <div class="cards">
+     <% @training_centers.each do |center| %>
+      <div class="card-1">
+       <div class="card-dashboard">
+        <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
+        <div class="card-description">
+         <h2><%= center.name %></h2>
+         <p><strong><i class="fas fa-map-marker-alt"></i></strong> <%= center.full_address %></p>
+         <p><strong><i class="fas fa-envelope"></i></strong> E-mail: <%= center.email %></p>
+         <p><strong><i class="fas fa-phone"></i></strong> Téléphone: <%= center.telephone %></p>
+         <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", center.website, :target => "_blank" %> </p>
         </div>
-            <!--       to uncomment when all controllers are created -->
-        <div
-          id="map"
-          style="width: 100%;
-          height: 600px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-          >
-        </div>
+       </div>
       </div>
+     <% end %>
     </div>
-<!-- Page Content  -->
+      <!--    to uncomment when all controllers are created -->
+    <div
+     id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+     >
+    </div>
+   </div>
+  </div>
+<!-- Page Content -->
