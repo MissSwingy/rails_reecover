@@ -58,31 +58,30 @@
     </nav>
     <!-- Page Content -->
     <div id="content-search">
-      <h2 class="title">Résultats de votre recherche</h2>
+      <h2 class="search-title">Vous trouverez ici une liste de métiers et de centres de formation associés à votre recherche: <strong>"<%= params[:query] %>" </strong></h2>
       <div class="grid-search">
-        <div class="cards">
-          <div class="card-1">
+        <div class="cards-search">
+          <div class="card-search">
             <% @results.each do |result| %>
               <% if result.searchable_type == "TrainingCenter" %>
-                <div class="card-dashboard">
-                  <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
-                    <div class="card-description">
+                <div class="card-dashboard-search">
+                  <div class="card-category-search training btn btn-info">CENTRE DE FORMATION</div>
+                    <div class="card-description-search">
                       <h2> <%= result.searchable.name %> </h2>
                       <p><strong><i class="fas fa-map-marker-alt"></i></strong> <%= result.searchable.address %>, <%= result.searchable.city %></p>
-    <!--                   <p><strong><i class="fas fa-phone"></i></strong> <%= result.searchable.telephone %></p>
-                      <p><strong><i class="fas fa-envelope"></i></strong> <%= result.searchable.email %></p> -->
                       <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", result.searchable.website , :target => "_blank" %> </p>
                     </div>
                   </div>
                 <% else %>
-                <div class="card-category btn btn-info">MÉTIER</div>
-                  <div class="card-description">
-                    <h2><strong><i class="fas fa-graduation-cap"></i></strong> <%= result.searchable.title %></h2>
-                    <p><strong><i class="fas fa-hammer"></i></strong> <%= result.searchable.category %></p>
+                <div class="card-dashboard-search">
+                  <div class="card-category-search career btn btn-info">MÉTIER</div>
+                    <div class="card-description-search">
+                      <h2><strong><i class="fas fa-graduation-cap"></i></strong> <%= result.searchable.title %></h2>
+                      <p><strong><i class="fas fa-hammer"></i></strong> <%= result.searchable.category %></p>
+                    </div>
                   </div>
-                </div>
                 <% end %>
-                <% end %>
+              <% end %>
               </div>
           </div>
         </div>

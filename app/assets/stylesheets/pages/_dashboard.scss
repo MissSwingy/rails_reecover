@@ -115,16 +115,11 @@ a.article:hover {
   height:100vh;
 }
 
-.grid-search {
-  display:grid;
-  grid-template-columns: 50% 50%;
-  height:100vh;
-}
-
 .search-bar {
   grid-row:1 / span 1;
   grid-column:1 / span 2;
 }
+
 
 .title {
   grid-row: 2 / span 1;
@@ -190,6 +185,59 @@ a.article:hover {
 }
 
 .card-description p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* ---------------------------------------------------
+    CAREERS SEARCH
+----------------------------------------------------- */
+
+.grid-search {
+  display:grid;
+  grid-template-columns: 50% 50%;
+  // height:100vh;
+}
+
+
+.search-title {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+}
+
+.search-title {
+  font-size: 16px !important;
+}
+
+.card-dashboard-search {
+  height: 250px;
+  width: 450px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background: white;
+  background-size: cover !important;
+  background-position: center;
+  color: #47748b;
+  border: 1px solid #47748b;
+  border-radius: 5px;
+  padding: inherit;
+  margin-bottom: 25px;
+}
+
+.card-category-search {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.card-search {
+  padding:10px 20px;
+  width:70%;
+}
+
+.card-description-search h2 {
+  font-size: 24px;
+}
+
+.card-description-search p {
   font-size: 14px;
   font-weight: lighter;
 }
