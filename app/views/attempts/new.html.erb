@@ -41,15 +41,15 @@
     <% @questions.each do |question| %>
 <!--             if question == @questions.last
           redirect_to sss_path -->
-    <div data-container="<%= @questions.index(question) + 1 %>" class="fade-in">
+    <div data-container="<%= @questions.index(question) + 1 %>">
       <div class="overlay"><h2 id="question-<%= question.id %>" class="text-center mb-5" data-question="<%= @questions.index(question) + 1 %>"> <%= question.question %> </h2></div>
         <div class="cards-quiz">
           <div class="row align-items-start text-center">
-          <% question.answers.each do |answer| %>
-            <div class="col-6 col-md-6 col-lg-4">
+          <% question.answers.each_with_index do |answer, index| %>
+            <div class="col-6 col-md-6 col-lg-4 card-custom">
               <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
-                <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>')">
-                 <div class="quiz-answer"><p> <%= answer.answer %> </p></div>
+                <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>'); transition-delay: <%= index/5.1 %>s ">
+                 <strong> <%= answer.answer %></strong>
                 </div>
               <% end %>
             </div>
