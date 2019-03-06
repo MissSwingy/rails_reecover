@@ -9,41 +9,41 @@ puts "destroy all centers"
 
 TrainingCenter.destroy_all
 
-puts 'Creating centers...'
+# puts 'Creating centers...'
 
-dev = Career.find_by title: "Commis de bourse"
+# dev = Career.find_by title: "Commis de bourse"
 
-centre1 = TrainingCenter.new(
-name: "Le Wagon",
-address: "16, Villa Gaudelet",
-city: "Paris",
-category: "TI",
-email: "lewagon@lewagon.org",
-telephone: "0101010101",
-website: "http://www.lewagon.org",
-latitude: "48.86",
-longitude: "2.37",
-career: dev
-)
-centre1.save!
+# centre1 = TrainingCenter.new(
+# name: "Le Wagon",
+# address: "16, Villa Gaudelet",
+# city: "Paris",
+# category: "TI",
+# email: "lewagon@lewagon.org",
+# telephone: "0101010101",
+# website: "http://www.lewagon.org",
+# latitude: "48.86",
+# longitude: "2.37",
+# career: dev
+# )
+# centre1.save!
 
-com = Career.find_by title: "Comptable"
+# com = Career.find_by title: "Comptable"
 
-centre2 = TrainingCenter.new(
-name: "ESCP",
-address: "179 Avenue de la République",
-city: "Paris",
-category: "Commerce",
-email: "escp@escpeurope.eu",
-telephone: "0101010101",
-website: "https://www.escpeurope.eu/",
-latitude: "48.87",
-longitude: "2.35",
-career: com
-)
+# centre2 = TrainingCenter.new(
+# name: "ESCP",
+# address: "179 Avenue de la République",
+# city: "Paris",
+# category: "Commerce",
+# email: "escp@escpeurope.eu",
+# telephone: "0101010101",
+# website: "https://www.escpeurope.eu/",
+# latitude: "48.87",
+# longitude: "2.35",
+# career: com
+# )
 
-centre2.save!
-puts 'end...'
+# centre2.save!
+# puts 'end...'
 
 
 
@@ -633,11 +633,14 @@ c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_ri
 count = 0
   training_centers.each_with_index do |training, index|
     if count < 6
-      t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
-      if c.category == t.category
+      if c.category == training[:category]
+        t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
+        # if Geocoder.coordinates(t.full_address) != nil
         t.save
         training_centers.delete_at(index)
         count += 1
+        # else
+        # end
       else
       end
     end
@@ -647,7 +650,7 @@ end
 vartest = Career.all
 
 vartest.each do |career|
-  puts career.training_centers.count
+  puts career.training_centers.where(latitude: nil).count
 end
 
 puts "end"
