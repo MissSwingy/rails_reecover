@@ -4,7 +4,10 @@
   padding: 1em 0;
   flex-shrink: 0;
 }
-
+footer.page-footer {
+    bottom: 0;
+    color: #fff;
+}
 #footer p {
   margin-top: 17px;
 }
@@ -21,9 +24,29 @@
   color: yellow;
 }
 
+.social-ic a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.social-ic a:hover {
+  opacity: 1;
+}
+
 body.sidebar-toggled {
   footer.sticky-footer {
     width: 100%;
   }
 }
 
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    color: rgba(255,255,255,.6);
+}
+
+.special-color-dark {
+    background-color: #263238!important;
+}

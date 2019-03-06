@@ -1,3 +1,14 @@
+.no-gutters {
+margin-right: 0;
+margin-left: 0;
+
+> .col,
+> [class*="col-"] {
+padding-right: 0;
+padding-left: 0;
+}
+}
+
 .container-quiz {
   margin-bottom: 16px;
 }
@@ -29,7 +40,7 @@
   height: 250px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -90,17 +101,19 @@
   //   display: initial;
   // }
 }
+
 a {
  text-decoration: none !important;
 }
 
 .cards-quiz  {
   display: grid;
- //grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+ // grid-template-columns: repeat(3, 33.33%);
+  grid-gap: 20px;
   padding: 16px;
   background-color: white;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .peach-gradient-rgba {
