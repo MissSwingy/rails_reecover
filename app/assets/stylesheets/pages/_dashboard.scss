@@ -208,6 +208,9 @@ a.article:hover {
   opacity: 0.1;
 }
 
+/* ---------------------------------------------------
+    MAPBOX
+----------------------------------------------------- */
 
 
 .marker {
@@ -218,6 +221,14 @@ cursor: pointer;
 padding: 0;
 }
 
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 /* ---------------------------------------------------
