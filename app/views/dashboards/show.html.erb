@@ -65,7 +65,7 @@
         <div class="grid">
           <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
          <div class="card-1">
-            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path @training_centers.first.photo, alt: "Chef Martial" %>);">
               <div class="card-category">Popular</div>
               <div class="card-description">
                 <h2><%= @training_centers.first.name %></h2>
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div class="card-2">
-            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path @training_centers.second.photo, alt: "Cuisine Mode Emploi" %>);">
               <div class="card-category">Popular</div>
               <div class="card-description">
                 <h2><%= @training_centers.second.name %></h2>
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="card-3">
-            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+            <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path @training_centers.third.photo, alt: "Les Coulisses du Chef" %>);">
               <div class="card-category">Popular</div>
               <div class="card-description">
                 <h2><%= @training_centers.third.name %></h2>

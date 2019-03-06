@@ -632,8 +632,8 @@ TrainingCenter.create!(
   email: "contact@chefmartial.com",
   telephone: "01 86 95 22 29",
   website: "https://www.chefmartial.com/",
-  career: Career.find_by(title: "Chef-cuisinier")
-  )
+  career: Career.find_by(title: "Chef-cuisinier"),
+  photo: "chef-martial.jpg")
 
 TrainingCenter.create!(
   name: "Cuisine Mode d'Emploi(s)",
@@ -644,8 +644,8 @@ TrainingCenter.create!(
   email: "restaurant-paris@cme-formations.com",
   telephone: "07 63 33 57 21",
   website: "https://www.cuisinemodemplois.com/",
-  career: Career.find_by(title: "Chef-cuisinier")
-  )
+  career: Career.find_by(title: "Chef-cuisinier"),
+  photo: "cuisine-mode-emploi-noir.png")
 
 TrainingCenter.create!(
   name: "Les coulisses du chef",
@@ -656,8 +656,8 @@ TrainingCenter.create!(
   email:"olivier.berte@coursdecuisineparis.com",
   telephone:"01 40 26 14 00",
   website:"http://www.coulissesduchef.com",
-  career: Career.find_by(title: "Chef-cuisinier")
-  )
+  career: Career.find_by(title: "Chef-cuisinier"),
+  photo: "les-coulisses-du-chef.png")
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 filepath = 'metier2.csv'
