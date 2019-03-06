@@ -46,7 +46,7 @@
         <div class="cards-quiz">
           <div class="row align-items-start text-center">
           <% question.answers.each_with_index do |answer, index| %>
-            <div class="col-6 col-md-6 col-lg-4 card-custom">
+            <div class="col-xs-6 col-md-6 col-lg-4 card-custom">
               <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
                 <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>'); transition-delay: <%= index/5.1 %>s ">
                  <strong> <%= answer.answer %></strong>
