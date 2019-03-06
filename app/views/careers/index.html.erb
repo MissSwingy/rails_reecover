@@ -2,35 +2,29 @@
   <h2 class="title">Résultats de votre recherche</h2>
   <div class="grid-search">
     <div class="cards">
-    <% @results.each do |result| %>
       <div class="card-1">
+        <% @results.each do |result| %>
           <% if result.searchable_type == "TrainingCenter" %>
             <div class="card-dashboard">
               <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
                 <div class="card-description">
-                  <h2><%= result.searchable.name %></h2>
+                  <h2> <%= result.searchable.name %> </h2>
                   <p><strong><i class="fas fa-map-marker-alt"></i></strong> <%= result.searchable.address %>, <%= result.searchable.city %></p>
-                  <p><strong><i class="fas fa-phone"></i></strong> <%= result.searchable.telephone %></p>
-                  <p><strong><i class="fas fa-envelope"></i></strong> <%= result.searchable.email %></p>
+<!--                   <p><strong><i class="fas fa-phone"></i></strong> <%= result.searchable.telephone %></p>
+                  <p><strong><i class="fas fa-envelope"></i></strong> <%= result.searchable.email %></p> -->
                   <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", result.searchable.website , :target => "_blank" %> </p>
                 </div>
               </div>
             <% else %>
+            <div class="card-category btn btn-info">MÉTIER</div>
+              <div class="card-description">
+                <h2><strong><i class="fas fa-graduation-cap"></i></strong> <%= result.searchable.title %></h2>
+                <p><strong><i class="fas fa-hammer"></i></strong> <%= result.searchable.category %></p>
+              </div>
             </div>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="card-2">
-        <div class="card-dashboard">
-          <div class="card-category btn btn-info">MÉTIER</div>
-            <div class="card-description">
-              <h2><strong><i class="fas fa-graduation-cap"></i></strong> <%= result.searchable.title %></h2>
-              <p><strong><i class="fas fa-hammer"></i></strong> <%= result.searchable.category %></p>
-              <% end  %>
-            </div>
+            <% end %>
+            <% end %>
           </div>
-          <% end  %>
-        </div>
       </div>
     </div>
   </div>
