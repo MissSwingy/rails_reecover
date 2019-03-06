@@ -603,7 +603,48 @@ PersonalityRiasec.find_by name: "Social"
 puts 'Creating training centers...'
 
 puts 'Creating careers...'
+Réaliste;Agro-alimentaire, alimentation, cuisine;1521
+Career.create!(
+  title: "Chef-cuisinier",
+  category: "Agro-alimentaire, alimentation, cuisine",
+  salary: 1521,
+  personality_riasec: PersonalityRiasec.find_by name: "Réaliste")
 
+TrainingCenter.create!(
+  name: "Chef Martial",
+  address:"80 rue des Tournelles",
+  postal_code: "75003",
+  city: "Paris",
+  category:"Agro-alimentaire, alimentation, cuisine",
+  email: "contact@chefmartial.com",
+  telephone: "01 86 95 22 29",
+  website: "https://www.chefmartial.com/",
+  career: Career.find_by title: "Chef-cuisinier"
+  )
+
+TrainingCenter.create!(
+  name: "Cuisine Mode d'Emploi(s)",
+  address:"7 Rue Albert Marquet",
+  postal_code: "75020",
+  city: "Paris",
+  category: "Agro-alimentaire, alimentation, cuisine",
+  email: "restaurant-paris@cme-formations.com",
+  telephone: "07 63 33 57 21",
+  website: "https://www.cuisinemodemplois.com/",
+  career: Career.find_by title: "Chef-cuisinier"
+  )
+
+TrainingCenter.create!(
+  name: "Les coulisses du chef",
+  address:"7 rue Paul Lelong",
+  postal_code: "75002",
+  city: "Paris",
+  category: "Agro-alimentaire, alimentation, cuisine",
+  email:"olivier.berte@coursdecuisineparis.com",
+  telephone:"01 40 26 14 00",
+  website:"http://www.coulissesduchef.com",
+  career: Career.find_by title: "Chef-cuisinier"
+  )
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
 filepath = 'metier2.csv'
