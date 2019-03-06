@@ -4,6 +4,7 @@ class TrainingCenter < ApplicationRecord
   multisearchable against: [:name, :city, :category]
   scope :find_name, lambda { |search| where("name ILIKE :search", search: "%#{search}%") }
   geocoded_by :full_address
+  # mount_uploader :photo, PhotoUploader
   after_validation :geocode, if: :will_save_change_to_full_address?
 
   def full_address
@@ -12,5 +13,11 @@ class TrainingCenter < ApplicationRecord
 
   def will_save_change_to_full_address?
     will_save_change_to_address? || will_save_change_to_postal_code? || will_save_change_to_city?
+  end
+
+  private
+
+  def training_params
+    params.require(:training_centersin).permit(:photo)
   end
 end
