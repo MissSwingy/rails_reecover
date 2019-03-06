@@ -67,10 +67,10 @@
                 <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
                 <div class="card-description">
                   <h2><%= center.name %></h2>
-                  <p><%= center.full_address %></p>
-                  <p> e-mail: <%= center.email %></p>
-                  <p> téléphone: <%= center.telephone %></p>
-                  <p> <%= link_to "Website", center.website, :target => "_blank" %> </p>
+                  <p><strong><i class="fas fa-map-marker-alt"></i></strong> <%= center.full_address %></p>
+                  <p><strong><i class="fas fa-envelope"></i></strong> E-mail: <%= center.email %></p>
+                  <p><strong><i class="fas fa-phone"></i></strong> Téléphone: <%= center.telephone %></p>
+                  <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", center.website, :target => "_blank" %> </p>
                 </div>
               </div>
             </div>

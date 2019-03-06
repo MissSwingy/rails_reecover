@@ -1,7 +1,7 @@
 class CareersController < ApplicationController
   def index
     @careers = Career.all
-    @results = PgSearch.multisearch(params[:query]
+    @results = PgSearch.multisearch(params[:query])
   end
 
   def show

@@ -115,6 +115,12 @@ a.article:hover {
   height:100vh;
 }
 
+.grid-search {
+  display:grid;
+  grid-template-columns: 50% 50%;
+  height:100vh;
+}
+
 .search-bar {
   grid-row:1 / span 1;
   grid-column:1 / span 2;
@@ -124,28 +130,6 @@ a.article:hover {
   grid-row: 2 / span 1;
   grid-column: 1 / span 2;
 }
-
-.card-1 {
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 1;
-  padding:10px 20px;
-  width:70%;
-
-}
-
-// .card-2 {
-//   grid-row: 4 / span 1;
-//   grid-column: 1 / span 1;
-//   padding:10px 20px;
-//   width:70%;
-// }
-
-// .card-3 {
-//   grid-row: 5 / span 1;
-//   grid-column: 1 / span 1;
-//   padding:10px 20px;
-//   width:70%;
-// }
 
 #map {
   grid-row: 1 / span 1;
@@ -181,6 +165,13 @@ a.article:hover {
   text-transform: uppercase;
 }
 
+.card-1 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  padding:10px 20px;
+  width:70%;
+}
+
 .card-1:hover {
   .card-description {
     bottom: 10px;
@@ -200,56 +191,7 @@ a.article:hover {
 
 .card-description p {
   font-size: 14px;
-  opacity: 0.7;
   font-weight: lighter;
-}
-
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: #47748b;
-  opacity: 0;
-}
-
-.card-link:hover {
-  opacity: 0.1;
-}
-
-/* ---------------------------------------------------
-    MODAL
------------------------------------------------------ */
-
-.modal {
-  // height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // display: flex;
-//   align-items: center;
-}
-
-.modal-category {
-  position: absolute;
-  left: 260px;
-}
-
-.modal-title {
-  position: relative;
-  font-size: 16px;
-  color: #47748b;
-  font-weight: bold;
-  margin: 0;
-}
-
-.modal p {
-  font-size: 16px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
 }
 
 /* ---------------------------------------------------
