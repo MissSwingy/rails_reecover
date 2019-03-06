@@ -1,4 +1,24 @@
 // Specific CSS for your home-page
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#test-riasec {
+  height: 600px;
+  clear: after;
+}
+
+#section2 {
+  height: 600px;
+}
+
 .masthead-img {
   height: 100vh;
   min-height: 500px;
@@ -8,6 +28,7 @@
   background-position: center center;
   color: #fff;
   // padding-top: 50px;
+  overflow: hidden;
 }
 
 #loading {

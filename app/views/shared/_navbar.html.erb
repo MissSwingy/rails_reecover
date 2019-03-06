@@ -1,9 +1,19 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon fixed-top">
 
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo-reecover-transparent-white.png", height: 100 %>
   <% end %>
 
+      <div class="search-bar form-inline">
+        <%= form_tag careers_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouver une formation "
+          %>
+          <%= button_tag "", class: "btn fas fa-search fa-sm btn-warning btn-lg" %>
+        <% end %>
+      </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -13,22 +23,12 @@
       <% if params[:controller] === "dashboards" %>
         <button type="button" id="sidebarCollapse" class="btn btn-info">
           <i class="fas fa-align-left"></i>
-          <span>Dashboard</span>
+          <span>Menu Dashboard</span>
         </button>
         <% else %>
       <% end %>
 
       <!-- Avatar with dropdown menu -->
-      <div class="search-bar form-inline">
-        <%= form_tag careers_path, method: :get do %>
-          <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Trouver une formation "
-          %>
-          <%= button_tag "Rechercher", class: "btn btn-warning btn-lg" %>
-        <% end %>
-      </div>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>

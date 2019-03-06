@@ -1,6 +1,6 @@
 <%= render 'shared/sidebar_menu' %>
 <!-- Full Page Image Header with Vertically Centered Content -->
-<header class="masthead-img animated--fade-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "mountain-climber-home.jpg", alt: "mountain climber homepage" %>);">
+<header class="masthead-img animated--fade-in clearfix" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(<%= image_path "mountain-climber-home.jpg", alt: "mountain climber homepage" %>);">
   <div class="container h-100 bg-overlay">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center">
@@ -13,10 +13,30 @@
         <h4>Vous souhaitez donner un nouvel élan à votre carrière ?
         </h4>
         <br><br>
-        <%= link_to "Comment ça fontionne ?", new_survey_attempt_path(Survey.last), class: "btn btn-warning btn-lg"  %>
+        <a href="#test-riasec" class="btn btn-warning btn-lg">Comment ça fonctionne ?</a>
         <%= link_to "Faites le test !", new_survey_attempt_path(Survey.last), class: "btn btn-warning btn-lg"  %>
         </div>
     </div>
   </div>
 </header>
   <!-- Header -->
+
+<section class="py-5 clearfix" id="test-riasec">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-7">
+        <h2><strong>Votre carrière a de la valeur</strong></h2>
+        <hr>
+        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etae magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <%= link_to "Faites le test !", new_survey_attempt_path(Survey.last), class: "btn btn-warning btn-lg"  %>
+
+      </div>
+    <div class="col-md-5" id="loading">
+       <%= image_tag "riasec-personnalités.png", width: '100%', class: "img-fluid" %>
+    </div>
+  </div>
+</div>
+</section>
+
+<%= render 'shared/footer' %>
