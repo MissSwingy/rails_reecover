@@ -1,2 +1,6 @@
 <h6><%= training_center.name %></h6>
-<p>Addresse : <%= training_center.full_address %></p>
+<p><strong>Adresse :</strong> <br><%= training_center.full_address %></p>
+<p><strong>E-mail :</strong> <br><a href="<%= training_center.email %>" target="_blank"><%= training_center.email %></a></p>
+<p><strong>Site-web :</strong> <br><a href="<%= training_center.website %>"><%= training_center.website %></a></p>
+<p><strong>Site-web :</strong> <br><%= training_center.telephone %></p>
+
