@@ -28,6 +28,12 @@ padding-left: 0;
   font-size: 32px;
 }
 
+.card-custom {
+    text-align: center;
+    height: 300px;
+    // width: 100%;
+}
+
 .card-category-career-results {
   background-size: cover;
   background-position: center;
@@ -47,9 +53,7 @@ padding-left: 0;
 .card-category-quiz {
   background-size: cover;
   background-position: center;
-  // height: 50px !important;
-  // width: 50px !important;
-  height: 350px !important;
+  height: 100% !important;
   width: 100% !important;
   display: flex;
   flex-direction: column;
@@ -66,6 +70,7 @@ padding-left: 0;
   padding: 50px;
   margin-bottom: 10px;
   transition: all 0.6s ease-out;
+  opacity: 0;
 }
 
 .quiz-answer strong {
@@ -86,15 +91,16 @@ padding-left: 0;
     border-radius: 5px;
 }
 
-// .fade-in {
-//  .card-category-quiz {
-//   height: 300px !important;
-//   width: 100% !important;
-//   }
-//   &.quiz-answer strong {
-//     display: initial;
-//   }
-// }
+.fade-in {
+ .card-category-quiz {
+  height: 100% !important;
+  width: 100% !important;
+  opacity: 1;
+  }
+  // &.quiz-answer strong {
+  //   display: initial;
+  // }
+}
 
 a {
  text-decoration: none !important;
