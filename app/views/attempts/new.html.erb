@@ -58,3 +58,16 @@
         </div>
       </div>
     <% end %>
+    <!-- Show results -->
+<header class="masthead-results">
+  <div class="container h-100 bg-overlay">
+    <div class="row h-100 align-items-center justify-content-center">
+      <div class="col-7 text-center">
+        <h1><strong>Pour quels métiers êtes-vous fait ?</strong></h1>
+        <hr class="col-6">
+        <br><br>
+          <div id="question-<%= @questions.last.id + 1 %>" data-question="9" data-container="9">
+            <!-- BOUTON TEST -->
+<center>
+  <%= link_to "Voir les résultats", survey_attempt_path(Survey.last.id, Attempt.last.id), method: :patch, class: "btn btn-warning btn-lg"  %>
+</center>
