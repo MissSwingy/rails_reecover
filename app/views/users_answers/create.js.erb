@@ -1,5 +1,5 @@
 function nextQuestion() {
-  const lastAnswerQuestion = document.getElementById("question-<%= @user_answer.answer.question.id %>");
+  const lastAnswerQuestion = document.getElementById("question-<%= @user_answer.answer.question.number %>");
   const nextQuestionDataQuestion = parseInt(lastAnswerQuestion.dataset.question) + 1;
   const nextQuestion = document.querySelector("[data-question='" + nextQuestionDataQuestion + "']");
   for (var i = 0; i < nextQuestionDataQuestion; i++) {

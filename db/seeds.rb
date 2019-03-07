@@ -256,7 +256,7 @@ answer36.save!
 question4 = Question.new(
 question: "A quelle personnalité tu t'identifies le + ?",
 gender: "F",
-number: 4,
+number: 3,
 survey: Survey.last)
 
 question4.save!
@@ -305,7 +305,7 @@ answer46.save!
 
 question5 = Question.new(
 question: "Ton repas préféré contient :",
-number: 5,
+number: 4,
 survey: Survey.last)
 
 question5.save!
@@ -354,7 +354,7 @@ answer56.save!
 
 question6 = Question.new(
 question: "Ton loisir préféré pour décompresser :",
-number: 6,
+number: 5,
 survey: Survey.last)
 question6.save!
 
@@ -402,7 +402,7 @@ answer66.save!
 
 question7 = Question.new(
 question: "Ton game préféré",
-number: 7,
+number: 6,
 survey: Survey.last)
 
 question7.save!
@@ -451,7 +451,7 @@ answer76.save!
 
 question8 = Question.new(
 question: "Ton combustible",
-number: 8,
+number: 7,
 survey: Survey.last)
 question8.save!
 
@@ -499,7 +499,7 @@ answer86.save!
 
 question9 = Question.new(
 question: "Tu es plutôt :",
-number: 9,
+number: 8,
 survey: Survey.last)
 
 question9.save!
@@ -665,20 +665,7 @@ CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) 
   training_centers << {name: row['name'], address: row['address'], category: row['category'], postal_code: row['postal_code'], city: row['city']}
 end
 
-# count = 0
-# puts training_centers.count
-# training_centers.each_with_index do |training, index|
-#   if count < 6
-#     puts index
-#     puts training[:name]
-#     training_centers.delete_at(index)
-#     count += 1
-#     puts training_centers.count
-#   end
-# end
-
 CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
-# puts row['personnalite'].capitalize
 personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
 c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
 count = 0
@@ -686,23 +673,15 @@ count = 0
     if count < 2
       if c.category == training[:category]
         t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
-        # if Geocoder.coordinates(t.full_address) != nil
         t.save
         training_centers.delete_at(index)
         count += 1
-        # else
-        # end
       else
       end
     end
   end
 end
 
-# vartest = Career.all
-
-# vartest.each do |career|
-#   puts career.training_centers.where(latitude: nil).count
-# end
 
 puts "end"
 

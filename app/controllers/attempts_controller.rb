@@ -3,6 +3,7 @@ class AttemptsController < ApplicationController
     @survey = Survey.find(params[:survey_id])
     @attempt = Attempt.create(user: current_user, survey: @survey, result: "")
     @questions = @survey.questions.where(gender: [nil, current_user.gender])
+    @lastquestion = @questions.find_by(number: 8)
   end
 
   def update
