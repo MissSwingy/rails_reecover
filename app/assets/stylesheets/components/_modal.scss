@@ -1,0 +1,60 @@
+  .modal-header {
+    border-bottom: none;
+    background-color: #eb4;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border: 0;
+    border-top-right-radius: .125rem;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .modal-footer .btn {
+    margin:auto;
+  }
+  .modal-job .job {
+    background:#263238cc;
+    border:none;
+    color:#fff;
+    text-align:center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  }
+
+  .modal-title {
+    color:#fff;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .modal-job .job {
+      margin-bottom: 15px;
+    }
+  }
+
+@media (min-width: 992px) {
+.modal-lg, .modal-xl {
+    max-width: 950px;
+  }
+}
+  .well {
+    background:#f1f1f1;
+    padding:15px;
+    border-radius:4px;
+    margin-top:20px;
+  }
+
+#exampleModal img.avatar-large {
+    width: 330px;
+    height: 325px;
+    border-radius: 60%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
