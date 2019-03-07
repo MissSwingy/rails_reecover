@@ -2753,14 +2753,22 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #fd7e146e !important;
-  border-color: #f6c23e;
+  background-color: #eb5 !important;
+  border-color: #eb5 !important;
 }
 
 .btn-warning:hover {
   color: #fff;
-  background-color: #f4b619;
-  border-color: #f4b30d;
+  background-color: #ffd071 !important;
+  border-color: #ffd071 !important;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  outline: 0;
+}
+
+.btn-test {
+  color: #fff;
+  background-color: #eb5 !important;
+  border-color: #eb5 !important;
 }
 
 .btn-warning:focus, .btn-warning.focus {
@@ -4894,6 +4902,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+  min-height: 130px;
 }
 
 .card-title {

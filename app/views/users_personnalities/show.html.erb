@@ -1,27 +1,61 @@
 <%= render 'shared/sidebar_menu' %>
-<header class="masthead-img" class="animated--fade-in">
-  <div class="container-results">
-    <div class="avatar-personnality">
-      <h1>Vous avez un profil de type :</h1>
-
-        <%= image_tag (@personality_riasec.avatar_f), class: "avatar-results-large", alt: "avatar-results-large" %>
-
-      <h2><%= @personality_riasec.name %></h2>
-      <p><%= @personality_riasec.description %></p>
-    <div id="randomize-career" class="btn btn-primary btn-lg"><i class="fas fa-dice"></i></div>
+  <div class="modal-dialog modal-lg modal-job"  id="exampleModal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title text-center" id="exampleModalLabel">Vous avez un profil de type :</h2>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+      <div class="col-md-5 py-5">
+        <center>
+          <%= image_tag (@personality_riasec.avatar_f), height: 320, width: 320, class: "avatar-large", alt: "avatar-large-réaliste"  %>
+        </center>
+      </div>
+      <div class="col-md-7">
+        <h3><strong><%= @personality_riasec.name %></strong></h3>
+        <div class="well">
+          <h4 class="small" style="color: #36b9cc"><strong><i class="fas fa-plus"></i> Vos points forts</strong></h4>
+        <%= @personality_riasec.points_forts %>
+         </div>
+         <div class="well">
+          <h4 class="small" style="color: #e74a3b"><strong><i class="fas fa-minus"></i> Vos points faibles</strong></h4>
+        <%= @personality_riasec.points_faibles %>
+        </div>
+        <div class="well">
+          <span class="badge badge-pill badge-danger">Patient</span>
+          <span class="badge badge-pill badge-danger">Minitieux</span>
+          <span class="badge badge-pill badge-danger">Franc</span>
+        </div>
+      </div>
     </div>
-
-
-    <div class="cards-results-quiz text-center">
+      <div class="modal-footer">
+        <button id="randomize-career" type="button" class="btn btn-lg btn-info"><i class="fas fa-dice"></i> Random</button>
+      </div>
+    <div class="row" style="padding-top:20px;">
       <% @personality_riasec.careers.sample(3).each do |career| %>
-        <%= link_to users_personnalities_path(personality: @personality_riasec, career: career), method: :post do %>
-          <div class="card-category-career-results peach-gradient-rgba " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(h)">
-            <%= career.title %>
-          </div>
-        <% end %>
+        <div class="col-md-4">
+          <%= link_to users_personnalities_path(personality: @personality_riasec, career: career), method: :post do %>
+            <div class="card job">
+              <div class="card-body">
+                <h5 class="card-title">Métier</h5>
+                <p class="card-text">
+                  <div url(h)">
+                    <strong><%= career.title %></strong>
+                  </div>
+                </p>
+              </div>
+            </div>
+          <% end %>
+        </div>
       <% end %>
     </div>
+     </div>
+    </div>
   </div>
-</header>
+        </div>
+       </div>
+    </div>
+  </div> -->
+<body style="background:#123;">
 
 

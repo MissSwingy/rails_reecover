@@ -38,31 +38,31 @@
   display: inline-flex;
   align-items: stretch;
   justify-content: center;
-  .icon {
-    background: fade-out($black, .85);
-    display: inline-block;
-    padding: $btn-padding-y $btn-padding-x;
-  }
-  .text {
-    display: inline-block;
-    padding: $btn-padding-y $btn-padding-x;
-  }
-  &.btn-sm {
-    .icon {
-      padding: $btn-padding-y-sm $btn-padding-x-sm;
-    }
-    .text {
-      padding: $btn-padding-y-sm $btn-padding-x-sm;
-    }
-  }
-  &.btn-lg {
-    .icon {
-      padding: $btn-padding-y-lg $btn-padding-x-lg;
-    }
-    .text {
-      padding: $btn-padding-y-lg $btn-padding-x-lg;
-    }
-  }
+  // .icon {
+  //   background: fade-out($black, .85);
+  //   display: inline-block;
+  //   padding: $btn-padding-y $btn-padding-x;
+  // }
+  // .text {
+  //   display: inline-block;
+  //   padding: $btn-padding-y $btn-padding-x;
+  // }
+  // &.btn-sm {
+  //   .icon {
+  //     padding: $btn-padding-y-sm $btn-padding-x-sm;
+  //   }
+  //   .text {
+  //     padding: $btn-padding-y-sm $btn-padding-x-sm;
+  //   }
+  // }
+  // &.btn-lg {
+  //   .icon {
+  //     padding: $btn-padding-y-lg $btn-padding-x-lg;
+  //   }
+  //   .text {
+  //     padding: $btn-padding-y-lg $btn-padding-x-lg;
+  //   }
+  // }
 }
 
 @-webkit-keyframes greenPulse {

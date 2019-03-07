@@ -14,6 +14,11 @@ footer.page-footer {
 #footer ul {
   margin-top: 10px;
 }
+
+.footer-copyright {
+  font-size: 12px;
+}
+
 #footer a {
   color: #CCCCCC;
   font-size: 30px;
@@ -44,7 +49,7 @@ body.sidebar-toggled {
 footer.page-footer .footer-copyright {
     overflow: hidden;
     background-color: rgba(0,0,0,.2);
-    color: rgba(255,255,255,.6);
+    color: rgba(255,255,255,.35);
 }
 
 .special-color-dark {

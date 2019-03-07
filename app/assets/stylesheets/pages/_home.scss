@@ -11,7 +11,7 @@ html {
 }
 
 #test-riasec {
-  height: 600px;
+  min-height: 600px;
   clear: after;
 }
 
@@ -71,8 +71,11 @@ html {
 
 @media (max-width: 479px) {
   .a-button-gender {
-    width: 250px;
-    height: 250px;
+    min-width: 150px;
+    min-height: 150px;
+  }
+  .masthead-img {
+  height: 150vh;
   }
 }
 
@@ -229,6 +232,8 @@ html {
 .pulse-button:hover
 {
   -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  outline: 0;
 }
 
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}

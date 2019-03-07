@@ -42,13 +42,13 @@
 <!--             if question == @questions.last
           redirect_to sss_path -->
     <div data-container="<%= @questions.index(question) + 1 %>">
-      <div class="overlay"><h2 id="question-<%= question.id %>" class="text-center mb-5" data-question="<%= @questions.index(question) + 1 %>"> <%= question.question %> </h2></div>
+      <div class="overlay" id="question-<%= question.id %>" data-question="<%= @questions.index(question) + 1 %>"><h2 class="text-center mb-5"> <%= question.question %> </h2></div>
         <div class="cards-quiz">
           <div class="row align-items-start text-center">
           <% question.answers.each_with_index do |answer, index| %>
             <div class="col-xs-6 col-md-6 col-lg-4 card-custom">
               <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
-                <div class="card-category-quiz" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url(answer.photo)%>'); transition-delay: <%= index/5.1 %>s ">
+                <div class="card-category-quiz" id="card-answer" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('<%= image_url(answer.photo)%>'); transition-delay: <%= index/5.1 %>s ">
                  <strong> <%= answer.answer %></strong>
                 </div>
               <% end %>
@@ -62,17 +62,14 @@
     <!-- Show results -->
 <header class="masthead-results">
   <div class="container h-100 bg-overlay">
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-center">
+    <div class="row h-100 align-items-center justify-content-center">
+      <div class="col-7 text-center">
+        <h1><strong>Pour quels métiers êtes-vous fait ?</strong></h1>
+        <hr class="col-6">
+        <br><br>
           <div id="question-<%= @questions.last.id + 1 %>" data-question="9" data-container="9">
-            <div class="button-results" >
-            <%= link_to "Voir les résultats", survey_attempt_path(Survey.last.id, Attempt.last.id), method: :patch, class: "btn btn-warning btn-lg"  %>
-          </div>
-        </div>
-       </div>
-    </div>
-  </div>
-</header>
-</div>
-
+            <!-- BOUTON TEST -->
+<center>
+  <%= link_to "Voir les résultats", survey_attempt_path(Survey.last.id, Attempt.last.id), method: :patch, class: "btn btn-warning btn-lg"  %>
+</center>
 
