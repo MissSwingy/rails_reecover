@@ -465,7 +465,7 @@ answer81.save!
 answer82 = Answer.new(
 question: question8,
 column: "E",
-answer: "Boisson alcoolisée",
+answer: "Inavouable",
 photo: "quiz/5qdrinks/whisky.jpg")
 answer82.save!
 
@@ -630,7 +630,7 @@ TrainingCenter.create!(
   telephone: "01 86 95 22 29",
   website: "https://www.chefmartial.com/",
   career: Career.find_by(title: "Chef-cuisinier"),
-  price: 6700;
+  price: 6700,
   photo: "chef-martial.jpg")
 
 TrainingCenter.create!(
@@ -643,7 +643,7 @@ TrainingCenter.create!(
   telephone: "07 63 33 57 21",
   website: "https://www.cuisinemodemplois.com/",
   career: Career.find_by(title: "Chef-cuisinier"),
-  price: 10300;
+  price: 10300,
   photo: "cuisine-mode-emploi-noir.jpg")
 
 TrainingCenter.create!(
@@ -656,7 +656,7 @@ TrainingCenter.create!(
   telephone:"01 40 26 14 00",
   website:"http://www.coulissesduchef.com",
   career: Career.find_by(title: "Chef-cuisinier"),
-  price: 8900;
+  price: 8900,
   photo: "les-coulisses-du-chef.jpg")
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
