@@ -256,7 +256,7 @@ answer36.save!
 question4 = Question.new(
 question: "A quelle personnalité tu t'identifies le + ?",
 gender: "F",
-number: 4,
+number: 3,
 survey: Survey.last)
 
 question4.save!
@@ -305,7 +305,7 @@ answer46.save!
 
 question5 = Question.new(
 question: "Ton repas préféré contient :",
-number: 5,
+number: 4,
 survey: Survey.last)
 
 question5.save!
@@ -354,7 +354,7 @@ answer56.save!
 
 question6 = Question.new(
 question: "Ton loisir préféré pour décompresser :",
-number: 6,
+number: 5,
 survey: Survey.last)
 question6.save!
 
@@ -402,7 +402,7 @@ answer66.save!
 
 question7 = Question.new(
 question: "Ton game préféré",
-number: 7,
+number: 6,
 survey: Survey.last)
 
 question7.save!
@@ -451,7 +451,7 @@ answer76.save!
 
 question8 = Question.new(
 question: "Ton combustible",
-number: 8,
+number: 7,
 survey: Survey.last)
 question8.save!
 
@@ -499,7 +499,7 @@ answer86.save!
 
 question9 = Question.new(
 question: "Tu es plutôt :",
-number: 9,
+number: 8,
 survey: Survey.last)
 
 question9.save!
@@ -546,167 +546,167 @@ answer: "Introverti(e)",
 photo: "quiz/9qpersonality/introverti.jpg")
 answer96.save!
 
-puts "ok"
+# puts "ok"
 
-puts 'Destroying personalities_riasec...'
+# puts 'Destroying personalities_riasec...'
 
-PersonalityRiasec.destroy_all
+# PersonalityRiasec.destroy_all
 
-puts 'Creating personalities_riasec...'
+# puts 'Creating personalities_riasec...'
 
-PersonalityRiasec.create!(
-  name: "Réaliste",
-  description: "Les personnes de ce type exercent surtout des tâches concrètes. Habiles de leurs mains, elles savent coordonner leurs gestes. Elles se servent d’outils, font fonctionner des appareils, des machines, des véhicules. Les réalistes ont le sens de la mécanique, le souci de la précision. Plusieurs exercent leur profession à l’extérieur plutôt qu’à l’intérieur. Leur travail demande souvent une bonne endurance physique et même des capacités athlétiques. Ces personnes sont patientes, minutieuses, constantes, sensées, naturelles, franches, pratiques, concrètes, simples.",
-  avatar_f: "realiste.jpg",
-  avatar_m: "realiste.jpg",
-  points_forts: "Une bonne coordination motrice, une bonne coordination visuelle-motrice, un sens de la mécanique, une bonne endurance physique.",
-  points_faibles: "Les relations humaines.")
-PersonalityRiasec.find_by name: "Réaliste"
+# PersonalityRiasec.create!(
+#   name: "Réaliste",
+#   description: "Les personnes de ce type exercent surtout des tâches concrètes. Habiles de leurs mains, elles savent coordonner leurs gestes. Elles se servent d’outils, font fonctionner des appareils, des machines, des véhicules. Les réalistes ont le sens de la mécanique, le souci de la précision. Plusieurs exercent leur profession à l’extérieur plutôt qu’à l’intérieur. Leur travail demande souvent une bonne endurance physique et même des capacités athlétiques. Ces personnes sont patientes, minutieuses, constantes, sensées, naturelles, franches, pratiques, concrètes, simples.",
+#   avatar_f: "realiste.jpg",
+#   avatar_m: "realiste.jpg",
+#   points_forts: "Une bonne coordination motrice, une bonne coordination visuelle-motrice, un sens de la mécanique, une bonne endurance physique.",
+#   points_faibles: "Les relations humaines.")
+# PersonalityRiasec.find_by name: "Réaliste"
 
-PersonalityRiasec.create!(
-  name: "Artistique",
-  description: "Les personnes de ce type aiment les activités qui leur permettent de s’exprimer librement à partir de leurs perceptions, de leur sensibilité et de leur intuition. Elles s’intéressent au travail de création, qu’il s’agisse d’art visuel, de littérature, de musique, de publicité ou de spectacle. D’esprit indépendant et non conformiste, elles sont à l’aise dans des situations qui sortent de l’ordinaire. Elles sont dotées d’une grande sensibilité et de beaucoup d’imagination. Bien qu’elles soient rebutées par les tâches méthodiques et routinières, elles sont néanmoins capables de travailler avec discipline. Ces personnes sont spontanées, expressives, imaginatives, émotives, indépendantes, originales, intuitives, passionnées, fières, flexibles, disciplinées.",
-  avatar_f: "artistique.jpg",
-  avatar_m: "artistique.jpg",
-  points_forts: "Les activités d'expression, les arts et la littérature.",
-  points_faibles:"Le sens des affaires et la routine de bureau.")
-PersonalityRiasec.find_by name: "Artistique"
+# PersonalityRiasec.create!(
+#   name: "Artistique",
+#   description: "Les personnes de ce type aiment les activités qui leur permettent de s’exprimer librement à partir de leurs perceptions, de leur sensibilité et de leur intuition. Elles s’intéressent au travail de création, qu’il s’agisse d’art visuel, de littérature, de musique, de publicité ou de spectacle. D’esprit indépendant et non conformiste, elles sont à l’aise dans des situations qui sortent de l’ordinaire. Elles sont dotées d’une grande sensibilité et de beaucoup d’imagination. Bien qu’elles soient rebutées par les tâches méthodiques et routinières, elles sont néanmoins capables de travailler avec discipline. Ces personnes sont spontanées, expressives, imaginatives, émotives, indépendantes, originales, intuitives, passionnées, fières, flexibles, disciplinées.",
+#   avatar_f: "artistique.jpg",
+#   avatar_m: "artistique.jpg",
+#   points_forts: "Les activités d'expression, les arts et la littérature.",
+#   points_faibles:"Le sens des affaires et la routine de bureau.")
+# PersonalityRiasec.find_by name: "Artistique"
 
-PersonalityRiasec.create!(
-  name: "Conventionnel",
-  description: "Les personnes de ce type ont une préférence pour les activités précises, méthodiques, axées sur un résultat prévisible. Elles se préoccupent de l’ordre et de la bonne organisation matérielle de leur environnement. Elles préfèrent se conformer à des conventions bien établies et à des consignes claires plutôt que d’agir dans l’improvisation. Elles aiment calculer, classer, tenir à jour des registres ou des dossiers. Elles sont efficaces dans tout travail qui exige de l’exactitude et à l’aise dans les tâches routinières. Ces personnes sont loyales, organisées, efficaces, respectueuses de l’autorité, perfectionnistes, raisonnables, consciencieuses, ponctuelles, discrètes, strictes.",
-  avatar_f: "conventionnel.jpg",
-  avatar_m: "conventionnel.jpg",
-  points_forts: "Mettre de l'ordre, réaliser un travail méthodique suivant des directives claires.",
-  points_faibles: "La compréhension artistique.")
-PersonalityRiasec.find_by name: "Conventionnel"
+# PersonalityRiasec.create!(
+#   name: "Conventionnel",
+#   description: "Les personnes de ce type ont une préférence pour les activités précises, méthodiques, axées sur un résultat prévisible. Elles se préoccupent de l’ordre et de la bonne organisation matérielle de leur environnement. Elles préfèrent se conformer à des conventions bien établies et à des consignes claires plutôt que d’agir dans l’improvisation. Elles aiment calculer, classer, tenir à jour des registres ou des dossiers. Elles sont efficaces dans tout travail qui exige de l’exactitude et à l’aise dans les tâches routinières. Ces personnes sont loyales, organisées, efficaces, respectueuses de l’autorité, perfectionnistes, raisonnables, consciencieuses, ponctuelles, discrètes, strictes.",
+#   avatar_f: "conventionnel.jpg",
+#   avatar_m: "conventionnel.jpg",
+#   points_forts: "Mettre de l'ordre, réaliser un travail méthodique suivant des directives claires.",
+#   points_faibles: "La compréhension artistique.")
+# PersonalityRiasec.find_by name: "Conventionnel"
 
-PersonalityRiasec.create!(
-  name: "Entrepreneur",
-  description: "Les personnes de ce type aiment influencer leur entourage. Leur capacité de décision, le sens de l’organisation et une habileté particulière à communiquer leur enthousiasme les appuient dans leurs objectifs. Elles savent vendre des idées autant que des biens matériels. Elles ont le sens de l’organisation, de la planification et de l’initiative et savent mener à bien leurs projets. Elles savent faire preuve d’audace et d’efficacité. Ces personnes sont persuasives, énergiques, optimistes, audacieuses, sûres d’elles-mêmes, ambitieuses, déterminées, diplomates, débrouillardes, sociables.",
-  avatar_f: "entreprenant.jpg",
-  avatar_m: "entreprenant.jpg",
-  points_forts: "Les affaires publiques, la sollicitation que requiert la vente, convaincre les gens et organiser des projets.",
-  points_faibles: "Les sciences.")
-PersonalityRiasec.find_by name: "Entrepreneur"
+# PersonalityRiasec.create!(
+#   name: "Entrepreneur",
+#   description: "Les personnes de ce type aiment influencer leur entourage. Leur capacité de décision, le sens de l’organisation et une habileté particulière à communiquer leur enthousiasme les appuient dans leurs objectifs. Elles savent vendre des idées autant que des biens matériels. Elles ont le sens de l’organisation, de la planification et de l’initiative et savent mener à bien leurs projets. Elles savent faire preuve d’audace et d’efficacité. Ces personnes sont persuasives, énergiques, optimistes, audacieuses, sûres d’elles-mêmes, ambitieuses, déterminées, diplomates, débrouillardes, sociables.",
+#   avatar_f: "entreprenant.jpg",
+#   avatar_m: "entreprenant.jpg",
+#   points_forts: "Les affaires publiques, la sollicitation que requiert la vente, convaincre les gens et organiser des projets.",
+#   points_faibles: "Les sciences.")
+# PersonalityRiasec.find_by name: "Entrepreneur"
 
-PersonalityRiasec.create!(
-  name: "Investigateur",
-  description: "La plupart des personnes de ce type ont des connaissances théoriques auxquelles elles ont recours pour agir. Elles disposent de renseignements spécialisés dont elles se servent pour résoudre des problèmes. Ce sont des personnes qui observent. Leur principale compétence tient à la compréhension qu’elles ont des phénomènes. Elles aiment bien se laisser absorber dans leurs réflexions. Elles aiment jouer avec les idées. Elles valorisent le savoir. Ces personnes sont critiques, curieuses, soucieuses de se renseigner, calmes, réservées, persévérantes, tolérantes, prudentes dans leurs jugements, logiques, objectives, rigoureuses, intellectuelles.",
-  avatar_f: "investigateur.jpg",
-  avatar_m: "investigateur.jpg",
-  points_forts: "Les études, le travail solitaire, les mathématiques.",
-  points_faibles: "Le leadership.")
-PersonalityRiasec.find_by name: "Investigateur"
+# PersonalityRiasec.create!(
+#   name: "Investigateur",
+#   description: "La plupart des personnes de ce type ont des connaissances théoriques auxquelles elles ont recours pour agir. Elles disposent de renseignements spécialisés dont elles se servent pour résoudre des problèmes. Ce sont des personnes qui observent. Leur principale compétence tient à la compréhension qu’elles ont des phénomènes. Elles aiment bien se laisser absorber dans leurs réflexions. Elles aiment jouer avec les idées. Elles valorisent le savoir. Ces personnes sont critiques, curieuses, soucieuses de se renseigner, calmes, réservées, persévérantes, tolérantes, prudentes dans leurs jugements, logiques, objectives, rigoureuses, intellectuelles.",
+#   avatar_f: "investigateur.jpg",
+#   avatar_m: "investigateur.jpg",
+#   points_forts: "Les études, le travail solitaire, les mathématiques.",
+#   points_faibles: "Le leadership.")
+# PersonalityRiasec.find_by name: "Investigateur"
 
-PersonalityRiasec.create!(
-  name: "Social",
-  description: "Les personnes de ce type aiment être en contact avec les autres dans le but de les aider, de les informer, de les éduquer, de les divertir, de les soigner ou encore de favoriser leur croissance. Elles s’intéressent aux comportements humains et sont soucieuses de la qualité de leurs relations avec les autres. Elles utilisent leur savoir ainsi que leurs impressions et leurs émotions pour agir et pour interagir avec les autres. Elles aiment communiquer et s’expriment facilement. Ces personnes sont attentives aux autres, coopératives, collaboratrices, compréhensives, dévouées, sensibles, sympathiques, perspicaces, bienveillantes, communicatives, encourageantes.",
-  avatar_f: "social.jpg",
-  avatar_m: "social.jpg",
-  points_forts: "Être en relation avec les gens, être à l'écoute des autres et répondre aux besoins des gens.",
-  points_faibles: "La compétence manuelle et technique.")
-PersonalityRiasec.find_by name: "Social"
+# PersonalityRiasec.create!(
+#   name: "Social",
+#   description: "Les personnes de ce type aiment être en contact avec les autres dans le but de les aider, de les informer, de les éduquer, de les divertir, de les soigner ou encore de favoriser leur croissance. Elles s’intéressent aux comportements humains et sont soucieuses de la qualité de leurs relations avec les autres. Elles utilisent leur savoir ainsi que leurs impressions et leurs émotions pour agir et pour interagir avec les autres. Elles aiment communiquer et s’expriment facilement. Ces personnes sont attentives aux autres, coopératives, collaboratrices, compréhensives, dévouées, sensibles, sympathiques, perspicaces, bienveillantes, communicatives, encourageantes.",
+#   avatar_f: "social.jpg",
+#   avatar_m: "social.jpg",
+#   points_forts: "Être en relation avec les gens, être à l'écoute des autres et répondre aux besoins des gens.",
+#   points_faibles: "La compétence manuelle et technique.")
+# PersonalityRiasec.find_by name: "Social"
 
 
 
-puts 'Creating careers...'
+# puts 'Creating careers...'
 
-Career.create!(
-  title: "Chef-cuisinier",
-  category: "Agro-alimentaire, alimentation, cuisine",
-  salary: 1521,
-  personality_riasec: PersonalityRiasec.find_by(name: "Réaliste")
-  )
-puts 'Creating training centers...'
+# Career.create!(
+#   title: "Chef-cuisinier",
+#   category: "Agro-alimentaire, alimentation, cuisine",
+#   salary: 1521,
+#   personality_riasec: PersonalityRiasec.find_by(name: "Réaliste")
+#   )
+# puts 'Creating training centers...'
 
-TrainingCenter.create!(
-  name: "Chef Martial",
-  address:"80 rue des Tournelles",
-  postal_code: "75003",
-  city: "Paris",
-  category:"Agro-alimentaire, alimentation, cuisine",
-  email: "contact@chefmartial.com",
-  telephone: "01 86 95 22 29",
-  website: "https://www.chefmartial.com/",
-  career: Career.find_by(title: "Chef-cuisinier"),
-  photo: "chef-martial.jpg")
+# TrainingCenter.create!(
+#   name: "Chef Martial",
+#   address:"80 rue des Tournelles",
+#   postal_code: "75003",
+#   city: "Paris",
+#   category:"Agro-alimentaire, alimentation, cuisine",
+#   email: "contact@chefmartial.com",
+#   telephone: "01 86 95 22 29",
+#   website: "https://www.chefmartial.com/",
+#   career: Career.find_by(title: "Chef-cuisinier"),
+#   photo: "chef-martial.jpg")
 
-TrainingCenter.create!(
-  name: "Cuisine Mode d'Emploi(s)",
-  address:"7 Rue Albert Marquet",
-  postal_code: "75020",
-  city: "Paris",
-  category: "Agro-alimentaire, alimentation, cuisine",
-  email: "restaurant-paris@cme-formations.com",
-  telephone: "07 63 33 57 21",
-  website: "https://www.cuisinemodemplois.com/",
-  career: Career.find_by(title: "Chef-cuisinier"),
-  photo: "cuisine-mode-emploi-noir.jpg")
+# TrainingCenter.create!(
+#   name: "Cuisine Mode d'Emploi(s)",
+#   address:"7 Rue Albert Marquet",
+#   postal_code: "75020",
+#   city: "Paris",
+#   category: "Agro-alimentaire, alimentation, cuisine",
+#   email: "restaurant-paris@cme-formations.com",
+#   telephone: "07 63 33 57 21",
+#   website: "https://www.cuisinemodemplois.com/",
+#   career: Career.find_by(title: "Chef-cuisinier"),
+#   photo: "cuisine-mode-emploi-noir.jpg")
 
-TrainingCenter.create!(
-  name: "Les coulisses du chef",
-  address:"7 rue Paul Lelong",
-  postal_code: "75002",
-  city: "Paris",
-  category: "Agro-alimentaire, alimentation, cuisine",
-  email:"olivier.berte@coursdecuisineparis.com",
-  telephone:"01 40 26 14 00",
-  website:"http://www.coulissesduchef.com",
-  career: Career.find_by(title: "Chef-cuisinier"),
-  photo: "les-coulisses-du-chef.jpg")
+# TrainingCenter.create!(
+#   name: "Les coulisses du chef",
+#   address:"7 rue Paul Lelong",
+#   postal_code: "75002",
+#   city: "Paris",
+#   category: "Agro-alimentaire, alimentation, cuisine",
+#   email:"olivier.berte@coursdecuisineparis.com",
+#   telephone:"01 40 26 14 00",
+#   website:"http://www.coulissesduchef.com",
+#   career: Career.find_by(title: "Chef-cuisinier"),
+#   photo: "les-coulisses-du-chef.jpg")
 
-csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
-filepath = 'metier2.csv'
-filepath2 = 'training_centers3.csv'
-csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
-training_centers = []
-CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
-  training_centers << {name: row['name'], address: row['address'], category: row['category'], postal_code: row['postal_code'], city: row['city']}
-end
+# csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
+# filepath = 'metier2.csv'
+# filepath2 = 'training_centers3.csv'
+# csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
+# training_centers = []
+# CSV.parse(File.open(filepath2, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
+#   training_centers << {name: row['name'], address: row['address'], category: row['category'], postal_code: row['postal_code'], city: row['city']}
+# end
 
+# # count = 0
+# # puts training_centers.count
+# # training_centers.each_with_index do |training, index|
+# #   if count < 6
+# #     puts index
+# #     puts training[:name]
+# #     training_centers.delete_at(index)
+# #     count += 1
+# #     puts training_centers.count
+# #   end
+# # end
+
+# CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
+# # puts row['personnalite'].capitalize
+# personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
+# c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
 # count = 0
-# puts training_centers.count
-# training_centers.each_with_index do |training, index|
-#   if count < 6
-#     puts index
-#     puts training[:name]
-#     training_centers.delete_at(index)
-#     count += 1
-#     puts training_centers.count
+#   training_centers.each_with_index do |training, index|
+#     if count < 2
+#       if c.category == training[:category]
+#         t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
+#         # if Geocoder.coordinates(t.full_address) != nil
+#         t.save
+#         training_centers.delete_at(index)
+#         count += 1
+#         # else
+#         # end
+#       else
+#       end
+#     end
 #   end
 # end
 
-CSV.parse(File.open(filepath, 'r:iso-8859-1:utf-8') {|f| f.read}, csv_options) do |row|
-# puts row['personnalite'].capitalize
-personality_riasec = PersonalityRiasec.find_by(name: row['personnalite'].capitalize)
-c = Career.create!(title: "#{row['metier']}", personality_riasec: personality_riasec, category: "#{row['category']}", salary: "#{row['salaire']}")
-count = 0
-  training_centers.each_with_index do |training, index|
-    if count < 2
-      if c.category == training[:category]
-        t = TrainingCenter.new(name: training[:name], address: training[:address], category: training[:category], postal_code: training[:postal_code], city: training[:city], career: c)
-        # if Geocoder.coordinates(t.full_address) != nil
-        t.save
-        training_centers.delete_at(index)
-        count += 1
-        # else
-        # end
-      else
-      end
-    end
-  end
-end
+# # vartest = Career.all
 
-# vartest = Career.all
+# # vartest.each do |career|
+# #   puts career.training_centers.where(latitude: nil).count
+# # end
 
-# vartest.each do |career|
-#   puts career.training_centers.where(latitude: nil).count
-# end
+# puts "end"
 
-puts "end"
+# PgSearch::Multisearch.rebuild(Career)
+# PgSearch::Multisearch.rebuild(TrainingCenter)
 
-PgSearch::Multisearch.rebuild(Career)
-PgSearch::Multisearch.rebuild(TrainingCenter)
-
-puts "end"
+# puts "end"

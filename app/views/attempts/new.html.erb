@@ -41,13 +41,13 @@
     <% @questions.each do |question| %>
 <!--             if question == @questions.last
           redirect_to sss_path -->
-    <div data-container="<%= @questions.index(question) + 1 %>">
-      <div class="overlay" id="question-<%= question.id %>" data-question="<%= @questions.index(question) + 1 %>"><h2 class="text-center mb-5"> <%= question.question %> </h2></div>
+    <div data-container="<%= question.number %>">
+      <div class="overlay" id="question-<%= question.number %>" data-question="<%= question.number %>"><h2 class="text-center mb-5"> <%= question.question %> </h2></div>
         <div class="cards-quiz">
           <div class="row align-items-start text-center">
           <% question.answers.each_with_index do |answer, index| %>
             <div class="col-xs-6 col-md-6 col-lg-4 card-custom">
-              <%= link_to answer_users_answers_path(answer), method: :post, remote: true do %>
+              <%= link_to answer_users_answers_path(answer), method: :post, remote: @questions.last != question do %>
                 <div class="card-category-quiz" id="card-answer" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('<%= image_url(answer.photo)%>'); transition-delay: <%= index/5.1 %>s ">
                  <strong> <%= answer.answer %></strong>
                 </div>
@@ -58,89 +58,3 @@
         </div>
       </div>
     <% end %>
-
-    <!-- Show results -->
-<header class="masthead-results">
-  <div class="container h-100 bg-overlay">
-    <div class="row h-100 align-items-center justify-content-center">
-      <div class="col-7 text-center">
-        <h1><strong>Pour quels métiers êtes-vous fait ?</strong></h1>
-        <hr class="col-6">
-        <br><br>
-          <div id="question-<%= @questions.last.id + 1 %>" data-question="9" data-container="9">
-            <!-- BOUTON TEST -->
-<center>
-  <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" style="margin-top:20px;" data-target="#exampleModal">
-    Voir les résultats
-  </button>
-</center>
-
-
-<!-- MODAL -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-job" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title text-center" id="exampleModalLabel">Vous avez un profil de type :</h2>
-        <button type="button btn-warning" class="close" data-dismiss="modal" aria-label="Fermer">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-      <div class="col-md-5 py-5">
-        <center>
-          <%= image_tag "realiste.jpg", height: 320, width: 320, class: "avatar-large", alt: "avatar-large-réaliste"  %>
-        </center>
-      </div>
-      <div class="col-md-7">
-        <h3>Réaliste</h3>
-      Les personnes de ce type exercent surtout des tâches concrètes. Habiles de leurs mains, elles savent coordonner leurs gestes. Elles se servent d’outils, font fonctionner des appareils, des machines, des véhicules. <strong>Les réalistes ont le sens de la mécanique, le souci de la précision.</strong> Plusieurs exercent leur profession à l’extérieur plutôt qu’à l’intérieur. Leur travail demande souvent une bonne endurance physique et même des capacités athlétiques.
-        <div class="well">
-          <span class="badge badge-pill badge-danger">Patient</span>
-          <span class="badge badge-pill badge-danger">Minitieux</span>
-          <span class="badge badge-pill badge-danger">Franc</span>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="padding-top:20px;">
-      <div class="col-md-4">
-        <div class="card job">
-          <div class="card-body">
-          <h5 class="card-title">Métier</h5>
-          <p class="card-text">Dessinateur/Projeteur</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card job">
-          <div class="card-body">
-          <h5 class="card-title">Métier</h5>
-          <p class="card-text">Chef cuisinier</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card job">
-          <div class="card-body">
-          <h5 class="card-title">Métier</h5>
-          <p class="card-text">Boucher</p>
-          </div>
-        </div>
-      </div>
-    </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-lg btn-info" data-dismiss="modal">Random</button>
-      </div>
-    </div>
-  </div>
-</div>
-        </div>
-       </div>
-    </div>
-  </div>
-</header>
-</div>
-<body style="background:#333;">
-
