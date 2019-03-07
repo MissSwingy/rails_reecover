@@ -110,6 +110,7 @@ survey.save!
 
 question1 = Question.new(
 question: "Avant une compétition, je ...",
+number: 1,
 survey: Survey.last)
 question1.save!
 
@@ -157,8 +158,8 @@ answer16.save!
 
 question2 = Question.new(
 question: "Ton film préferé un dimanche soir :",
+number: 2,
 survey: Survey.last)
-
 question2.save!
 
 answer21 = Answer.new(
@@ -206,6 +207,7 @@ answer26.save!
 question3 = Question.new(
 question: "A quelle personnalité tu t'identifies le + ?",
 gender: "M",
+number: 3,
 survey: Survey.last)
 question3.save!
 
@@ -254,6 +256,7 @@ answer36.save!
 question4 = Question.new(
 question: "A quelle personnalité tu t'identifies le + ?",
 gender: "F",
+number: 4,
 survey: Survey.last)
 
 question4.save!
@@ -302,6 +305,7 @@ answer46.save!
 
 question5 = Question.new(
 question: "Ton repas préféré contient :",
+number: 5,
 survey: Survey.last)
 
 question5.save!
@@ -350,6 +354,7 @@ answer56.save!
 
 question6 = Question.new(
 question: "Ton loisir préféré pour décompresser :",
+number: 6,
 survey: Survey.last)
 question6.save!
 
@@ -397,6 +402,7 @@ answer66.save!
 
 question7 = Question.new(
 question: "Ton game préféré",
+number: 7,
 survey: Survey.last)
 
 question7.save!
@@ -445,8 +451,8 @@ answer76.save!
 
 question8 = Question.new(
 question: "Ton combustible",
+number: 8,
 survey: Survey.last)
-
 question8.save!
 
 answer81 = Answer.new(
@@ -493,6 +499,7 @@ answer86.save!
 
 question9 = Question.new(
 question: "Tu es plutôt :",
+number: 9,
 survey: Survey.last)
 
 question9.save!
