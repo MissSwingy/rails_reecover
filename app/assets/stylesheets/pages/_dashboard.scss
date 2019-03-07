@@ -16,6 +16,7 @@
     transition: all 0.3s;
     padding-left :20px;
     margin-top: 70px !important;
+    height: 180vh;
 }
 
 #sidebar img.avatar-large {
@@ -215,6 +216,7 @@ a.article:hover {
 .grid-search {
   display:grid;
   grid-template-columns: 50% 50%;
+  margin-top: 25px;
   // height:100vh;
 }
 
