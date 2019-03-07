@@ -157,7 +157,7 @@ photo: "quiz/1question/leader.jpg")
 answer16.save!
 
 question2 = Question.new(
-question: "Ton film préferé un dimanche soir :",
+question: "Mon film préferé un dimanche soir :",
 number: 2,
 survey: Survey.last)
 question2.save!
@@ -205,7 +205,7 @@ photo: "quiz/2qfilms/lafureur.jpg")
 answer26.save!
 
 question3 = Question.new(
-question: "A quelle personnalité tu t'identifies le + ?",
+question: "A quelle personnalité je m'identifie le + ?",
 gender: "M",
 number: 3,
 survey: Survey.last)
@@ -254,7 +254,7 @@ photo: "quiz/4qhommes/rider.jpg")
 answer36.save!
 
 question4 = Question.new(
-question: "A quelle personnalité tu t'identifies le + ?",
+question: "A quelle personnalité je m'identifie le + ?",
 gender: "F",
 number: 3,
 survey: Survey.last)
@@ -304,7 +304,7 @@ photo: "quiz/3qfemmes/rowling.jpg")
 answer46.save!
 
 question5 = Question.new(
-question: "Ton repas préféré contient :",
+question: "Mon cheat meal :",
 number: 4,
 survey: Survey.last)
 
@@ -353,7 +353,7 @@ photo: "quiz/7qfood/fruits.jpg")
 answer56.save!
 
 question6 = Question.new(
-question: "Ton loisir préféré pour décompresser :",
+question: "Mon hobby pour décompresser :",
 number: 5,
 survey: Survey.last)
 question6.save!
@@ -401,7 +401,7 @@ photo: "quiz/8qhobbies/gardening.jpg")
 answer66.save!
 
 question7 = Question.new(
-question: "Ton game préféré",
+question: "Mon game préféré",
 number: 6,
 survey: Survey.last)
 
@@ -450,7 +450,7 @@ photo: "quiz/6qgaming/apex.jpg")
 answer76.save!
 
 question8 = Question.new(
-question: "Ton combustible",
+question: "Mon combustible",
 number: 7,
 survey: Survey.last)
 question8.save!
@@ -465,7 +465,7 @@ answer81.save!
 answer82 = Answer.new(
 question: question8,
 column: "E",
-answer: "Boisson alcoolisée",
+answer: "Inavouable",
 photo: "quiz/5qdrinks/whisky.jpg")
 answer82.save!
 
@@ -498,7 +498,7 @@ photo: "quiz/5qdrinks/coffee.jpg")
 answer86.save!
 
 question9 = Question.new(
-question: "Tu es plutôt :",
+question: "Je suis plutôt :",
 number: 8,
 survey: Survey.last)
 
@@ -630,6 +630,7 @@ TrainingCenter.create!(
   telephone: "01 86 95 22 29",
   website: "https://www.chefmartial.com/",
   career: Career.find_by(title: "Chef-cuisinier"),
+  price: 6700,
   photo: "chef-martial.jpg")
 
 TrainingCenter.create!(
@@ -642,6 +643,7 @@ TrainingCenter.create!(
   telephone: "07 63 33 57 21",
   website: "https://www.cuisinemodemplois.com/",
   career: Career.find_by(title: "Chef-cuisinier"),
+  price: 10300,
   photo: "cuisine-mode-emploi-noir.jpg")
 
 TrainingCenter.create!(
@@ -654,6 +656,7 @@ TrainingCenter.create!(
   telephone:"01 40 26 14 00",
   website:"http://www.coulissesduchef.com",
   career: Career.find_by(title: "Chef-cuisinier"),
+  price: 8900,
   photo: "les-coulisses-du-chef.jpg")
 
 csv_options = { col_sep: ';', headers: :first_row, encoding: "utf-8" }
