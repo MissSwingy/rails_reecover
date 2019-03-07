@@ -2,14 +2,13 @@
 <div class="wrapper" class="animated--fade-in">
     <!-- Sidebar  -->
     <nav id="sidebar">
-        <div class="sidebar-header">
+        <div class="text-center sidebar-header">
           <%= image_tag @user_personality.career.personality_riasec.avatar_f, class: "avatar-large", alt: "avatar-large" %>
-          <p>Personnalité : <%= @user_personality.career.personality_riasec.name %></p>
-          <p>Votre choix de métier :<br><%= @user_personality.career.title %></p>
-          <p><%= @user.first_name %> <%= @user.last_name %></p>
+          <p class="text-center"><%= @user_personality.career.personality_riasec.name %></p>
+          <p class="text-center"><%= @user_personality.career.title %></p>
         </div>
 
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled CTAs components">
             <p>Votre Dashboard</p>
             <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Votre profil</a>
@@ -17,18 +16,18 @@
                     <li>
                       <%=  link_to "Vos infos", edit_user_registration_path  %>
                     </li>
-                    <li>
+   <!--                  <li>
                         <a href="#">Home 2</a>
                     </li>
                     <li>
                         <a href="#">Home 3</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li>
               <%= link_to "Votre personnalité", results_path(current_user) %>
             </li>
-            <li>
+<!--             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Vos métiers</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
@@ -47,7 +46,7 @@
             </li>
             <li>
                 <a href="#">Contact</a>
-            </li>
+            </li> -->
     <ul class="list-unstyled CTAs">
       <li>
        <%= link_to "Retour à la page d'accueil", root_path, class: "article"%>
@@ -64,7 +63,7 @@
       <div class="card-1">
        <div class="card-dashboard">
         <div class="top-card-dashboard">
-          <div class="card-category btn btn-info">CENTRE DE FORMATION</div>
+<!--           <div class="card-category btn btn-info">CENTRE DE FORMATION</div> -->
           <%= image_tag center.photo, class: "card-photo" %>
         </div>
         <div class="card-description">
