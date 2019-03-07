@@ -71,8 +71,11 @@ html {
 
 @media (max-width: 479px) {
   .a-button-gender {
-    width: 250px;
-    height: 250px;
+    min-width: 150px;
+    min-height: 150px;
+  }
+  .masthead-img {
+  height: 150vh;
   }
 }
 
