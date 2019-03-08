@@ -4,87 +4,69 @@
     <nav id="sidebar">
         <div class="text-center sidebar-header">
           <%= image_tag @user_personality.career.personality_riasec.avatar_f, class: "avatar-large", alt: "avatar-large" %>
-          <p class="text-center"><%= @user_personality.career.personality_riasec.name %></p>
-          <p class="text-center"><%= @user_personality.career.title %></p>
+          <p class="text-center small"><%= @user_personality.career.personality_riasec.name %></p>
+          <p class="text-center" id="career"><%= @user_personality.career.title %></p>
         </div>
+      <ul class="list-unstyled CTAs">
+      <li>
+       <%= link_to "Refaire le test", new_survey_attempt_path(Survey.last), class: "btn-warning"%>
+      </li>
+      </ul>
 
         <ul class="list-unstyled CTAs components">
-            <p>Votre Dashboard</p>
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Votre profil</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                      <%=  link_to "Vos infos", edit_user_registration_path  %>
-                    </li>
-   <!--                  <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li> -->
-                </ul>
-            </li>
             <li>
-              <%= link_to "Votre personnalité", results_path(current_user) %>
+              <%= link_to "Ma personnalité", results_path(current_user) %>
             </li>
-<!--             <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Vos métiers</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Les formations</a>
+                   <li>
+                      <%=  link_to "Gérer mon profil", edit_user_registration_path  %>
                     </li>
-                    <li>
-                        <a href="#">Les subventions</a>
-                    </li>
-                    <li>
-                        <a href="#">La santé</a>
-                    </li>
-                </ul>
             </li>
-            <li>
-                <a href="#">Réseautage</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li> -->
-    <ul class="list-unstyled CTAs">
-      <li>
-       <%= link_to "Retour à la page d'accueil", root_path, class: "article"%>
-      </li>
-    </ul>
+        </ul>
   </nav>
+<!----SideNavbar----->
+<div class="container-fluid dashboard-container">
+    <h1 class="title">Les centres de formation <strong><%= @user_personality.career.title %></strong> près de chez vous</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+        <!---->
+        <% @training_centers.first(3).each do |center| %>
+        <div class="col-md-12 card-container">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4 col-md-3 col-sm-4">
+                  <% if  center.photo != nil%>
+                    <%= image_tag center.photo, class: "img-fluid rounded"%>
+                  <% end %>
+                </div>
+                <div class="col-8 col-md-9 col-sm-8">
+                  <h4 style="font-weight: bold; color: #333; margin-bottom: 5px;"><%= center.name %></h4>
+                  <p class="card-text">
+                    <%= center.full_address %>
+                    <% if  center.price != nil%>
+                     <p>Coût de la formation : <span class="badge badge-info" style="background-color: darkgray !important; border-radius: 5px;"><%= center.price %> <i class="fas fa-euro-sign"></i></span></p>
+                    <% end %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <div class="card-footer">
+            <a href='tel:<%= center.telephone %>' class="btn btn-xs btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Joindre par téléphone"><i class="fa fa-phone"></i> <%= center.telephone %></a>
+            <a href='mailto:<%= center.email %>' class="btn btn-xs btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Envoyer un email"><i class="fa fa-envelope"></i> Contacter</a>
+                <button class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title="Visiter le site"><i class="fa fa-info-circle"></i> <%= link_to "Site-web", center.website, :target => "_blank" %> </button>
+          </div>
+          </div>
+         </div>
+      <% end %>
+      <!---->
 
-<!-- Page Content -->
-  <div id="content">
-   <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
-   <div class="grid">
-    <div class="cards">
-     <% @training_centers.first(3).each do |center| %>
-      <div class="card-1">
-       <div class="card-dashboard">
-        <div class="top-card-dashboard">
-<!--           <div class="card-category btn btn-info">CENTRE DE FORMATION</div> -->
-          <% if  center.photo != nil%>
-          <%= image_tag center.photo, class: "card-photo" %>
-          <% end %>
         </div>
-        <div class="card-description">
-         <h2><%= center.name %></h2>
 
-         <p><strong><i class="fas fa-map-marker-alt"></i></strong> <%= center.full_address %></p>
-         <p><strong><i class="fas fa-envelope"></i></strong> E-mail: <%= center.email %></p>
-         <p><strong><i class="fas fa-phone"></i></strong> Téléphone: <%= center.telephone %></p>
-         <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", center.website, :target => "_blank" %> </p>
-         <% if  center.price != nil%>
-          <p>Coût de la formation : <%= center.price %> <i class="fas fa-euro-sign"></i></p>
-         <% end %>
-        </div>
-       </div>
       </div>
-     <% end %>
-    </div>
-      <!--    to uncomment when all controllers are created -->
-    <div
+      <div class="col-md-6">
+            <div
      id="map"
      style="width: 100%;
      height: 600px;"
@@ -92,6 +74,6 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
      >
     </div>
-   </div>
+      </div>
   </div>
-<!-- Page Content -->
+</div>

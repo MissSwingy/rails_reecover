@@ -320,7 +320,7 @@ answer51.save!
 answer52 = Answer.new(
 question: question5,
 column: "R",
-answer: "Lipides",
+answer: "Fast-Food",
 photo: "quiz/7qfood/fishchips.jpg")
 answer52.save!
 

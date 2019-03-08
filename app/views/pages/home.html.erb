@@ -10,7 +10,7 @@
         <% end %>
         <h1><strong>Votre carrière a de la valeur</strong></h1>
         <hr class="col-6">
-        <h4>Vous souhaitez donner un nouvel élan à votre carrière ?
+        <h4>Sportifs en reconversion, vous souhaitez donner un nouvel élan à votre carrière ?
         </h4>
         <br><br>
         <a href="#test-riasec" class="btn btn-warning btn-lg">Comment ça marche ?</a>
@@ -25,11 +25,19 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-7">
-        <h2><strong>Votre carrière a de la valeur</strong></h2>
+        <h2><strong>Qu'est-ce que la typologie de Holland (RIASEC) ?</strong></h2>
         <hr>
-        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etae magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <%= link_to "Faites le test !", new_survey_attempt_path(Survey.last), class: "btn btn-warning btn-lg"  %>
+        <p>La typologie de Holland, appelée couramment <strong>RIASEC</strong>, permet d’explorer le monde du travail en <strong>se basant sur les caractéristiques personnelles (personnalité, aptitudes, intérêts, etc.)</strong> associées à chaque profession. John Holland reconnaît 6 types de personnalité :</p>
+          <ol>
+            <li><strong>Réaliste (R) :</strong> Besoin d'être impliqué physiquement dans ce qu'il fait.</li>
+            <li><strong>Investigateur (I) :</strong> Habité par une soif de connaissances et de savoir.</li>
+            <li><strong>Artistique (A) :</strong> Souhaite exprimer ses émotions ou pensées à travers des formes d'art.</li>
+            <li><strong>Social (S) :</strong> Attiré par les activités favorisant le contact avec les autres, particulièrement dans le but de les aider.</li>
+            <li><strong>Entreprenant (E) :</strong> Aime avoir des responsabilités, surmonter des défis dans l'espoir de se hisser au sommet.</li>
+            <li><strong>Conventionnel (C) :</strong> Désire respecter les normes, consignes et règles.</li>
+          </ol>
+        <br>
+        <%= link_to "Démarrer le test", new_survey_attempt_path(Survey.last), class: "btn btn-warning btn-lg"  %>
 
       </div>
     <div class="col-md-5" id="loading">
@@ -38,5 +46,71 @@
   </div>
 </div>
 </section>
+
+
+
+<section class="py-5 clearfix" id="test-riasec" style="background: lightgrey; margin-top: 60px;">
+    <div class="container">
+        <div class="row">
+          <h2 class="col-md-12 text-center"><strong>De belles expériences de reconversion sportive réussie !</strong></h2>
+          <hr>
+          <!--Profile Card 3-->
+        <div class="col-md-4 mt-5">
+            <div class="card profile-card-3">
+                <div class="background-block">
+                    <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"class="background"/>
+                </div>
+                <div class="profile-thumb-block">
+                    <%= image_tag "lauraflessel", alt: "profile-image", class: "profile" %>
+                </div>
+                <div class="card-content">
+                    <h2>Laura Flessel</h2>
+                    <span class="badge badge-pill badge-warning">Entreprenant - Ministre</span>
+                    <br>
+                    <small>Escrimeuse</small>
+                   <p class="card-text text-center small">La plus décorée des escrimeuses françaises est nommée Ministre des Sports en raison de son expérience dans le domaine sportif. </p>
+                    </div>
+                </div>
+              </div>
+
+                  <div class="col-md-4 mt-5">
+            <div class="card profile-card-3">
+                <div class="background-block">
+                    <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"class="background"/>
+                </div>
+                <div class="profile-thumb-block">
+                    <%= image_tag "etchebest", alt: "profile-image", class: "profile" %>
+                </div>
+                <div class="card-content">
+                    <h2>Philippe Etchebest</h2>
+                    <span class="badge badge-pill badge-warning">Réaliste - Chef Cuisinier</span>
+                    <br>
+                    <small>Boxeur et Rugyman</small>
+                   <p class="card-text text-center small">A établi un vrai parallèle entre son vécu en équipe sur le terrain, et sa vie avec son équipe en cuisine. L'état d'esprit est le même, les valeurs aussi.</p>
+                    </div>
+                </div>
+              </div>
+
+                  <div class="col-md-4 mt-5">
+            <div class="card profile-card-3">
+                <div class="background-block">
+                    <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"class="background"/>
+                </div>
+                <div class="profile-thumb-block">
+                    <%= image_tag "lorie", alt: "profile-image", class: "profile" %>
+                </div>
+                <div class="card-content">
+                    <h2>Lorie</h2>
+                    <span class="badge badge-pill badge-warning">Artistique - Chanteuse</span>
+                    <br>
+                    <small>Patineuse artistique</small>
+                   <p class="card-text text-center small">Sa carrière musicale a failli ne jamais voir le jour car la chanteuse se prédestinait au patinage artistique : une blessure l'a contrainte à tout arrêter.</p>
+                    </div>
+                </div>
+              </div>
+          </div>
+    </div>
+</section>
+  <!--Section: Live preview-->
 
 <%= render 'shared/footer' %>

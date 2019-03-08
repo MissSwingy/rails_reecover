@@ -161,15 +161,15 @@ sup {
 }
 
 a {
-  color: #4e73df;
+  // color: #4e73df;
   text-decoration: none;
   background-color: transparent;
 }
 
-a:hover {
-  color: #224abe;
-  text-decoration: underline;
-}
+// a:hover {
+//   color: #224abe;
+//   text-decoration: underline;
+// }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -2516,6 +2516,7 @@ textarea.form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
+    border-radius: 30px;
   }
   .form-inline .form-control-plaintext {
     display: inline-block;
@@ -2573,7 +2574,7 @@ textarea.form-control {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 0.35rem;
+  border-radius: 1.60rem !important;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2751,10 +2752,11 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(84, 196, 212, 0.5);
 }
 
-.btn-warning {
+.btn-warning, .btn-warning a {
   color: #fff;
   background-color: #eb5 !important;
   border-color: #eb5 !important;
+  border-radius: 30px !important;
 }
 
 .btn-warning:hover {
@@ -10694,30 +10696,30 @@ a:focus {
 }
 
 .bg-gradient-success {
-  background-color: #1cc88a;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1cc88a), to(#13855c));
-  background-image: linear-gradient(180deg, #1cc88a 10%, #13855c 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1cc88a), to(#13855c));
+  // background-image: linear-gradient(180deg, #1cc88a 10%, #13855c 100%);
   background-size: cover;
 }
 
 .bg-gradient-info {
-  background-color: #36b9cc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #36b9cc), to(#258391));
-  background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #36b9cc), to(#258391));
+  // background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
   background-size: cover;
 }
 
 .bg-gradient-warning {
-  background-color: #f6c23e;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f6c23e), to(#dda20a));
-  background-image: linear-gradient(180deg, #f6c23e 10%, #dda20a 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f6c23e), to(#dda20a));
+  // background-image: linear-gradient(180deg, #f6c23e 10%, #dda20a 100%);
   background-size: cover;
 }
 
 .bg-gradient-danger {
-  background-color: #ff4356;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff4356), to(#e74a3b));
-  background-image: linear-gradient(180deg, #ff4356 10%, #e74a3b 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff4356), to(#e74a3b));
+  // background-image: linear-gradient(180deg, #ff4356 10%, #e74a3b 100%);
   background-size: cover;
 }
 
@@ -11598,19 +11600,19 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
-  background-position: center;
+  background: url("https://images.unsplash.com/photo-1536478922953-936c5cf65665");
+  background-position: bottom;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+  //background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
+  //background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
   background-position: center;
   background-size: cover;
 }
@@ -12015,4 +12017,5 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
 
