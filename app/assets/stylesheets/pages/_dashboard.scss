@@ -425,3 +425,7 @@ padding: 0;
   .show > .btn-outline-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
   }
+
+#dashboard-container .badge.badge-info {
+    background-color: #999 !important;
+}
