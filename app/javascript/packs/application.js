@@ -12,9 +12,6 @@ toggleSidebar();
 import { tooltip } from '../components/tooltip';
 tooltip();
 
-import { carousel } from '../components/carousel';
-carousel();
-
 import { scrollMoove } from '../components/scroll_move';
 if (document.getElementById('test-riasec')) {
   scrollMoove();
