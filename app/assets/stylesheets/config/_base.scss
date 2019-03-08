@@ -10696,30 +10696,30 @@ a:focus {
 }
 
 .bg-gradient-success {
-  background-color: #1cc88a;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1cc88a), to(#13855c));
-  background-image: linear-gradient(180deg, #1cc88a 10%, #13855c 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1cc88a), to(#13855c));
+  // background-image: linear-gradient(180deg, #1cc88a 10%, #13855c 100%);
   background-size: cover;
 }
 
 .bg-gradient-info {
-  background-color: #36b9cc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #36b9cc), to(#258391));
-  background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #36b9cc), to(#258391));
+  // background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
   background-size: cover;
 }
 
 .bg-gradient-warning {
-  background-color: #f6c23e;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f6c23e), to(#dda20a));
-  background-image: linear-gradient(180deg, #f6c23e 10%, #dda20a 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f6c23e), to(#dda20a));
+  // background-image: linear-gradient(180deg, #f6c23e 10%, #dda20a 100%);
   background-size: cover;
 }
 
 .bg-gradient-danger {
-  background-color: #ff4356;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff4356), to(#e74a3b));
-  background-image: linear-gradient(180deg, #ff4356 10%, #e74a3b 100%);
+  background-color: #263238;
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff4356), to(#e74a3b));
+  // background-image: linear-gradient(180deg, #ff4356 10%, #e74a3b 100%);
   background-size: cover;
 }
 
@@ -11600,19 +11600,19 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
-  background-position: center;
+  background: url("https://images.unsplash.com/photo-1536478922953-936c5cf65665");
+  background-position: bottom;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+  //background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
+  //background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
   background-position: center;
   background-size: cover;
 }
