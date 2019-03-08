@@ -31,9 +31,7 @@
     <h1 class="title">Les centres de formation <strong><%= @user_personality.career.title %></strong> près de chez vous</h1>
     <div class="row">
       <div class="col-md-6">
-
         <div class="row">
-
         <!---->
         <% @training_centers.each do |center| %>
         <div class="col-md-12 card-container">
@@ -41,16 +39,13 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-4 col-md-3 col-sm-4">
-                  <!-- <img  src="img/img-job-1.jpg" /> -->
                   <%= image_tag center.photo, class: "img-fluid rounded"%>
                 </div>
                 <div class="col-8 col-md-9 col-sm-8">
-                  <!-- <span class="badge badge-info">Le nord</span> -->
-                  <!-- <h4 class="card-title">Hodor center</h4> -->
-                  <h4><%= center.name %></h4>
+                  <h4 style="font-weight: bold; color: #333; margin-bottom: 5px;"><%= center.name %></h4>
                   <p class="card-text">
                     <%= center.full_address %>
-                    <p>Coût de la formation : <%= center.price %> <i class="fas fa-euro-sign"></i></p>
+                    <p>Coût de la formation : <span class="badge badge-info" style="background-color: darkgray; border-radius: 5px;"><%= center.price %> <i class="fas fa-euro-sign"></i></span></p>
                   </p>
                 </div>
               </div>
@@ -58,17 +53,7 @@
           <div class="card-footer">
             <a href='tel:<%= center.telephone %>' class="btn btn-xs btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Joindre par téléphone"><i class="fa fa-phone"></i> <%= center.telephone %></a>
             <a href='mailto:<%= center.email %>' class="btn btn-xs btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Envoyer un email"><i class="fa fa-envelope"></i> Contacter</a>
-
-
-
-
-            <!-- <a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Visiter le site web"> -->
-            <!--   <i class="fa fa-info-circle"></i>
-              <%= link_to center.website %> -->
                 <button class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title="Visiter le site"><i class="fa fa-info-circle"></i> <%= link_to "Site-web", center.website, :target => "_blank" %> </button>
-
-
-
           </div>
           </div>
          </div>
