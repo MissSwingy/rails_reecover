@@ -348,6 +348,7 @@ padding: 0;
 
   .dashboard-container .card {
     border: none;
+    margin-top: -40px;
   }
   .dashboard-container .card-body {
     padding: 1rem;
@@ -358,6 +359,7 @@ padding: 0;
   }
   .dashboard-container .card-container{
     padding-bottom: 20px;
+    height: 275px;
   }
   .dashboard-container .card-footer {
     background:#fff;
