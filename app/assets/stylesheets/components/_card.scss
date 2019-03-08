@@ -31,7 +31,7 @@ padding-left: 0;
 
 .card-custom {
     text-align: center;
-    height: 280px;
+    height: 45%;
     margin-bottom: 15px;
     // width: 100%;
 }
@@ -97,6 +97,8 @@ a {
   padding: 16px;
   margin: 0 auto;
   background-color: #263238 !important;
+  height: 100vh;
+  margin-bottom: -120px;
 }
 
  .cards-quiz :hover {
