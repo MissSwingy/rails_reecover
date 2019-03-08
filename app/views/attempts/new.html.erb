@@ -44,7 +44,7 @@
     <div data-container="<%= question.number %>">
       <div class="overlay" id="question-<%= question.number %>" data-question="<%= question.number %>"><h2 class="text-center mb-5"> <%= question.question %> </h2></div>
         <div class="cards-quiz">
-          <div class="row align-items-start text-center">
+          <div class="row-questions align-items-start text-center">
           <% question.answers.each_with_index do |answer, index| %>
             <div class="col-xs-6 col-md-6 col-lg-4 card-custom">
               <%= link_to answer_users_answers_path(answer), method: :post, remote: @questions.last != question do %>

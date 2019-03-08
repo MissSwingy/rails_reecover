@@ -602,9 +602,20 @@ pre code {
   flex-wrap: wrap;
   margin-right: -0.75rem;
   margin-left: -0.75rem;
-  padding-bottom: 110px;
-  padding-top: 40px;
 }
+
+.row-questions{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  padding-bottom: 110px;
+  padding-top: 40px
+}
+
 
 .no-gutters {
   margin-right: 0;
