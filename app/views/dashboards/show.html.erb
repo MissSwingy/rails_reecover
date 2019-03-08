@@ -59,12 +59,14 @@
    <h2 class="title">Bienvenue <%= @user.first_name %> !</h2>
    <div class="grid">
     <div class="cards">
-     <% @training_centers.each do |center| %>
+     <% @training_centers.first(3).each do |center| %>
       <div class="card-1">
        <div class="card-dashboard">
         <div class="top-card-dashboard">
 <!--           <div class="card-category btn btn-info">CENTRE DE FORMATION</div> -->
+          <% if  center.photo != nil%>
           <%= image_tag center.photo, class: "card-photo" %>
+          <% end %>
         </div>
         <div class="card-description">
          <h2><%= center.name %></h2>
@@ -73,7 +75,9 @@
          <p><strong><i class="fas fa-envelope"></i></strong> E-mail: <%= center.email %></p>
          <p><strong><i class="fas fa-phone"></i></strong> Téléphone: <%= center.telephone %></p>
          <p><strong><i class="fas fa-at"></i></strong> <%= link_to "Site-web", center.website, :target => "_blank" %> </p>
-         <p>Coût de la formation : <%= center.price %> <i class="fas fa-euro-sign"></i></p>
+         <% if  center.price != nil%>
+          <p>Coût de la formation : <%= center.price %> <i class="fas fa-euro-sign"></i></p>
+         <% end %>
         </div>
        </div>
       </div>
