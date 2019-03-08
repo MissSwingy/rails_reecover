@@ -9,6 +9,9 @@ hideFirstQuestion();
 import { toggleSidebar } from '../components/sidebar_toggle';
 toggleSidebar();
 
+import { tooltip } from '../components/tooltip';
+tooltip();
+
 import { carousel } from '../components/carousel';
 carousel();
 

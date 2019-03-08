@@ -11,7 +11,7 @@
           class: "form-control",
           placeholder: "Trouver une formation "
           %>
-          <%= button_tag "", class: "btn fas fa-search fa-sm btn-warning btn-lg" %>
+          <%= button_tag "", class: "btn fas fa-search fa-sm btn-lg" %>
         <% end %>
       </div>
   <!-- Right Navigation -->
@@ -21,9 +21,8 @@
 
       <!-- Links when logged in -->
       <% if params[:controller] === "dashboards" %>
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <button type="button" id="sidebarCollapse" class="btn">
           <i class="fas fa-align-left"></i>
-          <span>Menu Dashboard</span>
         </button>
         <% else %>
       <% end %>
