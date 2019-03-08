@@ -2,19 +2,25 @@
 // Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
 
 .bg-login-image {
-  background: url('https://i.pinimg.com/originals/c3/91/19/c391190f344973129f9409f05c3c0956.jpg');
-  background-position: top;
+  background: url('https://images.unsplash.com/photo-1536478922953-936c5cf65665');
+  background-position: bottom;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800');
+  background: url('https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80');
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url('http://www1.pictures.gi.zimbio.com/Eric+Cantona+Looking+Eric+Photocall+2009+Cannes+LCPHJB9rgGKl.jpg');
+  background: url('https://cdn.pixabay.com/photo/2018/07/24/13/46/sport-3559216_1280.jpg');
+  background-position: top;
+  background-size: cover;
+}
+
+.bg-edit-image {
+  background: url('https://cdn.pixabay.com/photo/2017/04/25/05/45/basketball-2258651_1280.jpg');
   background-position: top;
   background-size: cover;
 }

@@ -9,8 +9,8 @@ hideFirstQuestion();
 import { toggleSidebar } from '../components/sidebar_toggle';
 toggleSidebar();
 
-import { carousel } from '../components/carousel';
-carousel();
+import { tooltip } from '../components/tooltip';
+tooltip();
 
 import { scrollMoove } from '../components/scroll_move';
 if (document.getElementById('test-riasec')) {
